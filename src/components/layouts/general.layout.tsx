@@ -1,0 +1,129 @@
+import { ReactNode } from "react"
+import { Button, Dropdown, Footer, Link, Navbar } from "react-daisyui"
+import LogoWide from '@/assets/logo-wide.png'
+import LogoSquare from '@/assets/logo.png'
+import { HiArrowRight } from "react-icons/hi"
+import { FaInstagram, FaLinkedin, FaWhatsappSquare } from "react-icons/fa"
+import Image from "next/image"
+
+export const DefaultLayout = (props: { children?: ReactNode, className?: string }) => {
+    return <div className="flex flex-col min-h-screen">
+    <div className="z-[500]">
+    <Navbar className="lg:px-16 shadow-[0_1px_15px_rgba(0,0,0,0.1)] h-[80px]">
+      <Navbar.Start className="">
+        <Dropdown>
+          <Button tag="label" color="ghost" tabIndex={0} className="lg:hidden">
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h8m-8 6h16" />
+            </svg>
+          </Button>
+          <Dropdown.Menu tabIndex={0} className="w-52 menu-sm z-[1] bg-white">
+            <li>
+              <a>Produk Kami</a>
+              <ul className="p-2">
+                <li><a href="/earned-wage-access">Earned Wage Access</a></li>
+                <li><a href="#">Mobile Attendance</a></li>
+                <li><a href="#">Payroll</a></li>
+                <li><a href="#">Reimbursement System</a></li>
+                <li><a href="#">Salary Loan</a></li>
+                <li><a href="#">Digital Product</a></li>
+                <li><a href="#">Production Tracker</a></li>
+              </ul>
+            </li>
+            <li>
+              <a>Tentang Gajiku</a>
+              <ul className="p-2">
+                <li><a href="#">Tim Gajiku</a></li>
+                <li><a href="#">Testimoni</a></li>
+              </ul>
+            </li>
+            <Dropdown.Item>Blog</Dropdown.Item>
+            <Dropdown.Item>Kontak Kami</Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
+        <Link href="/" ><Image src={LogoWide} alt="Gajiku" className="h-fit" width="167" /></Link>
+      </Navbar.Start>
+      <Navbar.Center className="hidden lg:flex">
+        <Dropdown hover={true}>
+          <Dropdown.Toggle className="btn btn-ghost hover:bg-gray-100 rounded-btn text-base text-primary font-semibold" button={false}>
+            Produk Kami
+          </Dropdown.Toggle>
+          <Dropdown.Menu className="bg-white w-max text-base text-primary font-semibold">
+            <Dropdown.Item href="/earned-wage-access">Earned Wage Access</Dropdown.Item>
+            <Dropdown.Item href="#">Mobile Attendance</Dropdown.Item>
+            <Dropdown.Item href="#">Payroll</Dropdown.Item>
+            <Dropdown.Item href="#">Reimbursement System</Dropdown.Item>
+            <Dropdown.Item href="#">Salary Loan</Dropdown.Item>
+            <Dropdown.Item href="#">Digital Product</Dropdown.Item>
+            <Dropdown.Item href="#">Production Tracker</Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
+        <Dropdown hover={true}>
+          <Dropdown.Toggle className="btn btn-ghost hover:bg-gray-100 rounded-btn text-base text-primary font-semibold" button={false}>
+            Tentang Gajiku
+          </Dropdown.Toggle>
+          <Dropdown.Menu className="bg-white w-max text-base text-primary font-semibold">
+            <Dropdown.Item href="/earned-wage-access">Tim Gajiku</Dropdown.Item>
+            <Dropdown.Item href="#">Testimoni</Dropdown.Item>
+          </Dropdown.Menu>
+        </Dropdown>
+        <Button tag="a" className="btn btn-ghost hover:bg-gray-100 rounded-btn text-base text-primary font-semibold" href="/blog" >Blog</Button>
+        <Button tag="a" className="btn btn-ghost hover:bg-gray-100 rounded-btn text-base text-primary font-semibold" href="/" >Kontak Kami</Button>
+      </Navbar.Center>
+      <Navbar.End>
+        <Button tag="a" color="primary" className="text-white" size="sm">Coba Sekarang <HiArrowRight /></Button>
+      </Navbar.End>
+    </Navbar>
+    </div>
+    <div className={"grow " + (props.className ?? "")}>
+      {props.children}
+    </div>
+    <Footer className="p-10 bg-gray-100 ">
+      <div>
+        <Link href="/" ><Image src={LogoSquare} alt="Gajiku" className="h-fit" width="40" /></Link>
+        <p>
+          <span>© 2023 Sampradaa Pte Ltd </span><br />
+          <span>Jakarta - Indonesia</span>
+        </p>
+        <p>Email: <Link href="mailto:support@gajikuapp.com" color="primary">support@gajikuapp.com</Link></p>
+        <div className="flex gap-x-6 mt-3">
+            <a href="https://instagram.com/gajikuapp?igshid=ZDg1NjBiNjg=" className="text-3xl" target="_blank"  rel="nofollow noopener">
+                <FaInstagram />
+            </a>
+            <a href="https://www.linkedin.com/company/gajiku" className="text-3xl" target="_blank"  rel="nofollow noopener">
+                <FaLinkedin />
+            </a>
+            <a href="https://api.whatsapp.com/send/?phone=6281119209415&text&type=phone_number&app_absent=0" className="text-3xl" target="_blank" rel="nofollow noopener">
+                <FaWhatsappSquare />
+            </a>
+        </div>
+      </div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div>
+        <Footer.Title>Tentang Kami</Footer.Title>
+        <Link href="#" className="link link-hover">Tentang Gajiku</Link>
+        <Link href="#" className="link link-hover">Kebijakan Privasi</Link>
+        <Link href="#" className="link link-hover">Kontak</Link>
+      </div>
+      <div>
+        <Footer.Title>Produk</Footer.Title>        
+        <Link href="#" className="link link-hover">Earned Wage Access</Link>
+        <Link href="#" className="link link-hover">Mobile Attendance</Link>
+        <Link href="#" className="link link-hover">Payroll</Link>
+        <Link href="#" className="link link-hover">Reimbursement System</Link>
+        <Link href="#" className="link link-hover">Salary Loan</Link>
+        <Link href="#" className="link link-hover">Digital Product</Link>
+        <Link href="#" className="link link-hover">Production Tracker</Link>
+      </div>
+      <div>
+        <Footer.Title>Lainnya</Footer.Title>
+        <a className="link link-hover">Blog</a>
+        <a className="link link-hover">Use Case</a>
+        <a className="link link-hover">Panduan Penggunaan</a>
+      </div>
+    </Footer>
+
+    </div>
+}

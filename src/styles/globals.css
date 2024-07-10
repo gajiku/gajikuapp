@@ -1,13 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css?family=Noto Sans');
 
 :root {
+  --p: 74.84% 0.111 196.52;
+  --b1: #ffffff;
+
+  /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
+/* 
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+  --background-end-rgb: 255, 255, 255; */
 }
-
+/* 
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -30,4 +36,4 @@ body {
   .text-balance {
     text-wrap: balance;
   }
-}
+} */
