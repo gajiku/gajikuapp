@@ -33,12 +33,12 @@ export const DefaultLayout = (props: { children?: ReactNode, className?: string 
             <li>
               <a>Tentang Gajiku</a>
               <ul className="p-2">
-                <li><a href="#">Tim Gajiku</a></li>
+                <li><a href="/about">Tim Gajiku</a></li>
                 <li><a href="#">Testimoni</a></li>
               </ul>
             </li>
             <Dropdown.Item>Blog</Dropdown.Item>
-            <Dropdown.Item>Kontak Kami</Dropdown.Item>
+            <Dropdown.Item href="/contact-us">Kontak Kami</Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
         <Link href="/" ><Image src={LogoWide} alt="Gajiku" className="h-fit" width="167" /></Link>
@@ -63,15 +63,15 @@ export const DefaultLayout = (props: { children?: ReactNode, className?: string 
             Tentang Gajiku
           </Dropdown.Toggle>
           <Dropdown.Menu className="bg-white w-max text-base text-primary font-semibold">
-            <Dropdown.Item href="/earned-wage-access">Tim Gajiku</Dropdown.Item>
+            <Dropdown.Item href="/about">Tim Gajiku</Dropdown.Item>
             <Dropdown.Item href="#">Testimoni</Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
         <Button tag="a" className="btn btn-ghost hover:bg-gray-100 rounded-btn text-base text-primary font-semibold" href="/blog" >Blog</Button>
-        <Button tag="a" className="btn btn-ghost hover:bg-gray-100 rounded-btn text-base text-primary font-semibold" href="/" >Kontak Kami</Button>
+        <Button tag="a" className="btn btn-ghost hover:bg-gray-100 rounded-btn text-base text-primary font-semibold" href="/contact-us" >Kontak Kami</Button>
       </Navbar.Center>
       <Navbar.End>
-        <Button tag="a" color="primary" className="text-white" size="sm">Coba Sekarang <HiArrowRight /></Button>
+        <Button tag="a" color="primary" className="text-white" size="sm" href="/contact-us">Coba Sekarang <HiArrowRight /></Button>
       </Navbar.End>
     </Navbar>
     </div>
@@ -103,13 +103,13 @@ export const DefaultLayout = (props: { children?: ReactNode, className?: string 
       <div></div>
       <div>
         <Footer.Title>Tentang Kami</Footer.Title>
-        <Link href="#" className="link link-hover">Tentang Gajiku</Link>
-        <Link href="#" className="link link-hover">Kebijakan Privasi</Link>
-        <Link href="#" className="link link-hover">Kontak</Link>
+        <Link href="/about" className="link link-hover">Tentang Gajiku</Link>
+        <Link href="/privacy-policy" className="link link-hover">Kebijakan Privasi</Link>
+        <Link href="/contact-us" className="link link-hover">Kontak</Link>
       </div>
       <div>
         <Footer.Title>Produk</Footer.Title>        
-        <Link href="#" className="link link-hover">Earned Wage Access</Link>
+        <Link href="/earned-wage-access" className="link link-hover">Earned Wage Access</Link>
         <Link href="#" className="link link-hover">Mobile Attendance</Link>
         <Link href="#" className="link link-hover">Payroll</Link>
         <Link href="#" className="link link-hover">Reimbursement System</Link>
@@ -119,9 +119,9 @@ export const DefaultLayout = (props: { children?: ReactNode, className?: string 
       </div>
       <div>
         <Footer.Title>Lainnya</Footer.Title>
-        <a className="link link-hover">Blog</a>
-        <a className="link link-hover">Use Case</a>
-        <a className="link link-hover">Panduan Penggunaan</a>
+        <Link href="#" className="link link-hover">Blog</Link>
+        <Link href="#" className="link link-hover">Use Case</Link>
+        <Link href="#" className="link link-hover">Panduan Penggunaan</Link>
       </div>
     </Footer>
 
