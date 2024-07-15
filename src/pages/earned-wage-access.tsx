@@ -4,6 +4,8 @@ import { Link } from "react-daisyui";
 import PlaceholderEwa  from "@/assets/ewa/placeholder-ewa.svg";
 import Image from "next/image";
 import Head from "next/head";
+import Iframe from "react-iframe";
+import Script from "next/script";
 
 export default function Home() {
   return <DefaultLayout>
@@ -13,7 +15,7 @@ export default function Home() {
       <meta name="twitter:title" content="Gajiku - Earned Wage Access" />
       <meta name="description" content="Earned Wage Access (EWA) adalah sebuah fitur keuangan yang memungkinkan karyawan untuk mengakses sebagian dari gaji mereka sebelum jadwal gajian resmi." />
     </Head>
-    
+    <Script src="https://tally.so/widgets/embed.js"></Script>
     
     <section className="py-16 lg:px-32 md:px-16 px-4" id="features">
       <h1 className="text-primary text-center text-4xl mb-8 font-extrabold">GAJIKU Earned Wage Access (EWA)</h1>
@@ -70,6 +72,14 @@ export default function Home() {
     <section className="pb-16 lg:px-32 md:px-16 px-4">
       <h2 className="text-2xl mb-4 text-center font-semibold">Atau langsung jadwalkan demo</h2>
       {/* Forms */}
+      <Iframe 
+          url="https://tally.so/embed/meE2je?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+          width="100%"
+          height="100%"
+          className="h-full"
+          scrolling="no"
+          frameBorder={0}
+      />
     </section>
     
   </DefaultLayout>

@@ -21,23 +21,23 @@ export const DefaultLayout = (props: { children?: ReactNode, className?: string 
             <li>
               <a>Produk Kami</a>
               <ul className="p-2">
-                <li><a href="/earned-wage-access">Earned Wage Access</a></li>
-                <li><a href="#">Mobile Attendance</a></li>
-                <li><a href="#">Payroll</a></li>
-                <li><a href="#">Reimbursement System</a></li>
-                <li><a href="#">Salary Loan</a></li>
-                <li><a href="#">Digital Product</a></li>
-                <li><a href="#">Production Tracker</a></li>
+                <li><Link href="/earned-wage-access">Earned Wage Access</Link></li>
+                <li><Link href="#">Mobile Attendance</Link></li>
+                <li><Link href="#">Payroll</Link></li>
+                <li><Link href="#">Reimbursement System</Link></li>
+                <li><Link href="#">Salary Loan</Link></li>
+                <li><Link href="#">Digital Product</Link></li>
+                <li><Link href="#">Production Tracker</Link></li>
               </ul>
             </li>
             <li>
               <a>Tentang Gajiku</a>
               <ul className="p-2">
-                <li><a href="/about">Tim Gajiku</a></li>
-                <li><a href="#">Testimoni</a></li>
+                <li><Link href="/about">Tim Gajiku</Link></li>
+                <li><Link href="#">Testimoni</Link></li>
               </ul>
             </li>
-            <Dropdown.Item>Blog</Dropdown.Item>
+            <Dropdown.Item href="/blog">Blog</Dropdown.Item>
             <Dropdown.Item href="/contact-us">Kontak Kami</Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
@@ -119,7 +119,7 @@ export const DefaultLayout = (props: { children?: ReactNode, className?: string 
       </div>
       <div>
         <Footer.Title>Lainnya</Footer.Title>
-        <Link href="#" className="link link-hover">Blog</Link>
+        <Link href="/blog" className="link link-hover">Blog</Link>
         <Link href="#" className="link link-hover">Use Case</Link>
         <Link href="#" className="link link-hover">Panduan Penggunaan</Link>
       </div>
