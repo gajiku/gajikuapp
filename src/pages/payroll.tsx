@@ -8,7 +8,7 @@ import Head from 'next/head';
 import Iframe from 'react-iframe';
 import Script from 'next/script';
 
-export default function Home() {
+export default function Payroll() {
   return (
     <DefaultLayout>
       <Head>
