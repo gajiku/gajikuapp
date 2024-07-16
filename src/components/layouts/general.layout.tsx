@@ -23,7 +23,7 @@ export const DefaultLayout = (props: { children?: ReactNode, className?: string 
               <ul className="p-2">
                 <li><Link href="/earned-wage-access">Earned Wage Access</Link></li>
                 <li><Link href="#">Mobile Attendance</Link></li>
-                <li><Link href="#">Payroll</Link></li>
+                <li><Link href="/payroll">Payroll</Link></li>
                 <li><Link href="#">Reimbursement System</Link></li>
                 <li><Link href="#">Salary Loan</Link></li>
                 <li><Link href="#">Digital Product</Link></li>
@@ -51,7 +51,7 @@ export const DefaultLayout = (props: { children?: ReactNode, className?: string 
           <Dropdown.Menu className="bg-white w-max text-base text-primary font-semibold">
             <Dropdown.Item href="/earned-wage-access">Earned Wage Access</Dropdown.Item>
             <Dropdown.Item href="#">Mobile Attendance</Dropdown.Item>
-            <Dropdown.Item href="#">Payroll</Dropdown.Item>
+            <Dropdown.Item href="/payroll">Payroll</Dropdown.Item>
             <Dropdown.Item href="#">Reimbursement System</Dropdown.Item>
             <Dropdown.Item href="#">Salary Loan</Dropdown.Item>
             <Dropdown.Item href="#">Digital Product</Dropdown.Item>
@@ -108,7 +108,7 @@ export const DefaultLayout = (props: { children?: ReactNode, className?: string 
         <Link href="/contact-us" className="link link-hover">Kontak</Link>
       </div>
       <div>
-        <Footer.Title>Produk</Footer.Title>        
+        <Footer.Title>Produk</Footer.Title>
         <Link href="/earned-wage-access" className="link link-hover">Earned Wage Access</Link>
         <Link href="#" className="link link-hover">Mobile Attendance</Link>
         <Link href="#" className="link link-hover">Payroll</Link>
