@@ -7,6 +7,7 @@ function generateSiteMap() {
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
       <url><loc>https://gajikuapp.com</loc></url>
       <url><loc>https://gajikuapp.com/earned-wage-access</loc></url>
+      <url><loc>https://gajikuapp.com/payroll</loc></url>
       <url><loc>https://gajikuapp.com/about</loc></url>
    </urlset>
  `;
@@ -30,5 +31,3 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   };
 
 }
-
-  
