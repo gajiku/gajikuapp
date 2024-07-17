@@ -6,11 +6,11 @@ import PlaceholderEwa from '@/assets/ewa/placeholder-ewa.svg';
 import Head from 'next/head';
 import Image from 'next/image';
 import Script from 'next/script';
-import { HiOutlineCheck, HiArrowRight } from 'react-icons/hi';
+import { HiOutlineCheck, HiArrowRight, HiCheck } from 'react-icons/hi';
 import { IoLogoWhatsapp } from 'react-icons/io5';
 import Iframe from 'react-iframe';
 import { Accordion, Button, Card, WindowMockup } from 'react-daisyui';
-import { RiCodeBoxLine, RiFileExcel2Line, RiUserHeartLine } from 'react-icons/ri';
+import { RiCodeBoxLine, RiFileExcel2Line, RiFilePdf2Line, RiMoneyDollarBoxLine, RiUserHeartLine } from 'react-icons/ri';
 
 export default function Index() {
   return (
@@ -134,11 +134,12 @@ export default function Index() {
       <div className="bg-[#f5f5f7]">
         <div className="py-16 px-4 md:px-16 lg:px-32 mb-16">
           <section className="mb-8">
-            <h2 className="text-primary text-3xl mb-8 font-extrabold">
-              Keuntungan Lainnya Menggunakan Gajiku Payroll:
+            <h2 className="text-center text-primary text-3xl mb-8 font-extrabold">
+              Keuntungan Menggunakan Gajiku Payroll
             </h2>
-            <ul className="grid grid-cols-2 lg:grid-cols-3 gap-6">
-              <li className="card bg-white shadow-md transition-all scale-100 hover:scale-105">
+
+            <ul className="grid grid-cols-6 gap-6 mb-16">
+              <li className="col-span-3 lg:col-span-2 card bg-white shadow-md transition-all scale-100 hover:scale-105">
                 <Card.Body>
                   <RiFileExcel2Line size={32} />
                   <h3 className="font-bold mb-2 text-2xl">Laporan Akurat</h3>
@@ -148,7 +149,7 @@ export default function Index() {
                   </p>
                 </Card.Body>
               </li>
-              <li className="card bg-white shadow-md transition-all scale-100 hover:scale-105">
+              <li className="col-span-3 lg:col-span-2 card bg-white shadow-md transition-all scale-100 hover:scale-105">
                 <Card.Body>
                   <RiCodeBoxLine size={32} />
                   <h3 className="font-bold mb-2 text-2xl">Integrasi Mudah</h3>
@@ -157,7 +158,7 @@ export default function Index() {
                   </p>
                 </Card.Body>
               </li>
-              <li className="card bg-white shadow-md transition-all scale-100 hover:scale-105">
+              <li className="col-span-3 lg:col-span-2 card bg-white shadow-md transition-all scale-100 hover:scale-105">
                 <Card.Body>
                   <RiUserHeartLine size={32} />
                   <h3 className="font-bold mb-2 text-2xl">Dukungan Pelanggan</h3>
@@ -166,7 +167,71 @@ export default function Index() {
                   </p>
                 </Card.Body>
               </li>
+              <li className="col-span-3 lg:col-span-2 lg:col-start-2 card bg-white shadow-md transition-all scale-100 hover:scale-105">
+                <Card.Body>
+                  <RiFilePdf2Line size={32} />
+                  <h3 className="font-bold mb-2 text-2xl">Slip Gaji Real-Time</h3>
+                  <p className="leading-5 text-[15px]">
+                    Memudahkan distribusi slip gaji dengan mengirimkannya melalui aplikasi Gajiku di ponsel
+                    masing-masing karyawan
+                  </p>
+                </Card.Body>
+              </li>
+              <li className="col-span-4 col-start-2 lg:col-span-2 card bg-white shadow-md transition-all scale-100 hover:scale-105">
+                <Card.Body>
+                  <RiMoneyDollarBoxLine size={32} />
+                  <h3 className="font-bold mb-2 text-2xl">Payroll Disbursement</h3>
+                  <p className="leading-5 text-[15px]">
+                    Kami menyederhanakan proses transfer gaji yang biasanya sulit dengan administrasi bank. Transfer
+                    gaji jadi jauh lebih cepat, mudah, dan aman.
+                  </p>
+                </Card.Body>
+              </li>
             </ul>
+
+            <div className="grid grid-cols-12 gap-6">
+              <div className="col-span-5">
+                <h3 className="font-bold text-2xl text-primary mb-4">Cari tahu lebih banyak fitur Payroll Gajiku</h3>
+                <p>
+                  Gajiku menyediakan fitur yang komprehensif yang memudahkan untuk kebutuhan bisnis dan semua proses
+                  payroll.
+                </p>
+              </div>
+              <div className="col-span-7">
+                <ul className="flex flex-col gap-1">
+                  <li className="flex gap-2">
+                    <span className="btn btn-primary btn-circle btn-xs text-white">
+                      <HiOutlineCheck size={18} />
+                    </span>
+                    <span>Atur komponen payroll untuk perusahaan Anda</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="btn btn-primary btn-circle btn-xs text-white">
+                      <HiOutlineCheck size={18} />
+                    </span>
+                    <span>Atur configurasi keterlambatan / lembur untuk karyawan Anda.</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="btn btn-primary btn-circle btn-xs text-white">
+                      <HiOutlineCheck size={18} />
+                    </span>
+                    <span>Perhitungan PPh untuk karyawan / non karyawan.</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="btn btn-primary btn-circle btn-xs text-white">
+                      <HiOutlineCheck size={18} />
+                    </span>
+                    <span>Multi periode payroll</span>
+                  </li>
+                  <li className="flex gap-2">
+                    <span className="btn btn-primary btn-circle btn-xs text-white">
+                      <HiOutlineCheck size={18} />
+                    </span>
+                    <span>Import / export</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
           </section>
         </div>
       </div>
@@ -178,7 +243,7 @@ export default function Index() {
             kerja yang lebih baik dan produktif dengan solusi kami. Hubungi kami hari ini untuk <b>demo gratis</b>!
           </p>
           <div className="text-center mb-4">
-            <a className="btn bg-[#1A3636] hover:bg-[#1A3636] text-white" href="https://wa.me/628170177701">
+            <a className="btn bg-[#1A3636] hover:bg-[#1A3636] text-white" href="https://wa.me/">
               <IoLogoWhatsapp size={18} />
               WhatsApp Kami
             </a>
