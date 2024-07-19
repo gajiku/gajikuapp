@@ -8,12 +8,12 @@
   --b1: #ffffff;
 
   /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
-/* 
+  /*
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255; */
 }
-/* 
+/*
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
@@ -37,3 +37,13 @@ body {
     text-wrap: balance;
   }
 } */
+
+.collapse-arrow > .collapse-title:after {
+  top: 50%;
+}
+
+.collapse-title,
+:where(.collapse > input[type='checkbox']),
+:where(.collapse > input[type='radio']) {
+  min-height: 2.75rem;
+}
