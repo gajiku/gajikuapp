@@ -9,6 +9,11 @@ function generateSiteMap() {
       <url><loc>https://gajikuapp.com/earned-wage-access</loc></url>
       <url><loc>https://gajikuapp.com/payroll</loc></url>
       <url><loc>https://gajikuapp.com/about</loc></url>
+      <url><loc>https://gajikuapp.com/produk/absensi-karyawan</loc></url>
+      <url><loc>https://gajikuapp.com/produk/absensi-karyawan/manajemen-absensi</loc></url>
+      <url><loc>https://gajikuapp.com/produk/absensi-karyawan/shift</loc></url>
+      <url><loc>https://gajikuapp.com/produk/absensi-karyawan/pengajuan-cuti-lembur</loc></url>
+      <url><loc>https://gajikuapp.com/produk/absensi-karyawan/dashboard</loc></url>
    </urlset>
  `;
 }

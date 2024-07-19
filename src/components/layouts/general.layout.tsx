@@ -22,7 +22,7 @@ export const DefaultLayout = (props: { children?: ReactNode, className?: string 
               <a>Produk Kami</a>
               <ul className="p-2">
                 <li><Link href="/earned-wage-access">Earned Wage Access</Link></li>
-                <li><Link href="#">Mobile Attendance</Link></li>
+                <li><Link href="/produk/absensi-karyawan">Absensi Karyawan (Online)</Link></li>
                 <li><Link href="/payroll">Payroll</Link></li>
                 <li><Link href="#">Reimbursement System</Link></li>
                 <li><Link href="#">Salary Loan</Link></li>
@@ -50,7 +50,7 @@ export const DefaultLayout = (props: { children?: ReactNode, className?: string 
           </Dropdown.Toggle>
           <Dropdown.Menu className="bg-white w-max text-base text-primary font-semibold">
             <Dropdown.Item href="/earned-wage-access">Earned Wage Access</Dropdown.Item>
-            <Dropdown.Item href="#">Mobile Attendance</Dropdown.Item>
+            <Dropdown.Item href="/produk/absensi-karyawan">Absensi Karyawan (Online)</Dropdown.Item>
             <Dropdown.Item href="/payroll">Payroll</Dropdown.Item>
             <Dropdown.Item href="#">Reimbursement System</Dropdown.Item>
             <Dropdown.Item href="#">Salary Loan</Dropdown.Item>
@@ -110,8 +110,8 @@ export const DefaultLayout = (props: { children?: ReactNode, className?: string 
       <div>
         <Footer.Title>Produk</Footer.Title>
         <Link href="/earned-wage-access" className="link link-hover">Earned Wage Access</Link>
-        <Link href="#" className="link link-hover">Mobile Attendance</Link>
-        <Link href="#" className="link link-hover">Payroll</Link>
+        <Link href="/produk/absensi-karyawan" className="link link-hover">Absensi Karyawan (Online)</Link>
+        <Link href="/payroll" className="link link-hover">Payroll</Link>
         <Link href="#" className="link link-hover">Reimbursement System</Link>
         <Link href="#" className="link link-hover">Salary Loan</Link>
         <Link href="#" className="link link-hover">Digital Product</Link>
