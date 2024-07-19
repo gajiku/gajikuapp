@@ -95,39 +95,35 @@ export default function Page() {
             <Button tag="a" color="primary" className="text-white" size="sm" href="/contact-us">Hubungi Kami <HiArrowRight /></Button>
           </div>
         </div>
-        
       </div>
     </section>
 
     <section className="py-16 lg:px-32 md:px-16 px-4 bg-gray-50">
-    <div className="grid md:grid-cols-2 gap-y-16 gap-x-8">
-      <div>
-      <h2 className="text-3xl font-normal mb-4">Fitur Lainnya</h2>
-        <p className="font-[350] text-gray-800">Manajemen pengajuan Gajiku memiliki fitur yang komprehensif dan memudahkan untuk kebutuhan bisnis dan semua proses absensi.</p>
+      <div className="grid md:grid-cols-2 gap-y-16 gap-x-8">
+        <div>
+        <h2 className="text-3xl font-normal mb-4">Fitur Lainnya</h2>
+          <p className="font-[350] text-gray-800">Manajemen pengajuan Gajiku memiliki fitur yang komprehensif dan memudahkan untuk kebutuhan bisnis dan semua proses absensi.</p>
+        </div>
+        <ul className="flex flex-col gap-y-2 ">
+          <li className="flex gap-x-1 items-center">
+            <HiOutlineCheck size={20} className="font-light text-success" />
+            <div>Semua pengajuan & approval melalui aplikasi karyawan</div>
+          </li>
+          <li className="flex gap-x-1 items-center">
+            <HiOutlineCheck size={20} className="font-light text-success" />
+            <div>Cuti setengah hari/jam, cuti pengganti bisa dibuat</div>
+          </li>
+          <li className="flex gap-x-1 items-center">
+            <HiOutlineCheck size={20} className="font-light text-success" />
+            <div>Integrasi dengan payroll gajiku</div>
+          </li>
+          <li className="flex gap-x-1 items-center">
+            <HiOutlineCheck size={20} className="font-light text-success" />
+            <div>Perhitungan bisa dengan aturan pemerintah ataupun custom</div>
+          </li>
+        </ul>
       </div>
-      <ul className="flex flex-col gap-y-2 ">
-        <li className="flex gap-x-1 items-center">
-          <HiOutlineCheck size={20} className="font-light text-success" />
-          <div>Semua pengajuan & approval melalui aplikasi karyawan</div>
-        </li>
-        <li className="flex gap-x-1 items-center">
-          <HiOutlineCheck size={20} className="font-light text-success" />
-          <div>Cuti setengah hari/jam, cuti pengganti bisa dibuat</div>
-        </li>
-        <li className="flex gap-x-1 items-center">
-          <HiOutlineCheck size={20} className="font-light text-success" />
-          <div>Integrasi dengan payroll gajiku</div>
-        </li>
-        <li className="flex gap-x-1 items-center">
-          <HiOutlineCheck size={20} className="font-light text-success" />
-          <div>Perhitungan bisa dengan aturan pemerintah ataupun custom</div>
-        </li>
-      </ul>
-    </div>
     </section>
-   
-
-    
   </DefaultLayout>
 }
      
