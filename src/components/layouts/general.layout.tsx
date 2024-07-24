@@ -27,7 +27,7 @@ export const DefaultLayout = (props: { children?: ReactNode, className?: string 
                 <li><Link href="#">Reimbursement System</Link></li>
                 <li><Link href="#">Salary Loan</Link></li>
                 <li><Link href="#">Digital Product</Link></li>
-                <li><Link href="#">Production Tracker</Link></li>
+                <li><Link href="/produk/production-tracker">Production Tracker</Link></li>
               </ul>
             </li>
             <li>
@@ -55,7 +55,7 @@ export const DefaultLayout = (props: { children?: ReactNode, className?: string 
             <Dropdown.Item href="#">Reimbursement System</Dropdown.Item>
             <Dropdown.Item href="#">Salary Loan</Dropdown.Item>
             <Dropdown.Item href="#">Digital Product</Dropdown.Item>
-            <Dropdown.Item href="#">Production Tracker</Dropdown.Item>
+            <Dropdown.Item href="/produk/production-tracker">Production Tracker</Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
         <Dropdown hover={true}>
@@ -115,7 +115,7 @@ export const DefaultLayout = (props: { children?: ReactNode, className?: string 
         <Link href="#" className="link link-hover">Reimbursement System</Link>
         <Link href="#" className="link link-hover">Salary Loan</Link>
         <Link href="#" className="link link-hover">Digital Product</Link>
-        <Link href="#" className="link link-hover">Production Tracker</Link>
+        <Link href="/produk/production-tracker" className="link link-hover">Production Tracker</Link>
       </div>
       <div>
         <Footer.Title>Lainnya</Footer.Title>
