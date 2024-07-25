@@ -7,3 +7,4 @@ docker image rm gcr.io/gajikuapp/frontend/gajikuapp-com gajikuapp-com
 
 <!-- Build production in local -->
 export NODE_ENV=production && npm run build && npm start
+ssh -i ~/.ssh/az/gajiku-az-key.pem azureuser@10.224.0.6
