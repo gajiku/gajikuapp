@@ -24,7 +24,7 @@ export const DefaultLayout = (props: { children?: ReactNode, className?: string 
                 <li><Link href="/earned-wage-access">Earned Wage Access</Link></li>
                 <li><Link href="/produk/absensi-karyawan">Absensi Karyawan (Online)</Link></li>
                 <li><Link href="/payroll">Payroll</Link></li>
-                <li><Link href="#">Reimbursement System</Link></li>
+                <li><Link href="/produk/reimbursement">Reimbursement System</Link></li>
                 <li><Link href="#">Salary Loan</Link></li>
                 <li><Link href="#">Digital Product</Link></li>
                 <li><Link href="/produk/production-tracker">Production Tracker</Link></li>
@@ -52,7 +52,7 @@ export const DefaultLayout = (props: { children?: ReactNode, className?: string 
             <Dropdown.Item href="/earned-wage-access">Earned Wage Access</Dropdown.Item>
             <Dropdown.Item href="/produk/absensi-karyawan">Absensi Karyawan (Online)</Dropdown.Item>
             <Dropdown.Item href="/payroll">Payroll</Dropdown.Item>
-            <Dropdown.Item href="#">Reimbursement System</Dropdown.Item>
+            <Dropdown.Item href="/produk/reimbursement">Reimbursement System</Dropdown.Item>
             <Dropdown.Item href="#">Salary Loan</Dropdown.Item>
             <Dropdown.Item href="#">Digital Product</Dropdown.Item>
             <Dropdown.Item href="/produk/production-tracker">Production Tracker</Dropdown.Item>
@@ -112,7 +112,7 @@ export const DefaultLayout = (props: { children?: ReactNode, className?: string 
         <Link href="/earned-wage-access" className="link link-hover">Earned Wage Access</Link>
         <Link href="/produk/absensi-karyawan" className="link link-hover">Absensi Karyawan (Online)</Link>
         <Link href="/payroll" className="link link-hover">Payroll</Link>
-        <Link href="#" className="link link-hover">Reimbursement System</Link>
+        <Link href="/produk/reimbursement" className="link link-hover">Reimbursement System</Link>
         <Link href="#" className="link link-hover">Salary Loan</Link>
         <Link href="#" className="link link-hover">Digital Product</Link>
         <Link href="/produk/production-tracker" className="link link-hover">Production Tracker</Link>
