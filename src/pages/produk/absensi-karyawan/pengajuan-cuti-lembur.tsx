@@ -1,11 +1,14 @@
 import { DefaultLayout } from "@/components/layouts/general.layout";
-import { HiArrowRight, HiOutlineBriefcase, HiOutlineCalendar, HiOutlineChartBar, HiOutlineCheck, HiOutlineCheckCircle, HiOutlineClock, HiOutlinePlusCircle, HiOutlineUserGroup } from "react-icons/hi";
-import { Button, Link } from "react-daisyui";
+import { HiArrowRight, HiOutlineCheck } from "react-icons/hi";
+import { Button, PhoneMockup, WindowMockup } from "react-daisyui";
 import Image from "next/image";
 import Head from "next/head";
 import HomepageBackdrop  from "@/assets/homepage/backdrop.png";
 import GajikuHeroImage  from "@/assets/gajiku-hero-image.png";
 import PlaceholderEwa  from "@/assets/ewa/placeholder-ewa.svg";
+import RequestLeaveImg  from "@/assets/product/request-leave.png";
+import RequestOvertimeImg  from "@/assets/product/request-overtime.png";
+import RequestApprovalImg  from "@/assets/product/request-approval.png";
 
 export default function Page() {
   return <DefaultLayout>
@@ -53,12 +56,16 @@ export default function Page() {
           </div>
         </div>
         <div className="content-center">
-          <Image src={PlaceholderEwa} className="h-fit  px-6" alt="Gajiku employee apps"   loading="lazy" />
+          <PhoneMockup className="max-w-64 aspect-[9/16]">
+            <Image src={RequestLeaveImg} className="max-w-64 aspect-[9/16] mb-auto mr-auto pr-6 pb-4" alt="Gajiku MAster Shift" loading="lazy" />
+          </PhoneMockup>
         </div>
 
 
-        <div className="content-center">
-          <Image src={PlaceholderEwa} className="h-fit  px-6" alt="Gajiku employee apps"   loading="lazy" />
+        <div className="content-center text-right pr-6">
+          <PhoneMockup className="max-w-64 aspect-[9/16] ">
+            <Image src={RequestOvertimeImg} className="max-w-64 aspect-[9/16] mb-auto mr-auto pr-6 pb-4" alt="Gajiku MAster Shift" loading="lazy" />
+          </PhoneMockup>
         </div>
         <div className="flex flex-col gap-y-4 justify-center">
           <h3 className="text-3xl font-normal">Pengajuan Lembur</h3>
@@ -84,7 +91,9 @@ export default function Page() {
         </div>
 
         <div className="content-center">
-          <Image src={PlaceholderEwa} className="h-fit  px-6" alt="Gajiku employee apps"   loading="lazy" />
+          <WindowMockup className="w-full" border frameColor="base-200">
+            <Image src={RequestApprovalImg} className="h-fit w-full p-0" alt="Gajiku MAster Shift" loading="lazy" />
+          </WindowMockup>
         </div>
         <div className="flex flex-col gap-y-4 justify-center">
           <h3 className="text-3xl font-normal">Mekanisme persetujuan yang fleksibel</h3>

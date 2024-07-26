@@ -1,11 +1,13 @@
 import { DefaultLayout } from "@/components/layouts/general.layout";
-import { HiArrowRight, HiOutlineBriefcase, HiOutlineCalendar, HiOutlineChartBar, HiOutlineCheck, HiOutlineCheckCircle, HiOutlineClock, HiOutlinePlusCircle, HiOutlineUserGroup } from "react-icons/hi";
-import { Button, Link } from "react-daisyui";
+import { HiArrowRight } from "react-icons/hi";
+import { Button, PhoneMockup, WindowMockup } from "react-daisyui";
 import Image from "next/image";
 import Head from "next/head";
 import HomepageBackdrop  from "@/assets/homepage/backdrop.png";
 import GajikuHeroImage  from "@/assets/gajiku-hero-image.png";
-import PlaceholderEwa  from "@/assets/ewa/placeholder-ewa.svg";
+import MasterShiftImg  from "@/assets/product/shift-master.png";
+import OpenShiftImg  from "@/assets/product/shift-open.png";
+import WfhShiftImg  from "@/assets/product/shift-wfh.png";
 
 export default function Page() {
   return <DefaultLayout>
@@ -51,11 +53,15 @@ export default function Page() {
           </div>
         </div>
         <div className="content-center">
-          <Image src={PlaceholderEwa} className="h-fit  px-6" alt="Gajiku employee apps"   loading="lazy" />
+          <WindowMockup className="w-full" border frameColor="base-200">
+            <Image src={MasterShiftImg} className="h-fit w-full p-0" alt="Gajiku MAster Shift" loading="lazy" />
+          </WindowMockup>
         </div>
 
         <div className="content-center">
-          <Image src={PlaceholderEwa} className="h-fit  px-6" alt="Gajiku employee apps"   loading="lazy" />
+          <WindowMockup className="w-full" border frameColor="base-200">
+            <Image src={OpenShiftImg} className="h-fit w-full p-0" alt="Gajiku Open Shift" loading="lazy" />
+          </WindowMockup>
         </div>
         <div className="flex flex-col gap-y-4 justify-center">
           <h3 className="text-3xl font-normal">Kelola jadwal karyawan lapangan dan produksi</h3>
@@ -73,7 +79,9 @@ export default function Page() {
           </div>
         </div>
         <div className="content-center">
-          <Image src={PlaceholderEwa} className="h-fit  px-6" alt="Gajiku employee apps"   loading="lazy" />
+          <PhoneMockup className="max-w-xs max-h-fit">
+            <Image src={WfhShiftImg} className="w-fit pr-6 mb-auto" alt="Gajiku Shift WFH" loading="lazy" />
+          </PhoneMockup>
         </div>
 
       </div>

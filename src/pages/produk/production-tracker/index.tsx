@@ -1,11 +1,13 @@
 import { DefaultLayout } from "@/components/layouts/general.layout";
-import { HiArrowRight, HiOutlineBriefcase, HiOutlineCalendar, HiOutlineChartBar, HiOutlineCheck, HiOutlineCheckCircle, HiOutlineClock, HiOutlinePlusCircle, HiOutlineUserGroup } from "react-icons/hi";
-import { Button, Link } from "react-daisyui";
+import { HiArrowRight } from "react-icons/hi";
+import { Accordion, Button, Card, WindowMockup } from "react-daisyui";
 import Image from "next/image";
 import Head from "next/head";
 import HomepageBackdrop  from "@/assets/homepage/backdrop.png";
 import GajikuHeroImage  from "@/assets/gajiku-hero-image.png";
 import PlaceholderEwa  from "@/assets/ewa/placeholder-ewa.svg";
+import DashboardImg from '@/assets/product/production-tracker-dashboard.png';
+import ReportImg from '@/assets/product/production-tracker-report.png';
 
 export default function Page() {
   return <DefaultLayout>
@@ -22,7 +24,7 @@ export default function Page() {
       <div className="grid lg:grid-cols-2">
         <div className="px-6 antialiased">
           <h1 className="text-primary text-[3rem]/[1.2] mb-4 font-extrabold">Production Tracker</h1>
-          <p className="text-[1.25rem]/[1.75] font-normal mb-8">Perhitungan upah berdasarkan hasil produksi jadi lebih mudah dengan Gajiku Production Tracker</p>
+          <p className="text-[1.25rem]/[1.75] font-normal mb-8">Sistem pencatatan hasil produksi. Perhitungan upah berdasarkan hasil produksi dapat dilakukan dengan Gajiku Production Tracker</p>
           <Button tag="a" color="primary" className="text-white" size="sm" href="/contact-us">Hubungi Kami <HiArrowRight /></Button>
         </div>
         <div className="content-center lg:block hidden">
@@ -44,23 +46,7 @@ export default function Page() {
     <section className="py-16 lg:px-32 md:px-16 px-4">
       {/* <h2 className="text-primary text-[2.5rem]/[1.2] mb-16 font-extrabold text-center">Fitur Absensi Karyawan</h2> */}
       <div className="grid md:grid-cols-2 gap-y-16 gap-x-8">
-        <div className="flex flex-col gap-y-4 justify-center">
-          <h3 className="text-3xl font-normal">Multi Level User</h3>
-          <p className="text-lg font-[350]">
-            Karyawan dapat di atur sebagai worker, checker, operator ataupun manager dimana worker melakukan input, checker sebagai penjaga dan manager sebagai approver terakhir.
-          </p>
-          <div className="w-fit mt-4">
-            <Button tag="a" color="primary" className="text-white" size="sm" href="/contact-us">Hubungi Kami <HiArrowRight /></Button>
-          </div>
-        </div>
-        <div className="content-center">
-          <Image src={PlaceholderEwa} className="h-fit  px-6" alt="Gajiku employee apps"   loading="lazy" />
-        </div>
-
-
-        <div className="content-center">
-          <Image src={PlaceholderEwa} className="h-fit  px-6" alt="Gajiku employee apps"   loading="lazy" />
-        </div>
+      
         <div className="flex flex-col gap-y-4 justify-center">
           <h3 className="text-3xl font-normal">Manajemen Proyek</h3>
           <p className="text-lg font-[350]">
@@ -70,7 +56,17 @@ export default function Page() {
             <Button tag="a" color="primary" className="text-white" size="sm" href="/contact-us">Hubungi Kami <HiArrowRight /></Button>
           </div>
         </div>
+        <div className="content-center">
+          <WindowMockup className="w-full" border frameColor="base-200">
+            <Image src={DashboardImg} className="h-fit w-full p-0" alt="Gajiku Production Tracker" loading="lazy" />
+          </WindowMockup>
+        </div>
 
+        <div className="content-center">
+          <WindowMockup className="w-full" border frameColor="base-200">
+            <Image src={ReportImg} className="h-fit w-full p-0" alt="Gajiku Production Tracker" loading="lazy" />
+          </WindowMockup>
+        </div>
         <div className="flex flex-col gap-y-4 justify-center">
           <h3 className="text-3xl font-normal">Hitung Upah Berdasarkan Hasil Produksi</h3>
           <p className="text-lg font-[350]">
@@ -80,9 +76,60 @@ export default function Page() {
             <Button tag="a" color="primary" className="text-white" size="sm" href="/contact-us">Hubungi Kami <HiArrowRight /></Button>
           </div>
         </div>
-        <div className="content-center">
-          <Image src={PlaceholderEwa} className="h-fit  px-6" alt="Gajiku employee apps"   loading="lazy" />
+        
+        <div className="flex flex-col gap-y-4 justify-center">
+          <h3 className="text-3xl font-normal">Multi Role</h3>
+          
+          <p className="text-lg font-[350]">
+            Karyawan dapat di atur sebagai worker, checker, operator ataupun manager dimana masing-masing memiliki tugasnya.
+          </p>
+          <div className="w-fit mt-4">
+            <Button tag="a" color="primary" className="text-white" size="sm" href="/contact-us">Hubungi Kami <HiArrowRight /></Button>
+          </div>
         </div>
+        <div className="content-center">
+        <Card>
+            <Card.Body className="gap-0 px-4 py-5">
+              <Accordion defaultChecked icon="arrow" className="rounded-none border-b-[1px]">
+                <Accordion.Title className="font-bold pl-2 py-2">Worker</Accordion.Title>
+                <Accordion.Content className="text-sm px-2">
+                  <p>
+                    Worker dapat memasukan/meng-input data hasil produksi melalui aplikasi gajiku
+                  </p>
+                </Accordion.Content>
+              </Accordion>
+              <Accordion icon="arrow" className="rounded-none border-b-[1px]">
+                <Accordion.Title className="font-bold pl-2 py-2">Operator</Accordion.Title>
+                <Accordion.Content className="text-sm px-2">
+                  <p>
+                    Operator dapat menginput hasil produksi tim dibawahnya setelah worker melaporkan hasil produksi
+                  </p>
+                </Accordion.Content>
+              </Accordion>
+              <Accordion icon="arrow" className="rounded-none border-b-[1px]">
+                <Accordion.Title className="font-bold pl-2 py-2">Checker</Accordion.Title>
+                <Accordion.Content className="text-sm px-2">
+                  <p>
+                    Checker adalah approver layer pertama sebelum di teruskan kepada manager. Jika ditolak, proses akan dikembalikan ke worker/operator untuk diperbaiki
+                  </p>
+                </Accordion.Content>
+              </Accordion>
+              <Accordion icon="arrow" className="rounded-none">
+                <Accordion.Title className="font-bold pl-2 py-2">Manager</Accordion.Title>
+                <Accordion.Content className="text-sm px-2">
+                  <p>
+                    Approver terakhir sebelum nantinya akan diteruskan ke HR (dashboard) agar bisa dilakukan penghitungan upah
+                  </p>
+                </Accordion.Content>
+              </Accordion>
+            </Card.Body>
+          </Card>
+        </div>
+
+
+        
+
+        
        
       </div>
     </section>

@@ -23,7 +23,7 @@ export const DefaultLayout = (props: { children?: ReactNode, className?: string 
               <ul className="p-2">
                 <li><Link href="/earned-wage-access">Earned Wage Access</Link></li>
                 <li><Link href="/produk/absensi-karyawan">Absensi Karyawan (Online)</Link></li>
-                <li><Link href="/payroll">Payroll</Link></li>
+                <li><Link href="/produk/payroll">Payroll</Link></li>
                 <li><Link href="/produk/reimbursement">Reimbursement System</Link></li>
                 <li><Link href="#">Salary Loan</Link></li>
                 <li><Link href="#">Digital Product</Link></li>
@@ -51,7 +51,7 @@ export const DefaultLayout = (props: { children?: ReactNode, className?: string 
           <Dropdown.Menu className="bg-white w-max text-base text-primary font-semibold">
             <Dropdown.Item href="/earned-wage-access">Earned Wage Access</Dropdown.Item>
             <Dropdown.Item href="/produk/absensi-karyawan">Absensi Karyawan (Online)</Dropdown.Item>
-            <Dropdown.Item href="/payroll">Payroll</Dropdown.Item>
+            <Dropdown.Item href="/produk/payroll">Payroll</Dropdown.Item>
             <Dropdown.Item href="/produk/reimbursement">Reimbursement System</Dropdown.Item>
             <Dropdown.Item href="#">Salary Loan</Dropdown.Item>
             <Dropdown.Item href="#">Digital Product</Dropdown.Item>
@@ -111,7 +111,7 @@ export const DefaultLayout = (props: { children?: ReactNode, className?: string 
         <Footer.Title>Produk</Footer.Title>
         <Link href="/earned-wage-access" className="link link-hover">Earned Wage Access</Link>
         <Link href="/produk/absensi-karyawan" className="link link-hover">Absensi Karyawan (Online)</Link>
-        <Link href="/payroll" className="link link-hover">Payroll</Link>
+        <Link href="/produk/payroll" className="link link-hover">Payroll</Link>
         <Link href="/produk/reimbursement" className="link link-hover">Reimbursement System</Link>
         <Link href="#" className="link link-hover">Salary Loan</Link>
         <Link href="#" className="link link-hover">Digital Product</Link>

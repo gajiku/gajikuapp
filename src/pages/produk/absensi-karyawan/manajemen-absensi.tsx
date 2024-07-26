@@ -1,11 +1,14 @@
 import { DefaultLayout } from "@/components/layouts/general.layout";
-import { HiArrowRight, HiOutlineBriefcase, HiOutlineCalendar, HiOutlineChartBar, HiOutlineCheck, HiOutlineCheckCircle, HiOutlineClock, HiOutlinePlusCircle, HiOutlineUserGroup } from "react-icons/hi";
-import { Button, Link } from "react-daisyui";
+import { HiArrowRight, HiOutlineCheck } from "react-icons/hi";
+import { Button, WindowMockup } from "react-daisyui";
 import Image from "next/image";
 import Head from "next/head";
 import HomepageBackdrop  from "@/assets/homepage/backdrop.png";
 import GajikuHeroImage  from "@/assets/gajiku-hero-image.png";
 import PlaceholderEwa  from "@/assets/ewa/placeholder-ewa.svg";
+import AttendancePresenceImg  from "@/assets/product/attendance-presence.png";
+import AttendanceLocationImg  from "@/assets/product/attendance-location.png";
+import AttendanceDashboardImg  from "@/assets/product/attendance-dashboard.png";
 
 export default function Page() {
   return <DefaultLayout>
@@ -72,12 +75,26 @@ export default function Page() {
           </div>
         </div>
         <div className="content-center">
-          <Image src={PlaceholderEwa} className="h-fit  px-6" alt="Gajiku employee apps"   loading="lazy" />
+          <div aria-label="Phone mockup" className="mockup-phone max-w-xs max-h-fit">
+            <div className="camera"></div>
+            <div className="display">
+              <div className="artboard artboard-demo phone-1 !h-fit">
+              <Image src={AttendancePresenceImg} className="pr-6 mb-auto " alt="Gajiku Attendance" loading="lazy" />
+              </div>
+            </div>
+          </div>
         </div>
 
 
-        <div className="content-center">
-          <Image src={PlaceholderEwa} className="h-fit  px-6" alt="Gajiku employee apps"   loading="lazy" />
+        <div className="content-center text-right pr-6">
+          <div aria-label="Phone mockup" className="mockup-phone max-w-xs max-h-fit">
+            <div className="camera"></div>
+            <div className="display">
+              <div className="artboard artboard-demo phone-1 !h-fit">
+              <Image src={AttendanceLocationImg} className="pr-6 mb-auto " alt="Gajiku Attendance Location" loading="lazy" />
+              </div>
+            </div>
+          </div>
         </div>
         <div className="flex flex-col gap-y-4 justify-center">
           <h3 className="text-3xl font-normal">Absensi Untuk Karyawan Lapangan</h3>
@@ -122,7 +139,9 @@ export default function Page() {
           </div>
         </div>
         <div className="content-center">
-          <Image src={PlaceholderEwa} className="h-fit  px-6" alt="Gajiku employee apps"   loading="lazy" />
+          <WindowMockup className="w-full" border frameColor="base-200">
+            <Image src={AttendanceDashboardImg} className="h-fit w-full p-0" alt="Gajiku MAster Shift" loading="lazy" />
+          </WindowMockup>
         </div>
 
         
