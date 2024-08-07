@@ -12,7 +12,7 @@ const BlogPostPage: NextPage<{slug: string}> = (param) => {
     {/* Form */}
     {
     param.slug === "download-template-perhitungan-gajiku-excel" &&
-    <section className="py-16 lg:px-32 md:px-16 px-4 text-center mx-auto max-w-4xl">
+    <section className="py-16 lg:px-32 md:px-16 px-4 text-center mx-auto max-w-4xl" id="download-form">
       <h2 className="text-2xl mb-4 text-center font-semibold">Download Template Excel Perhitungan Gaji Karyawan</h2>
       <Iframe 
         url="https://tally.so/embed/w7oNpP?hideTitle=1&transparentBackground=1&dynamicHeight=1"
