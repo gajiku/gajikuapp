@@ -15,7 +15,7 @@ const BlogPostPage: NextPage<{slug: string}> = (param) => {
     <section className="py-16 lg:px-32 md:px-16 px-4 text-center mx-auto max-w-4xl">
       <h2 className="text-2xl mb-4 text-center font-semibold">Download Template Excel Perhitungan Gaji Karyawan</h2>
       <Iframe 
-        url="https://tally.so/embed/3jxN24?hideTitle=1&transparentBackground=1&dynamicHeight=1"
+        url="https://tally.so/embed/w7oNpP?hideTitle=1&transparentBackground=1&dynamicHeight=1"
         width="100%"
         height="100%"
         className="h-full"
