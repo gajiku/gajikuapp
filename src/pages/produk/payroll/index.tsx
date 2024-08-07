@@ -248,7 +248,6 @@ export default function Index() {
               WhatsApp Kami
             </a>
           </div>
-         
         </section>
 
         <section className="py-16 lg:px-32 md:px-16 px-4 text-center mx-auto max-w-4xl">
