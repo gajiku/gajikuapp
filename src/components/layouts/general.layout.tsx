@@ -22,12 +22,12 @@ export const DefaultLayout = (props: { children?: ReactNode, className?: string 
               <a>Produk Kami</a>
               <ul className="p-2">
                 <li><Link href="/earned-wage-access">Earned Wage Access</Link></li>
-                <li><Link href="#">Mobile Attendance</Link></li>
-                <li><Link href="#">Payroll</Link></li>
-                <li><Link href="#">Reimbursement System</Link></li>
+                <li><Link href="/produk/absensi-karyawan">Absensi Karyawan (Online)</Link></li>
+                <li><Link href="/produk/payroll">Payroll</Link></li>
+                <li><Link href="/produk/reimbursement">Reimbursement System</Link></li>
                 <li><Link href="#">Salary Loan</Link></li>
                 <li><Link href="#">Digital Product</Link></li>
-                <li><Link href="#">Production Tracker</Link></li>
+                <li><Link href="/produk/production-tracker">Production Tracker</Link></li>
               </ul>
             </li>
             <li>
@@ -50,12 +50,12 @@ export const DefaultLayout = (props: { children?: ReactNode, className?: string 
           </Dropdown.Toggle>
           <Dropdown.Menu className="bg-white w-max text-base text-primary font-semibold">
             <Dropdown.Item href="/earned-wage-access">Earned Wage Access</Dropdown.Item>
-            <Dropdown.Item href="#">Mobile Attendance</Dropdown.Item>
-            <Dropdown.Item href="#">Payroll</Dropdown.Item>
-            <Dropdown.Item href="#">Reimbursement System</Dropdown.Item>
+            <Dropdown.Item href="/produk/absensi-karyawan">Absensi Karyawan (Online)</Dropdown.Item>
+            <Dropdown.Item href="/produk/payroll">Payroll</Dropdown.Item>
+            <Dropdown.Item href="/produk/reimbursement">Reimbursement System</Dropdown.Item>
             <Dropdown.Item href="#">Salary Loan</Dropdown.Item>
             <Dropdown.Item href="#">Digital Product</Dropdown.Item>
-            <Dropdown.Item href="#">Production Tracker</Dropdown.Item>
+            <Dropdown.Item href="/produk/production-tracker">Production Tracker</Dropdown.Item>
           </Dropdown.Menu>
         </Dropdown>
         <Dropdown hover={true}>
@@ -108,14 +108,14 @@ export const DefaultLayout = (props: { children?: ReactNode, className?: string 
         <Link href="/contact-us" className="link link-hover">Kontak</Link>
       </div>
       <div>
-        <Footer.Title>Produk</Footer.Title>        
+        <Footer.Title>Produk</Footer.Title>
         <Link href="/earned-wage-access" className="link link-hover">Earned Wage Access</Link>
-        <Link href="#" className="link link-hover">Mobile Attendance</Link>
-        <Link href="#" className="link link-hover">Payroll</Link>
-        <Link href="#" className="link link-hover">Reimbursement System</Link>
+        <Link href="/produk/absensi-karyawan" className="link link-hover">Absensi Karyawan (Online)</Link>
+        <Link href="/produk/payroll" className="link link-hover">Payroll</Link>
+        <Link href="/produk/reimbursement" className="link link-hover">Reimbursement System</Link>
         <Link href="#" className="link link-hover">Salary Loan</Link>
         <Link href="#" className="link link-hover">Digital Product</Link>
-        <Link href="#" className="link link-hover">Production Tracker</Link>
+        <Link href="/produk/production-tracker" className="link link-hover">Production Tracker</Link>
       </div>
       <div>
         <Footer.Title>Lainnya</Footer.Title>
