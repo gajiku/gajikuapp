@@ -248,8 +248,12 @@ export default function Index() {
               WhatsApp Kami
             </a>
           </div>
+         
+        </section>
+
+        <section className="py-16 lg:px-32 md:px-16 px-4 text-center mx-auto max-w-4xl">
           <h2 className="text-2xl mb-4 text-center font-semibold">Atau langsung jadwalkan demo</h2>
-          <Iframe
+          <Iframe 
             url="https://tally.so/embed/meE2je?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
             width="100%"
             height="100%"
