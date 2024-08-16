@@ -86,6 +86,18 @@ const PostPage: NextPage<{ post: EmbedPost }> = (param) => {
          frameBorder={0}
        />
       </section> :
+      param.post.slug === "download-absensi-karyawan-format-excel-gratis" ?
+      <section className="py-16 lg:px-32 md:px-16 px-4 text-center mx-auto max-w-4xl" id="download-form">
+       <h2 className="text-2xl mb-4 text-center font-semibold">Download Absensi Karyawan Format Excel</h2>
+       <Iframe 
+         url="https://tally.so/embed/w7o4X9?hideTitle=1&transparentBackground=1&dynamicHeight=1"
+         width="100%"
+         height="100%"
+         className="h-full"
+         scrolling="no"
+         frameBorder={0}
+       />
+      </section> :
       <></>
       }
     </DefaultLayout>

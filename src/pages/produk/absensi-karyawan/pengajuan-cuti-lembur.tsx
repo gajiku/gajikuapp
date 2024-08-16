@@ -17,6 +17,7 @@ export default function Page() {
       <meta name="description" content="Dengan gajiku karyawan dapat dengan mudah mengajukan cuti, lembur, hingga work from home melalui aplikasi android/ios gajiku" />
       <meta name="twitter:title" content="Aplikasi Cuti, Lembur dan Pengajuan Lainnya - Gajiku" />
       <meta name="description" content="Dengan gajiku karyawan dapat dengan mudah mengajukan cuti, lembur, hingga work from home melalui aplikasi android/ios gajiku" />
+      <link rel="canonical" href="https://www.gajikuapp.com/produk/manajemen-cuti-lembur" />
     </Head>
     
     <section id="hero" className={`bg-cover  inset-x-0 inset-y-0 pb-16 pt-16 lg:px-32 md:px-16 px-4`} 

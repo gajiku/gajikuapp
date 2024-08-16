@@ -16,6 +16,7 @@ export default function Page() {
       <meta name="description" content="Kelola penjadwalan atau shift karyawan dengan mudah: jadwal 9to5, open shift, hybrid, work from home" />
       <meta name="twitter:title" content="Sistem Penjadwalan dan Shift Karyawan" />
       <meta name="description" content="Kelola penjadwalan atau shift karyawan dengan mudah: jadwal 9to5, open shift, hybrid, work from home" />
+      <link rel="canonical" href="https://www.gajikuapp.com/produk/shift" />
     </Head>
     
     <section id="hero" className={`bg-cover  inset-x-0 inset-y-0 pb-16 pt-16 lg:px-32 md:px-16 px-4`} 

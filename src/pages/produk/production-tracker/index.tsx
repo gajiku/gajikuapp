@@ -16,6 +16,7 @@ export default function Page() {
       <meta name="description" content="Absensi karyawan menjadi simpel dan fleksibel. Semua data termasuk masuk, absen, cuti dapat di akses secara real-time" />
       <meta name="twitter:title" content="Aplikasi Absensi Karyawan Online - Gajiku" />
       <meta name="description" content="Absensi karyawan menjadi simpel dan fleksibel. Semua data termasuk masuk, absen, cuti dapat di akses secara real-time" />
+      <link rel="canonical" href="https://www.gajikuapp.com/produk/production-tracker" />
     </Head>
     
     <section id="hero" className={`bg-cover  inset-x-0 inset-y-0 pb-16 pt-16 lg:px-32 md:px-16 px-4`} 

@@ -14,6 +14,7 @@ export default function Page() {
       <meta name="description" content="Sistem absensi gajiku di lengkapi dashboard untuk melakukan monitoring dan konfigurasi yang fleksibel" />
       <meta name="twitter:title" content="Dashboard Absensi Online" />
       <meta name="description" content="Sistem absensi gajiku di lengkapi dashboard untuk melakukan monitoring dan konfigurasi yang fleksibel" />
+      <link rel="canonical" href="https://www.gajikuapp.com/produk/dashboard" />
     </Head>
 
     

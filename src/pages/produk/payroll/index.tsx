@@ -22,6 +22,7 @@ export default function Index() {
           content="Solusi payroll terlengkap untuk perusahaan Anda! Kelola penggajian, potongan pajak, dan tunjangan karyawan dengan mudah dan cepat. Dapatkan laporan akurat, otomatisasi proses, dan dukungan penuh untuk memastikan kepatuhan dan efisiensi."
         />
         <meta name="twitter:title" content="Gajiku - Payroll" />
+        <link rel="canonical" href="https://www.gajikuapp.com/produk/payroll" />
       </Head>
       <Script src="https://tally.so/widgets/embed.js"></Script>
 
