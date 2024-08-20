@@ -100,6 +100,7 @@ const PostPage: NextPage<{ post: EmbedPost }> = (param) => {
       </section> :
       <></>
       }
+      
     </DefaultLayout>
   </>
 }
