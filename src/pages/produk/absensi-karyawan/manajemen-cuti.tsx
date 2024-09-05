@@ -14,6 +14,7 @@ export default function Page() {
       <meta name="description" content="Earned Wage Access (EWA) adalah sebuah fitur keuangan yang memungkinkan karyawan untuk mengakses sebagian dari gaji mereka sebelum jadwal gajian resmi." />
       <meta name="twitter:title" content="Gajiku - Earned Wage Access" />
       <meta name="description" content="Earned Wage Access (EWA) adalah sebuah fitur keuangan yang memungkinkan karyawan untuk mengakses sebagian dari gaji mereka sebelum jadwal gajian resmi." />
+      <link rel="canonical" href="https://www.gajikuapp.com/produk/manajemen-cuti" />
     </Head>
     
     <section id="hero" className={`bg-cover  inset-x-0 inset-y-0 pb-16 pt-16 lg:px-32 md:px-16 px-4`} 
