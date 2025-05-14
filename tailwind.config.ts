@@ -10,6 +10,10 @@ const config: Config = {
     './node_modules/react-daisyui/dist/**/*.js',
   ],
   theme: {
+    container: {
+      center: true,
+      padding: '1.75rem',
+    },
     extend: {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',

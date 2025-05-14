@@ -12,6 +12,8 @@ export default function Document() {
     <Html lang="id">
       <Head>
         <meta name="robots" content="index, follow" />
+        <meta name="author" content="Gajiku" />
+        <meta name="publisher" content="Sampradaa Pte Ltd" />
       </Head>
       <body>
         <Main />

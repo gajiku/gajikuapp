@@ -5,12 +5,13 @@ import LogoSquare from '@/assets/logo.png';
 import { HiArrowRight } from 'react-icons/hi';
 import { FaInstagram, FaLinkedin, FaWhatsappSquare } from 'react-icons/fa';
 import Image from 'next/image';
+import classNames from 'classnames';
 
 export const DefaultLayout = (props: { children?: ReactNode; className?: string }) => {
   return (
     <div className="flex flex-col min-h-screen">
-      <div className="z-[500]">
-        <Navbar className="lg:px-16 shadow-lg h-[80px]">
+      <div className="fixed w-full bg-white z-40">
+        <Navbar className="lg:px-16 shadow h-20">
           <Navbar.Start className="">
             <Dropdown>
               <Button tag="label" color="ghost" tabIndex={0} className="lg:hidden">
@@ -41,7 +42,7 @@ export const DefaultLayout = (props: { children?: ReactNode; className?: string 
                       <Link href="/produk/reimbursement">Reimbursement System</Link>
                     </li>
                     <li>
-                      <Link href="#">Salary Loan</Link>
+                      <Link href="/salary-loan">Salary Loan</Link>
                     </li>
                     <li>
                       <Link href="#">Digital Product</Link>
@@ -83,7 +84,7 @@ export const DefaultLayout = (props: { children?: ReactNode; className?: string 
                 <Dropdown.Item href="/produk/absensi-karyawan">Absensi Karyawan (Online)</Dropdown.Item>
                 <Dropdown.Item href="/produk/payroll">Payroll</Dropdown.Item>
                 <Dropdown.Item href="/produk/reimbursement">Reimbursement System</Dropdown.Item>
-                <Dropdown.Item href="#">Salary Loan</Dropdown.Item>
+                <Dropdown.Item href="/salary-loan">Salary Loan</Dropdown.Item>
                 <Dropdown.Item href="#">Digital Product</Dropdown.Item>
                 <Dropdown.Item href="/produk/production-tracker">Production Tracker</Dropdown.Item>
               </Dropdown.Menu>
@@ -122,7 +123,7 @@ export const DefaultLayout = (props: { children?: ReactNode; className?: string 
           </Navbar.End>
         </Navbar>
       </div>
-      <div className={'grow ' + (props.className ?? '')}>{props.children}</div>
+      <div className={classNames('grow pt-20', props.className)}>{props.children}</div>
       <Footer className="p-10 bg-gray-100 ">
         <div>
           <Link href="/">
@@ -195,7 +196,7 @@ export const DefaultLayout = (props: { children?: ReactNode; className?: string 
           <Link href="/produk/reimbursement" className="link link-hover">
             Reimbursement System
           </Link>
-          <Link href="#" className="link link-hover">
+          <Link href="/salary-loan" className="link link-hover">
             Salary Loan
           </Link>
           <Link href="#" className="link link-hover">

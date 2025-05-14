@@ -5,38 +5,9 @@
 
 :root {
   --p: 74.84% 0.111 196.52;
+  --pc: 1 0 0;
   --b1: #ffffff;
-
-  /* font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif; */
-  /*
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255; */
 }
-/*
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
-}
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-} */
 
 .collapse-arrow > .collapse-title:after {
   top: 50%;
