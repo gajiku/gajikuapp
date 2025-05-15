@@ -7,6 +7,7 @@ type HeroProps = {
   image?: StaticImageData;
   children?: ReactNode;
   reverse?: boolean;
+  title?: string;
 };
 
 export default function Hero(props: HeroProps) {
@@ -20,7 +21,10 @@ export default function Hero(props: HeroProps) {
         }}
       >
         <div className="grid lg:grid-cols-2">
-          <div className="flex flex-col gap-8">{props.children}</div>
+          <div className="flex flex-col gap-8 text-slate-700">
+            {props.title && <h1 className="text-primary text-5xl font-bold">{props.title}</h1>}
+            {props.children}
+          </div>
           {props.image && (
             <div className={classNames('content-center lg:block hidden', props.reverse && 'order-first')}>
               <Image src={props.image} alt="Hero Image" loading="lazy" />

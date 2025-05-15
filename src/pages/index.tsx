@@ -38,14 +38,13 @@ export default function Home() {
         <meta name="twitter:title" content="Gajiku - Gajian, on demand" />
       </Head>
 
-      <Hero background={HomepageBackdrop} image={GajikuHeroImage}>
-        <h1 className="text-primary text-5xl leading-tight font-bold">Benefit Terbaik Untuk Karyawan Anda</h1>
-        <p className="leading-6">
+      <Hero background={HomepageBackdrop} image={GajikuHeroImage} title="Benefit Terbaik Untuk Karyawan Anda">
+        <p>
           Gajiku membantu meningkatkan performa dan retensi karyawan perusahaan Anda dengan memberikan akses Gaji di
           depan dan benefit lainnya.
         </p>
         <footer>
-          <Link className="btn btn-primary mb-6" href="/contact-us">
+          <Link className="btn btn-primary mb-8" href="/contact-us">
             Mulai Sekarang
           </Link>
           <div className="flex items-center gap-4">
@@ -56,7 +55,7 @@ export default function Home() {
               <Image src={GooglePlayEn} alt="Gajiku Google Play" className="h-12 w-auto" loading="lazy" />
             </a>
           </div>
-          <small className="text-sm tracking-tight">*Aplikasi Gajiku khusus karyawan</small>
+          <small className="text-sm tracking-tight text-slate-500">*Aplikasi Gajiku khusus karyawan</small>
         </footer>
       </Hero>
 

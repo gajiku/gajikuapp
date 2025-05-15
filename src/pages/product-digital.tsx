@@ -19,11 +19,12 @@ export default function Page() {
       </Head>
 
       <div className="flex flex-col gap-16 mb-16">
-        <Hero background={HomepageBackdrop} image={GajikuHeroImage}>
-          <h1 className="text-primary text-5xl leading-tight font-bold">
-            Belanja Pulsa, Bayar Pakai Gaji yang Sudah Kamu Hasilkan
-          </h1>
-          <p className="leading-6">
+        <Hero
+          background={HomepageBackdrop}
+          image={GajikuHeroImage}
+          title="Belanja Pulsa, Bayar Pakai Gaji yang Sudah Kamu Hasilkan"
+        >
+          <p>
             Butuh pulsa, paket data, atau token listrik tapi gajian masih lama? Gajiku bantu kamu akses sebagian gaji
             lebih awal untuk beli produk digital langsung dari aplikasi.
           </p>
@@ -38,10 +39,10 @@ export default function Page() {
           <h2 className="text-primary text-5xl font-extrabold">Produk Dijital yang Ditawarkan Gajiku</h2>
           <p>Produk Digital adalah fitur yang memungkinkan karyawan membeli kebutuhan digital seperti</p>
           <ul className="flex items-center gap-4">
-            <li className="badge badge-primary badge-outline p-4">Token PLN</li>
-            <li className="badge badge-secondary badge-outline p-4">Pulsa</li>
-            <li className="badge badge-accent badge-outline p-4">Paket Internet</li>
-            <li className="badge badge-success badge-outline p-4">Voucher Deals</li>
+            <li className="btn btn-primary btn-outline">Token PLN</li>
+            <li className="btn btn-secondary btn-outline">Pulsa</li>
+            <li className="btn btn-accent btn-outline">Paket Internet</li>
+            <li className="btn btn-success btn-outline">Voucher Deals</li>
           </ul>
           <p>
             Pembayaran produk dilakukan menggunakan sebagian dari gaji yang sudah kamu hasilkan. Jadi kamu gak perlu

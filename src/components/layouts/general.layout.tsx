@@ -1,10 +1,10 @@
 import { Button, Dropdown, Footer, Navbar } from 'react-daisyui';
 import { FaInstagram, FaLinkedin, FaWhatsappSquare } from 'react-icons/fa';
-import { HiArrowRight } from 'react-icons/hi';
 import Image from 'next/image';
 import Link from 'next/link';
 import LogoSquare from '@/assets/logo.png';
 import LogoWide from '@/assets/logo-wide.png';
+import { LuChevronsRight } from 'react-icons/lu';
 import { ReactNode } from 'react';
 import classNames from 'classnames';
 
@@ -69,8 +69,12 @@ export const DefaultLayout = (props: Props) => {
                     </li>
                   </ul>
                 </li>
-                <Dropdown.Item href="/blog">Blog</Dropdown.Item>
-                <Dropdown.Item href="/contact-us">Kontak Kami</Dropdown.Item>
+                <li>
+                  <Link href="/blog">Blog</Link>
+                </li>
+                <li>
+                  <Link href="/contact-us">Kontak Kami</Link>
+                </li>
               </Dropdown.Menu>
             </Dropdown>
             <Link href="/">
@@ -86,14 +90,30 @@ export const DefaultLayout = (props: Props) => {
                 Produk Kami
               </Dropdown.Toggle>
               <Dropdown.Menu className="bg-white w-max text-base text-primary font-semibold">
-                <Dropdown.Item href="/earned-wage-access">Earned Wage Access</Dropdown.Item>
-                <Dropdown.Item href="/produk/absensi-karyawan">Absensi Karyawan (Online)</Dropdown.Item>
-                <Dropdown.Item href="/produk/payroll">Payroll</Dropdown.Item>
-                <Dropdown.Item href="/produk/reimbursement">Reimbursement System</Dropdown.Item>
-                <Dropdown.Item href="/salary-loan">Salary Loan</Dropdown.Item>
-                <Dropdown.Item href="/employee-loan">Employee Loan</Dropdown.Item>
-                <Dropdown.Item href="/product-digital">Digital Product</Dropdown.Item>
-                <Dropdown.Item href="/produk/production-tracker">Production Tracker</Dropdown.Item>
+                <li>
+                  <Link href="/earned-wage-access">Earned Wage Access</Link>
+                </li>
+                <li>
+                  <Link href="/produk/absensi-karyawan">Absensi Karyawan (Online)</Link>
+                </li>
+                <li>
+                  <Link href="/produk/payroll">Payroll</Link>
+                </li>
+                <li>
+                  <Link href="/produk/reimbursement">Reimbursement System</Link>
+                </li>
+                <li>
+                  <Link href="/salary-loan">Salary Loan</Link>
+                </li>
+                <li>
+                  <Link href="/employee-loan">Employee Loan</Link>
+                </li>
+                <li>
+                  <Link href="/product-digital">Digital Product</Link>
+                </li>
+                <li>
+                  <Link href="/produk/production-tracker">Production Tracker</Link>
+                </li>
               </Dropdown.Menu>
             </Dropdown>
             <Dropdown hover={true}>
@@ -104,8 +124,12 @@ export const DefaultLayout = (props: Props) => {
                 Tentang Gajiku
               </Dropdown.Toggle>
               <Dropdown.Menu className="bg-white w-max text-base text-primary font-semibold">
-                <Dropdown.Item href="/about">Tim Gajiku</Dropdown.Item>
-                <Dropdown.Item href="#">Testimoni</Dropdown.Item>
+                <li>
+                  <Link href="/about">Tim Gajiku</Link>
+                </li>
+                <li>
+                  <Link href="#">Testimoni</Link>
+                </li>
               </Dropdown.Menu>
             </Dropdown>
             <Button
@@ -124,8 +148,8 @@ export const DefaultLayout = (props: Props) => {
             </Button>
           </Navbar.Center>
           <Navbar.End>
-            <Button tag="a" color="primary" className="text-white" size="sm" href="/contact-us">
-              Coba Sekarang <HiArrowRight />
+            <Button tag="a" color="primary" className="text-white" href="/contact-us">
+              Coba Sekarang <LuChevronsRight />
             </Button>
           </Navbar.End>
         </Navbar>

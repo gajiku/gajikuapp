@@ -31,7 +31,7 @@ function Card(props: CardProp) {
             <props.icon size={56} />
           </div>
         )}
-        {props.title && <h3 className="text-2xl font-extrabold tracking-tight text-slate-600">{props.title}</h3>}
+        {props.title && <h3 className="text-2xl font-extrabold tracking-tight text-slate-700">{props.title}</h3>}
         <div className="text-slate-500">{props.children}</div>
       </div>
     </div>
@@ -55,9 +55,8 @@ export default function Page() {
       </Head>
 
       <div className="flex flex-col gap-16 mb-16">
-        <Hero background={HomepageBackdrop} image={GajikuHeroImage}>
-          <h1 className="text-primary text-5xl leading-tight font-bold">Solusi Pinjaman untuk Kebutuhan Bisnis Anda</h1>
-          <p className="leading-6">
+        <Hero background={HomepageBackdrop} image={GajikuHeroImage} title="Solusi Pinjaman untuk Kebutuhan Bisnis Anda">
+          <p>
             Atasi kebutuhan operasional perusahaan dengan cepat dan mudah melalui Salary Loan. Produk ini dirancang
             untuk membantu perusahaan dalam memenuhi kebutuhan finansial jangka pendek, seperti pembayaran gaji
             karyawan, bonus, atau kebutuhan operasional lainnya.
@@ -70,7 +69,7 @@ export default function Page() {
         </Hero>
 
         <section className="container">
-          <h2 className="text-slate-600 text-5xl mb-16 font-extrabold text-center">Kenapa Memilih Salary Loan?</h2>
+          <h2 className="text-slate-700 text-5xl mb-16 font-extrabold text-center">Kenapa Memilih Salary Loan?</h2>
           <ul className="grid lg:grid-cols-3 gap-8">
             <li>
               <Card

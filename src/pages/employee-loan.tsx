@@ -19,9 +19,13 @@ export default function Page() {
       </Head>
 
       <div className="flex flex-col gap-16 mb-16">
-        <Hero background={HomepageBackdrop} image={GajikuHeroImage} reverse>
-          <h1 className="text-primary text-5xl leading-tight font-bold">Pinjaman Karyawan yang Aman & Fleksibel</h1>
-          <p className="leading-6">
+        <Hero
+          background={HomepageBackdrop}
+          image={GajikuHeroImage}
+          reverse
+          title="Pinjaman Karyawan yang Aman & Fleksibel"
+        >
+          <p>
             Mau ajukan pinjaman tanpa ribet dan tanpa takut bunga mencekik? Gajiku punya solusinya lewat Employee Loan -
             pinjaman karyawan langsung dari kantor yang udah kerja sama bareng kami.
           </p>
