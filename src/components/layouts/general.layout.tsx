@@ -1,18 +1,21 @@
-import { ReactNode } from 'react';
-import { Button, Dropdown, Footer, Link, Navbar } from 'react-daisyui';
-import LogoWide from '@/assets/logo-wide.png';
-import LogoSquare from '@/assets/logo.png';
-import { HiArrowRight } from 'react-icons/hi';
+import { Button, Dropdown, Footer, Navbar } from 'react-daisyui';
 import { FaInstagram, FaLinkedin, FaWhatsappSquare } from 'react-icons/fa';
+import { HiArrowRight } from 'react-icons/hi';
 import Image from 'next/image';
+import Link from 'next/link';
+import LogoSquare from '@/assets/logo.png';
+import LogoWide from '@/assets/logo-wide.png';
+import { ReactNode } from 'react';
 import classNames from 'classnames';
 
-export const DefaultLayout = (props: { children?: ReactNode; className?: string }) => {
+type Props = { children?: ReactNode; className?: string };
+
+export const DefaultLayout = (props: Props) => {
   return (
     <div className="flex flex-col min-h-screen">
       <div className="fixed w-full bg-white z-40">
         <Navbar className="lg:px-16 shadow h-20">
-          <Navbar.Start className="">
+          <Navbar.Start>
             <Dropdown>
               <Button tag="label" color="ghost" tabIndex={0} className="lg:hidden">
                 <svg
@@ -45,7 +48,10 @@ export const DefaultLayout = (props: { children?: ReactNode; className?: string 
                       <Link href="/salary-loan">Salary Loan</Link>
                     </li>
                     <li>
-                      <Link href="#">Digital Product</Link>
+                      <Link href="/employee-loan">Employee Loan</Link>
+                    </li>
+                    <li>
+                      <Link href="/product-digital">Digital Product</Link>
                     </li>
                     <li>
                       <Link href="/produk/production-tracker">Production Tracker</Link>
@@ -85,7 +91,8 @@ export const DefaultLayout = (props: { children?: ReactNode; className?: string 
                 <Dropdown.Item href="/produk/payroll">Payroll</Dropdown.Item>
                 <Dropdown.Item href="/produk/reimbursement">Reimbursement System</Dropdown.Item>
                 <Dropdown.Item href="/salary-loan">Salary Loan</Dropdown.Item>
-                <Dropdown.Item href="#">Digital Product</Dropdown.Item>
+                <Dropdown.Item href="/employee-loan">Employee Loan</Dropdown.Item>
+                <Dropdown.Item href="/product-digital">Digital Product</Dropdown.Item>
                 <Dropdown.Item href="/produk/production-tracker">Production Tracker</Dropdown.Item>
               </Dropdown.Menu>
             </Dropdown>
@@ -199,7 +206,10 @@ export const DefaultLayout = (props: { children?: ReactNode; className?: string 
           <Link href="/salary-loan" className="link link-hover">
             Salary Loan
           </Link>
-          <Link href="#" className="link link-hover">
+          <Link href="/employee-loan" className="link link-hover">
+            Employee Loan
+          </Link>
+          <Link href="/product-digital" className="link link-hover">
             Digital Product
           </Link>
           <Link href="/produk/production-tracker" className="link link-hover">

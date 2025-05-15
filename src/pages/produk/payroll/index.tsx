@@ -1,16 +1,16 @@
+import { Accordion, Button, Card } from 'react-daisyui';
+import { HiArrowRight, HiOutlineCheck } from 'react-icons/hi';
+import { RiCodeBoxLine, RiFileExcel2Line, RiFilePdf2Line, RiMoneyDollarBoxLine, RiUserHeartLine } from 'react-icons/ri';
 import Background from '@/assets/payroll/image.png';
 import { DefaultLayout } from '@/components/layouts/general.layout';
-import HomepageBackdrop from '@/assets/homepage/backdrop.png';
 import GajikuHeroImage from '@/assets/gajiku-hero-image.png';
-import PlaceholderEwa from '@/assets/ewa/placeholder-ewa.svg';
 import Head from 'next/head';
-import Image from 'next/image';
-import Script from 'next/script';
-import { HiOutlineCheck, HiArrowRight, HiCheck } from 'react-icons/hi';
-import { IoLogoWhatsapp } from 'react-icons/io5';
+import HomepageBackdrop from '@/assets/homepage/backdrop.png';
 import Iframe from 'react-iframe';
-import { Accordion, Button, Card, WindowMockup } from 'react-daisyui';
-import { RiCodeBoxLine, RiFileExcel2Line, RiFilePdf2Line, RiMoneyDollarBoxLine, RiUserHeartLine } from 'react-icons/ri';
+import Image from 'next/image';
+import { IoLogoWhatsapp } from 'react-icons/io5';
+import PlaceholderEwa from '@/assets/ewa/placeholder-ewa.svg';
+import Script from 'next/script';
 
 export default function Index() {
   return (
@@ -253,7 +253,7 @@ export default function Index() {
 
         <section className="py-16 lg:px-32 md:px-16 px-4 text-center mx-auto max-w-4xl">
           <h2 className="text-2xl mb-4 text-center font-semibold">Atau langsung jadwalkan demo</h2>
-          <Iframe 
+          <Iframe
             url="https://tally.so/embed/meE2je?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
             width="100%"
             height="100%"

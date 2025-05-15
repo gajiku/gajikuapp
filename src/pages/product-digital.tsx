@@ -1,0 +1,101 @@
+import { DefaultLayout } from '@/components/layouts/general.layout';
+import GajikuHeroImage from '@/assets/gajiku-hero-image.png';
+import Head from 'next/head';
+import Hero from '@/components/sections/hero';
+import HomepageBackdrop from '@/assets/homepage/backdrop.png';
+import Link from 'next/link';
+
+export default function Page() {
+  return (
+    <DefaultLayout>
+      <Head>
+        <title>Gajiku - Beli Pulsa & Token Pakai Gaji yang Sudah Kamu Hasilkan</title>
+        <meta
+          name="description"
+          content="Beli pulsa, paket data atau token listrik pakai sebagian gaji sebelum gajian lewat fitur Produk Digital di aplikasi Gajiku."
+        />
+        <meta name="keywords" content="akses gaji lebih awal, product digital, beli kebutuhan dengan gaji" />
+        <meta name="twitter:title" content="Gajiku - Beli Pulsa & Token Pakai Gaji yang Sudah Kamu Hasilkan" />
+      </Head>
+
+      <div className="flex flex-col gap-16 mb-16">
+        <Hero background={HomepageBackdrop} image={GajikuHeroImage}>
+          <h1 className="text-primary text-5xl leading-tight font-bold">
+            Belanja Pulsa, Bayar Pakai Gaji yang Sudah Kamu Hasilkan
+          </h1>
+          <p className="leading-6">
+            Butuh pulsa, paket data, atau token listrik tapi gajian masih lama? Gajiku bantu kamu akses sebagian gaji
+            lebih awal untuk beli produk digital langsung dari aplikasi.
+          </p>
+          <footer>
+            <Link href="/contact-us" className="btn btn-primary">
+              Hubungi Kami
+            </Link>
+          </footer>
+        </Hero>
+
+        <section className="container flex flex-col gap-4">
+          <h2 className="text-primary text-5xl font-extrabold">Produk Dijital yang Ditawarkan Gajiku</h2>
+          <p>Produk Digital adalah fitur yang memungkinkan karyawan membeli kebutuhan digital seperti</p>
+          <ul className="flex items-center gap-4">
+            <li className="badge badge-primary badge-outline p-4">Token PLN</li>
+            <li className="badge badge-secondary badge-outline p-4">Pulsa</li>
+            <li className="badge badge-accent badge-outline p-4">Paket Internet</li>
+            <li className="badge badge-success badge-outline p-4">Voucher Deals</li>
+          </ul>
+          <p>
+            Pembayaran produk dilakukan menggunakan sebagian dari gaji yang sudah kamu hasilkan. Jadi kamu gak perlu
+            tunggu akhir bulan untuk beli kebutuhan penting.
+          </p>
+        </section>
+        <section className="container">
+          <h2 className="text-primary text-5xl mb-4 font-extrabold">Keuntungan</h2>
+          <ol className="list-decimal px-6">
+            <li>
+              <dl>
+                <dt className="font-bold">Harga Terjangkau</dt>
+                <dd>Produk mulai dari Rp5.000 aja</dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt className="font-bold">Akses Kapan Saja</dt>
+                <dd>Bisa beli kapan pun lewat aplikasi Gajiku</dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt className="font-bold">Tanpa Utang & Tanpa Bunga</dt>
+                <dd>Bukan pinjaman, kamu cuma pakai gaji yang sudah kamu hasilkan</dd>
+              </dl>
+            </li>
+            <li>
+              <dl>
+                <dt className="font-bold">Terintegrasi dengan Perusahaan</dt>
+                <dd>Sistem kami terhubung langsung dengan perusahaan tempat kamu bekerja</dd>
+              </dl>
+            </li>
+          </ol>
+        </section>
+        <section className="container">
+          <h2 className="text-primary text-5xl mb-4 font-extrabold">Siapa yang Bisa Gunakan?</h2>
+          <p>
+            Karyawan dari perusahaan yang sudah kerja sama dengan Gajiku. Kalau perusahaanmu belum kerja sama, bisa
+            rekomendasikan ke HR untuk gabung!
+          </p>
+        </section>
+        <section className="container text-center">
+          <h3 className="text-primary text-xl font-bold mb-2">Yuk, Gunakan Gaji yang Sudah Kamu Hasilkan</h3>
+          <p className="max-w-2xl mx-auto mb-6">
+            Gak perlu tunggu gajian buat beli kebutuhan penting. Pakai Produk Digital dari Gajiku, langsung dari
+            aplikasi.
+          </p>
+          <p className="max-w-2xl mx-auto mb-6">Ingin tahu lebih lanjut, Tim kami siap membantu Anda.</p>
+          <Link href="/contact-us" className="btn btn-primary">
+            Hubungi Kami
+          </Link>
+        </section>
+      </div>
+    </DefaultLayout>
+  );
+}

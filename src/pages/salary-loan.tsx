@@ -1,28 +1,13 @@
+import { LuAlarmClockCheck, LuAlignEndHorizontal, LuPercent } from 'react-icons/lu';
 import { DefaultLayout } from '@/components/layouts/general.layout';
-import { Button } from 'react-daisyui';
-import PlaceholderEwa from '@/assets/ewa/placeholder-ewa.svg';
-import Image from 'next/image';
-import Head from 'next/head';
-import Iframe from 'react-iframe';
-import Script from 'next/script';
-import {
-  HiArrowRight,
-  HiOutlineBriefcase,
-  HiOutlineCalendar,
-  HiOutlineChartBar,
-  HiOutlineCheck,
-  HiOutlineCheckCircle,
-  HiOutlineClock,
-  HiOutlinePlusCircle,
-  HiOutlineUserGroup,
-} from 'react-icons/hi';
-import HomepageBackdrop from '@/assets/homepage/backdrop.png';
 import GajikuHeroImage from '@/assets/gajiku-hero-image.png';
-import { LuAlarmCheck, LuAlignEndHorizontal, LuPercent } from 'react-icons/lu';
-import { ReactNode } from 'react';
-import classNames from 'classnames';
+import Head from 'next/head';
+import Hero from '@/components/sections/hero';
+import HomepageBackdrop from '@/assets/homepage/backdrop.png';
 import { IconType } from 'react-icons';
 import Link from 'next/link';
+import { ReactNode } from 'react';
+import classNames from 'classnames';
 
 type CardProp = {
   className?: string;
@@ -46,8 +31,8 @@ function Card(props: CardProp) {
             <props.icon size={56} />
           </div>
         )}
-        {props.title && <h3 className="text-2xl font-extrabold tracking-tight">{props.title}</h3>}
-        <div className="text-slate-600">{props.children}</div>
+        {props.title && <h3 className="text-2xl font-extrabold tracking-tight text-slate-600">{props.title}</h3>}
+        <div className="text-slate-500">{props.children}</div>
       </div>
     </div>
   );
@@ -70,57 +55,19 @@ export default function Page() {
       </Head>
 
       <div className="flex flex-col gap-16 mb-16">
-        <section>
-          <div
-            id="hero"
-            className="container py-6"
-            style={{
-              backgroundImage: 'url(' + HomepageBackdrop.src + ')',
-              backgroundPosition: '50%',
-              objectFit: 'cover',
-              backgroundSize: 'cover',
-              zIndex: '-1',
-            }}
-          >
-            <div className="grid lg:grid-cols-2">
-              <section className="flex flex-col gap-8">
-                <h1 className="text-primary text-5xl leading-tight font-bold">
-                  Solusi Pinjaman untuk Kebutuhan Bisnis Anda
-                </h1>
-                <p className="leading-6">
-                  Atasi kebutuhan operasional perusahaan dengan cepat dan mudah melalui Salary Loan. Produk ini
-                  dirancang untuk membantu perusahaan dalam memenuhi kebutuhan finansial jangka pendek, seperti
-                  pembayaran gaji karyawan, bonus, atau kebutuhan operasional lainnya.
-                </p>
-                <footer>
-                  <Link href="/contact-us" className="btn btn-primary">
-                    Hubungi Kami
-                  </Link>
-                </footer>
-              </section>
-              <div className="content-center lg:block hidden">
-                <Image src={GajikuHeroImage} alt="Gajikuapp background" loading="lazy" />
-              </div>
-            </div>
-          </div>
-          <div
-            id="separator"
-            className="w-full overflow-hidden relative pb-36"
-            style={{
-              background: 'linear-gradient(0deg, rgb(63, 195, 197) 0%, white 100%)',
-            }}
-          >
-            <div className="absolute bottom-0 left-0 right-0">
-              <svg viewBox="0 0 1695 876" xmlns="http://www.w3.org/2000/svg">
-                <g fill="#fff" fillRule="evenodd">
-                  <path opacity=".61" d="M1695 0l-555.512 876H1695z"></path>
-                  <path opacity=".61" d="M0 872.81V703l1695 76L0 876z"></path>
-                  <path d="M0 872.729L1695 779v97H0z"></path>
-                </g>
-              </svg>
-            </div>
-          </div>
-        </section>
+        <Hero background={HomepageBackdrop} image={GajikuHeroImage}>
+          <h1 className="text-primary text-5xl leading-tight font-bold">Solusi Pinjaman untuk Kebutuhan Bisnis Anda</h1>
+          <p className="leading-6">
+            Atasi kebutuhan operasional perusahaan dengan cepat dan mudah melalui Salary Loan. Produk ini dirancang
+            untuk membantu perusahaan dalam memenuhi kebutuhan finansial jangka pendek, seperti pembayaran gaji
+            karyawan, bonus, atau kebutuhan operasional lainnya.
+          </p>
+          <footer>
+            <Link href="/contact-us" className="btn btn-primary">
+              Hubungi Kami
+            </Link>
+          </footer>
+        </Hero>
 
         <section className="container">
           <h2 className="text-slate-600 text-5xl mb-16 font-extrabold text-center">Kenapa Memilih Salary Loan?</h2>
@@ -128,8 +75,8 @@ export default function Page() {
             <li>
               <Card
                 className="h-full"
-                icon={LuAlarmCheck}
-                iconClassName="bg-[#c06c84] text-white"
+                icon={LuAlarmClockCheck}
+                iconClassName="bg-secondary text-white"
                 title="Proses Cepat dan Mudah"
               >
                 <p>
@@ -142,7 +89,7 @@ export default function Page() {
               <Card
                 className="h-full"
                 icon={LuAlignEndHorizontal}
-                iconClassName="bg-[#f8b195] text-white"
+                iconClassName="bg-accent text-white"
                 title="Fleksibel untuk Berbagai Kebutuhan"
               >
                 <p>Dana pinjaman dapat digunakan untuk berbagai keperluan, tidak terbatas pada pembayaran gaji saja.</p>
@@ -152,7 +99,7 @@ export default function Page() {
               <Card
                 className="h-full"
                 icon={LuPercent}
-                iconClassName="bg-[#17a2b8] text-white"
+                iconClassName="bg-success text-white"
                 title="Bunga Kompetitif dan Transparan"
               >
                 <p>Nikmati suku bunga yang bersaing tanpa biaya tersembunyi.</p>
@@ -161,7 +108,7 @@ export default function Page() {
           </ul>
         </section>
         <section className="container">
-          <h2 className="text-primary text-5xl mb-16 font-extrabold">Cara Kerja Salary Loan</h2>
+          <h2 className="text-primary text-5xl mb-4 font-extrabold">Cara Kerja Salary Loan</h2>
           <ol className="list-decimal px-6">
             <li>
               <dl>
@@ -190,7 +137,7 @@ export default function Page() {
           </ol>
         </section>
         <section className="container">
-          <h2 className="text-primary text-5xl mb-16 font-extrabold">Siapa yang Cocok Salary Loan?</h2>
+          <h2 className="text-primary text-5xl mb-4 font-extrabold">Siapa yang Cocok Salary Loan?</h2>
           <ol className="list-decimal px-6">
             <li>
               <dl>

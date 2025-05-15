@@ -1,20 +1,19 @@
-import { DefaultLayout } from '@/components/layouts/general.layout';
-import Head from 'next/head';
-import Image from 'next/image';
-import { Avatar } from 'react-daisyui';
+import AboutCantika from '@/assets/about/about-cantika.jpg';
+import AboutEffene from '@/assets/about/about-effene.jpg';
+import AboutHayu from '@/assets/about/about-hayu.jpg';
+import AboutHerry from '@/assets/about/about-herry.jpg';
 import AboutImg1 from '@/assets/about/about-img1.svg';
 import AboutImg2 from '@/assets/about/about-img2.svg';
 import AboutImg3 from '@/assets/about/about-img3.svg';
 import AboutImg4 from '@/assets/about/about-img4.svg';
 import AboutSherman from '@/assets/about/about-sherman.jpg';
-import AboutHerry from '@/assets/about/about-herry.jpg';
-import AboutEffene from '@/assets/about/about-effene.jpg';
-import AboutHayu from '@/assets/about/about-hayu.jpg';
-import AboutCantika from '@/assets/about/about-cantika.jpg';
-import AboutBrian from '@/assets/about/about-brian.jpeg';
+import { Avatar } from 'react-daisyui';
+import { DefaultLayout } from '@/components/layouts/general.layout';
 import { FaLinkedin } from 'react-icons/fa';
+import Head from 'next/head';
+import Image from 'next/image';
 
-export default function Home() {
+export default function Page() {
   return (
     <DefaultLayout>
       <Head>
@@ -23,9 +22,6 @@ export default function Home() {
         <meta name="twitter:title" content="Gajiku - Tentang Kami " />
         <meta name="description" content="Gajiku Team Sherman Tanuwidjaja and Herry Gunawan" />
       </Head>
-
-      {/* background-color:rgb(63, 195, 197);padding-bottom:48px;padding-top:42px;--pdx-min-height:0px;--wr-max:1200px */}
-
       <section className={`relative bg-[#3FC3C5] bg-cover  inset-x-0 inset-y-0 pt-16 lg:px-32 md:px-16 px-4`}>
         <div className="items-end bottom-0 flex left-0 overflow-hidden pointer-events-none absolute right-0">
           <svg viewBox="0 0 1695 876" xmlns="http://www.w3.org/2000/svg">
@@ -35,11 +31,9 @@ export default function Home() {
               <path d="M0 872.729L1695 779v97H0z"></path>
             </g>
           </svg>
-          {/* <svg viewBox="0 0 1695 876" xmlns="http://www.w3.org/2000/svg"><g fill="#fff" fillRule="evenodd"><path opacity=".61" d="M1695 0l-555.512 876H1695z"></path><path opacity=".61" d="M0 872.81V703l1695 76L0 876z"></path><path d="M0 872.729L1695 779v97H0z"></path></g></svg> */}
         </div>
 
         <h1 className="text-white text-center text-[2.5rem]/[1.2] mb-4 font-extrabold">Perjalanan Gajiku</h1>
-
         <div className="max-w-4xl mx-auto mt-16 pb-16 grid md:grid-cols-2 gap-x-4">
           <div className="antialiased ml-[50px] content-center md:pb-0 pb-16">
             <div className="relative">
@@ -167,39 +161,13 @@ export default function Home() {
           <h2 className="text-primary lg:px-32 md:px-16 px-4 text-center text-[2.5rem]/[1.2] mb-16 font-extrabold">
             Founding Member
           </h2>
-          <div className="grid md:grid-cols-4 grid-cols-2 gap-8 items-center">
-            <div className="flex flex-col gap-y-1 justify-center items-center self-start">
-              <Avatar src={AboutBrian.src} shape="circle" size={120} className="mb-4" />
-              <h3 className="text-primary text-lg">Brian Ridwan </h3>
-              <p>Head of Product</p>
-              <a
-                href="https://www.linkedin.com/in/brian-ridwan"
-                className="text-xl py-2 "
-                target="_blank"
-                rel="nofollow noopener"
-              >
-                <FaLinkedin />
-              </a>
-            </div>
+          <div className="grid md:grid-cols-3 gap-8 items-center">
             <div className="flex flex-col gap-y-1 justify-center items-center self-start">
               <Avatar src={AboutCantika.src} shape="circle" size={120} className="mb-4" />
-              <h3 className="text-primary text-lg">Cantika Dewi </h3>
+              <h3 className="text-primary text-lg">Cantika Dewi</h3>
               <p>Head of Partnership</p>
               <a
                 href="https://www.linkedin.com/in/cantika-dewi-498b681b3"
-                className="text-xl py-2 "
-                target="_blank"
-                rel="nofollow noopener"
-              >
-                <FaLinkedin />
-              </a>
-            </div>
-            <div className="flex flex-col gap-y-1 justify-center items-center self-start">
-              <Avatar src={AboutEffene.src} shape="circle" size={120} className="mb-4" />
-              <h3 className="text-primary text-lg">Effene Herry </h3>
-              <p>Principal Software Engineer</p>
-              <a
-                href="https://www.linkedin.com/in/effene-herry"
                 className="text-xl py-2 "
                 target="_blank"
                 rel="nofollow noopener"
@@ -213,6 +181,19 @@ export default function Home() {
               <p>Head of Operation and Account</p>
               <a
                 href="https://www.linkedin.com/in/tyas-hayuwuri-067665bb"
+                className="text-xl py-2 "
+                target="_blank"
+                rel="nofollow noopener"
+              >
+                <FaLinkedin />
+              </a>
+            </div>
+            <div className="flex flex-col gap-y-1 justify-center items-center self-start">
+              <Avatar src={AboutEffene.src} shape="circle" size={120} className="mb-4" />
+              <h3 className="text-primary text-lg">Effene Herry </h3>
+              <p>Principal Software Engineer</p>
+              <a
+                href="https://www.linkedin.com/in/effene-herry"
                 className="text-xl py-2 "
                 target="_blank"
                 rel="nofollow noopener"

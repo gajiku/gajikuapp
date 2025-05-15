@@ -1,30 +1,30 @@
-import { DefaultLayout } from '@/components/layouts/general.layout';
-import { HiArrowRight } from 'react-icons/hi';
-import { Button } from 'react-daisyui';
-import HomepageBackdrop from '@/assets/homepage/backdrop.png';
 import AppleEn from '@/assets/apple-en.png';
-import GooglePlayEn from '@/assets/google-play-en.png';
-import GajikuHeroImage from '@/assets/gajiku-hero-image.png';
-import LogoSquare from '@/assets/logo.png';
-import GajikuEmployeeApps from '@/assets/homepage/gajiku-employee-apps.png';
-import GajikuDashboard from '@/assets/homepage/gajiku-dashboard.png';
+import ClientEdenfarm from '@/assets/homepage/client-edenfarm.svg';
+import ClientEkrut from '@/assets/homepage/client-ekrut.png';
+import ClientEsb from '@/assets/homepage/client-esb.png';
+import ClientEvermos from '@/assets/homepage/client-evermos.png';
+import ClientGowork from '@/assets/homepage/client-gowork.png';
+import ClientHangry from '@/assets/homepage/client-hangry.png';
+import ClientLotte from '@/assets/homepage/client-lotte.png';
+import ClientMajoo from '@/assets/homepage/client-majoo.png';
 import ClientMatahari from '@/assets/homepage/client-matahari.png';
 import ClientSampoerna from '@/assets/homepage/client-sampoerna.png';
-import ClientLotte from '@/assets/homepage/client-lotte.png';
 import ClientShipper from '@/assets/homepage/client-shipper.png';
-import ClientHangry from '@/assets/homepage/client-hangry.png';
-import ClientEsb from '@/assets/homepage/client-esb.png';
-import ClientEdenfarm from '@/assets/homepage/client-edenfarm.svg';
-import ClientEvermos from '@/assets/homepage/client-evermos.png';
-import ClientEkrut from '@/assets/homepage/client-ekrut.png';
-import ClientGowork from '@/assets/homepage/client-gowork.png';
-import ClientMajoo from '@/assets/homepage/client-majoo.png';
-import MediaDailysocial from '@/assets/homepage/media-dailysocial.png';
-import MediaTechinasia from '@/assets/homepage/media-techinasia.png';
-import MediaJakartaPost from '@/assets/homepage/media-thejakartapost.png';
-import MediaForbes from '@/assets/homepage/media-forbes.png';
-import Image from 'next/image';
+import { DefaultLayout } from '@/components/layouts/general.layout';
+import GajikuDashboard from '@/assets/homepage/gajiku-dashboard.png';
+import GajikuEmployeeApps from '@/assets/homepage/gajiku-employee-apps.png';
+import GajikuHeroImage from '@/assets/gajiku-hero-image.png';
+import GooglePlayEn from '@/assets/google-play-en.png';
 import Head from 'next/head';
+import Hero from '@/components/sections/hero';
+import HomepageBackdrop from '@/assets/homepage/backdrop.png';
+import Image from 'next/image';
+import Link from 'next/link';
+import LogoSquare from '@/assets/logo.png';
+import MediaDailysocial from '@/assets/homepage/media-dailysocial.png';
+import MediaForbes from '@/assets/homepage/media-forbes.png';
+import MediaJakartaPost from '@/assets/homepage/media-thejakartapost.png';
+import MediaTechinasia from '@/assets/homepage/media-techinasia.png';
 
 export default function Home() {
   return (
@@ -37,64 +37,29 @@ export default function Home() {
         />
         <meta name="twitter:title" content="Gajiku - Gajian, on demand" />
       </Head>
-      <section
-        id="hero"
-        className={`bg-cover  inset-x-0 inset-y-0 h-[600px] pt-16 lg:px-32 md:px-16 px-4`}
-        style={{
-          backgroundImage: 'url(' + HomepageBackdrop.src + ')',
-          backgroundPosition: '50%',
-          objectFit: 'cover',
-          backgroundSize: 'cover',
-          zIndex: '-1',
-        }}
-      >
-        <div className="grid lg:grid-cols-2">
-          <div className="px-6 antialiased">
-            <h1 className="text-primary text-[3rem]/[1.2] mb-4 font-extrabold">Benefit Terbaik Untuk Karyawan Anda</h1>
-            <p className="text-[1.25rem]/[1.75] font-normal mb-8">
-              Gajiku membantu meningkatkan performa dan retensi karyawan perusahaan Anda dengan memberikan akses Gaji di
-              depan dan benefit lainnya.
-            </p>
-            <Button tag="a" color="primary" className="text-white" size="sm" href="/contact-us">
-              Mulai Sekarang <HiArrowRight />
-            </Button>
-            <div className="flex gap-x-4 my-2.5">
-              <a href="https://apps.apple.com/id/app/gajiku/id6444016967" target="_blank">
-                <Image src={AppleEn} alt="Gajiku App Store" className="h-[52px] w-fit" loading="lazy" />
-              </a>
-              <a
-                href="https://play.google.com/store/apps/details?id=com.gajiku.app&amp;hl=en&amp;gl=US"
-                target="_blank"
-              >
-                <Image src={GooglePlayEn} alt="Gajiku Google Play" className="h-[52px] w-fit" loading="lazy" />
-              </a>
-            </div>
-            <p className="text-sm py-8 text-gray-500">*Aplikasi Gajiku khusus Karyawan Anda.</p>
-          </div>
-          <div className="content-center lg:block hidden">
-            <Image src={GajikuHeroImage} alt="Gajikuapp background" loading="lazy" />
-          </div>
-        </div>
-      </section>
 
-      <section
-        id="separator"
-        className="flex flex-col justify-center max-w-[100vw] overflow-hidden px-[50px] relative pb-[6px] pt-[120px]"
-        style={{
-          backgroundColor: 'rgb(63, 195, 197)',
-          background: 'linear-gradient(0deg, rgb(63, 195, 197) 0%, white 100%)',
-        }}
-      >
-        <div className="items-end bottom-0 flex left-0 overflow-hidden pointer-events-none absolute right-0">
-          <svg viewBox="0 0 1695 876" xmlns="http://www.w3.org/2000/svg">
-            <g fill="#fff" fillRule="evenodd">
-              <path opacity=".61" d="M1695 0l-555.512 876H1695z"></path>
-              <path opacity=".61" d="M0 872.81V703l1695 76L0 876z"></path>
-              <path d="M0 872.729L1695 779v97H0z"></path>
-            </g>
-          </svg>
-        </div>
-      </section>
+      <Hero background={HomepageBackdrop} image={GajikuHeroImage}>
+        <h1 className="text-primary text-5xl leading-tight font-bold">Benefit Terbaik Untuk Karyawan Anda</h1>
+        <p className="leading-6">
+          Gajiku membantu meningkatkan performa dan retensi karyawan perusahaan Anda dengan memberikan akses Gaji di
+          depan dan benefit lainnya.
+        </p>
+        <footer>
+          <Link className="btn btn-primary mb-6" href="/contact-us">
+            Mulai Sekarang
+          </Link>
+          <div className="flex items-center gap-4">
+            <a href="https://apps.apple.com/id/app/gajiku/id6444016967" target="_blank">
+              <Image src={AppleEn} alt="Gajiku App Store" className="h-12 w-auto" loading="lazy" />
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.gajiku.app&amp;hl=en&amp;gl=US" target="_blank">
+              <Image src={GooglePlayEn} alt="Gajiku Google Play" className="h-12 w-auto" loading="lazy" />
+            </a>
+          </div>
+          <small className="text-sm tracking-tight">*Aplikasi Gajiku khusus karyawan</small>
+        </footer>
+      </Hero>
+
       <section className="py-16 lg:px-32 md:px-16 px-4 border-b-[3px] border-[#fafafa]" id="feature-karyawan">
         <div className="grid md:grid-cols-2 pl-8">
           <div>

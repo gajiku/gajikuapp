@@ -1,7 +1,8 @@
 import '@/styles/globals.css';
+
 import type { AppProps } from 'next/app';
-import { Noto_Sans } from 'next/font/google';
 import { GoogleAnalytics } from '@next/third-parties/google';
+import { Noto_Sans } from 'next/font/google';
 
 const notosans = Noto_Sans({
   subsets: ['latin'],
