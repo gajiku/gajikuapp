@@ -1,11 +1,12 @@
-import { Button } from 'react-daisyui';
+import { Accordion, Button, Card, WindowMockup } from 'react-daisyui';
+import DashboardImg from '@/assets/product/production-tracker-dashboard.png';
 import { DefaultLayout } from '@/components/layouts/general.layout';
 import GajikuHeroImage from '@/assets/gajiku-hero-image.png';
 import Head from 'next/head';
 import { HiArrowRight } from 'react-icons/hi';
 import HomepageBackdrop from '@/assets/homepage/backdrop.png';
 import Image from 'next/image';
-import PlaceholderEwa from '@/assets/ewa/placeholder-ewa.svg';
+import ReportImg from '@/assets/product/production-tracker-report.png';
 
 export default function Page() {
   return (
@@ -21,7 +22,6 @@ export default function Page() {
           name="description"
           content="Absensi karyawan menjadi simpel dan fleksibel. Semua data termasuk masuk, absen, cuti dapat di akses secara real-time"
         />
-        <link rel="canonical" href="https://www.gajikuapp.com/produk/reimbursement" />
       </Head>
 
       <section
@@ -37,9 +37,10 @@ export default function Page() {
       >
         <div className="grid lg:grid-cols-2">
           <div className="px-6 antialiased">
-            <h1 className="text-primary text-[3rem]/[1.2] mb-4 font-extrabold">Reimbursement</h1>
+            <h1 className="text-primary text-[3rem]/[1.2] mb-4 font-extrabold">Production Tracker</h1>
             <p className="text-[1.25rem]/[1.75] font-normal mb-8">
-              Pencatatan biaya reimbursement, approval dan disbursement bisa dilakukan secara online melalui Gajiku
+              Sistem pencatatan hasil produksi. Perhitungan upah berdasarkan hasil produksi dapat dilakukan dengan
+              Gajiku Production Tracker
             </p>
             <Button tag="a" color="primary" className="text-white" size="sm" href="/contact-us">
               Hubungi Kami <HiArrowRight />
@@ -73,10 +74,10 @@ export default function Page() {
         {/* <h2 className="text-primary text-[2.5rem]/[1.2] mb-16 font-extrabold text-center">Fitur Absensi Karyawan</h2> */}
         <div className="grid md:grid-cols-2 gap-y-16 gap-x-8">
           <div className="flex flex-col gap-y-4 justify-center">
-            <h3 className="text-3xl font-normal">Pencatatan Reimbursement</h3>
+            <h3 className="text-3xl font-normal">Manajemen Proyek</h3>
             <p className="text-lg font-[350]">
-              Pengajuan dan riwayatnya tercatat secara online. Gajiku juga memprovide laporan yang bisa diatur kategori
-              penggunaan reimbursementnya
+              Production Tracker dapat diatur sebagai proyek di mana setiap proyek memiliki target dan melibatkan siapa
+              saja yang terlibat, sehingga bisa menjadi KPI.
             </p>
             <div className="w-fit mt-4">
               <Button tag="a" color="primary" className="text-white" size="sm" href="/contact-us">
@@ -85,17 +86,21 @@ export default function Page() {
             </div>
           </div>
           <div className="content-center">
-            <Image src={PlaceholderEwa} className="h-fit  px-6" alt="Gajiku employee apps" loading="lazy" />
+            <WindowMockup className="w-full" border frameColor="base-200">
+              <Image src={DashboardImg} className="h-fit w-full p-0" alt="Gajiku Production Tracker" loading="lazy" />
+            </WindowMockup>
           </div>
 
           <div className="content-center">
-            <Image src={PlaceholderEwa} className="h-fit  px-6" alt="Gajiku employee apps" loading="lazy" />
+            <WindowMockup className="w-full" border frameColor="base-200">
+              <Image src={ReportImg} className="h-fit w-full p-0" alt="Gajiku Production Tracker" loading="lazy" />
+            </WindowMockup>
           </div>
           <div className="flex flex-col gap-y-4 justify-center">
-            <h3 className="text-3xl font-normal">1 Click Disbursement</h3>
+            <h3 className="text-3xl font-normal">Hitung Upah Berdasarkan Hasil Produksi</h3>
             <p className="text-lg font-[350]">
-              Tidak perlu lagi melakukan transfer melalui bank ataupun cash, pengiriman uang reimbursement bisa
-              dilakukan hanya dengan 1 click.
+              Hasil produksi bisa di atur apakah berdasarkan pieces atau bahkan dimensi yang akan menjadi dasar
+              perhitungan upah karyawan.
             </p>
             <div className="w-fit mt-4">
               <Button tag="a" color="primary" className="text-white" size="sm" href="/contact-us">
@@ -105,10 +110,11 @@ export default function Page() {
           </div>
 
           <div className="flex flex-col gap-y-4 justify-center">
-            <h3 className="text-3xl font-normal">Approval Flexible</h3>
+            <h3 className="text-3xl font-normal">Multi Role</h3>
+
             <p className="text-lg font-[350]">
-              Approval untuk pengajuan reimbursement sangat fleksibel dengan konsep multi level approval. Semua bisa di
-              atur.
+              Karyawan dapat di atur sebagai worker, checker, operator ataupun manager dimana masing-masing memiliki
+              tugasnya.
             </p>
             <div className="w-fit mt-4">
               <Button tag="a" color="primary" className="text-white" size="sm" href="/contact-us">
@@ -117,7 +123,42 @@ export default function Page() {
             </div>
           </div>
           <div className="content-center">
-            <Image src={PlaceholderEwa} className="h-fit  px-6" alt="Gajiku employee apps" loading="lazy" />
+            <Card>
+              <Card.Body className="gap-0 px-4 py-5">
+                <Accordion defaultChecked icon="arrow" className="rounded-none border-b-[1px]">
+                  <Accordion.Title className="font-bold pl-2 py-2">Worker</Accordion.Title>
+                  <Accordion.Content className="text-sm px-2">
+                    <p>Worker dapat memasukan/meng-input data hasil produksi melalui aplikasi gajiku</p>
+                  </Accordion.Content>
+                </Accordion>
+                <Accordion icon="arrow" className="rounded-none border-b-[1px]">
+                  <Accordion.Title className="font-bold pl-2 py-2">Operator</Accordion.Title>
+                  <Accordion.Content className="text-sm px-2">
+                    <p>
+                      Operator dapat menginput hasil produksi tim dibawahnya setelah worker melaporkan hasil produksi
+                    </p>
+                  </Accordion.Content>
+                </Accordion>
+                <Accordion icon="arrow" className="rounded-none border-b-[1px]">
+                  <Accordion.Title className="font-bold pl-2 py-2">Checker</Accordion.Title>
+                  <Accordion.Content className="text-sm px-2">
+                    <p>
+                      Checker adalah approver layer pertama sebelum di teruskan kepada manager. Jika ditolak, proses
+                      akan dikembalikan ke worker/operator untuk diperbaiki
+                    </p>
+                  </Accordion.Content>
+                </Accordion>
+                <Accordion icon="arrow" className="rounded-none">
+                  <Accordion.Title className="font-bold pl-2 py-2">Manager</Accordion.Title>
+                  <Accordion.Content className="text-sm px-2">
+                    <p>
+                      Approver terakhir sebelum nantinya akan diteruskan ke HR (dashboard) agar bisa dilakukan
+                      penghitungan upah
+                    </p>
+                  </Accordion.Content>
+                </Accordion>
+              </Card.Body>
+            </Card>
           </div>
         </div>
       </section>

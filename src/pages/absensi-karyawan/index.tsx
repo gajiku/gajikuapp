@@ -20,7 +20,6 @@ export default function Page() {
           name="description"
           content="Absensi karyawan menjadi simpel dan fleksibel. Semua data termasuk masuk, absen, cuti dapat di akses secara real-time"
         />
-        <link rel="canonical" href="https://www.gajikuapp.com/produk/absensi-karyawan" />
       </Head>
 
       <section
@@ -88,7 +87,7 @@ export default function Page() {
               className="w-full text-white"
               size="sm"
               tag="a"
-              href="/produk/absensi-karyawan/shift"
+              href="/absensi-karyawan/shift"
             >
               Pelajari Lebih Lanjut
             </Button>
@@ -104,7 +103,7 @@ export default function Page() {
               className="w-full text-white"
               size="sm"
               tag="a"
-              href="/produk/absensi-karyawan/manajemen-absensi"
+              href="/absensi-karyawan/manajemen-absensi"
             >
               Pelajari Lebih Lanjut
             </Button>
@@ -123,25 +122,12 @@ export default function Page() {
               className="w-full text-white"
               size="sm"
               tag="a"
-              href="/produk/absensi-karyawan/pengajuan-cuti-lembur"
+              href="/absensi-karyawan/pengajuan-cuti-lembur"
             >
               Pelajari Lebih Lanjut
             </Button>
           </div>
-          {/* <div className="flex flex-col gap-y-4 items-center justify-center text-center border rounded-xl p-4 self-start h-full">
-          <HiOutlineBriefcase size={36}/>
-          <h3 className="text-xl font-normal">Manajemen Lembur</h3>
-          <p className="text-sm font-[350]">Kelola pengajuan lembur baik lembur di hari kerja maupun di luar hari kerja</p>
-          <div className="grow"></div>
-          <Button type="button" color="primary" className="w-full text-white" size="sm" tag="a" href="/produk/absensi-karyawan/manajemen-lembur">Pelajari Lebih Lanjut</Button>
-        </div>
-        <div className="flex flex-col gap-y-4 items-center justify-center text-center border rounded-xl p-4 self-start h-full">
-          <HiOutlineCheck size={36}/>
-          <h3 className="text-xl font-normal">Manajemen Persetujuan</h3>
-          <p className="text-sm font-[350]">Alur persetujuan (cuti, lembur dan lainnya) dapat di atur dalam multiple level</p>
-          <div className="grow"></div>
-          <Button type="button" color="primary" className="w-full text-white" size="sm">Pelajari Lebih Lanjut</Button>
-        </div> */}
+
           <div className="flex flex-col gap-y-4 items-center justify-center text-center border rounded-xl p-4 self-start h-full">
             <HiOutlineChartBar size={36} />
             <h3 className="text-xl font-normal">Dashboard & Laporan</h3>
@@ -153,7 +139,7 @@ export default function Page() {
               className="w-full text-white"
               size="sm"
               tag="a"
-              href="/produk/absensi-karyawan/dashboard"
+              href="/absensi-karyawan/dashboard"
             >
               Pelajari Lebih Lanjut
             </Button>

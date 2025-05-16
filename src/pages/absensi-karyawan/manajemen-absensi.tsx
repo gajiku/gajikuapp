@@ -24,7 +24,6 @@ export default function Page() {
           name="description"
           content="Earned Wage Access (EWA) adalah sebuah fitur keuangan yang memungkinkan karyawan untuk mengakses sebagian dari gaji mereka sebelum jadwal gajian resmi."
         />
-        <link rel="canonical" href="https://www.gajikuapp.com/produk/manajemen-absensi" />
       </Head>
 
       <section

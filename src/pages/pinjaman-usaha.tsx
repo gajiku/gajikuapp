@@ -45,19 +45,16 @@ export default function Page() {
         <title>Gajiku - Pinjaman untuk Kebutuhan Perusahaan</title>
         <meta
           name="description"
-          content="Butuh dana untuk gaji atau operasional? Ajukan Salary Loan ke Gajiku. Proses cepat dan bunga transparan."
+          content="Butuh dana untuk gaji atau operasional? Ajukan Pinjaman Usaha ke Gajiku. Proses cepat dan bunga transparan."
         />
-        <meta
-          name="keywords"
-          content="salary loan perusahaan, pinjaman operasional bisnis, pinjaman untuk bayar gaji"
-        />
+        <meta name="keywords" content="pinjaman usaha, pinjaman operasional bisnis, pinjaman untuk bayar gaji" />
         <meta name="twitter:title" content="Gajiku - Pinjaman Untuk Kebutuhan Perusahaan" />
       </Head>
 
       <div className="flex flex-col gap-16 mb-16">
         <Hero background={HomepageBackdrop} image={GajikuHeroImage} title="Solusi Pinjaman untuk Kebutuhan Bisnis Anda">
           <p>
-            Atasi kebutuhan operasional perusahaan dengan cepat dan mudah melalui Salary Loan. Produk ini dirancang
+            Atasi kebutuhan operasional perusahaan dengan cepat dan mudah melalui Pinjaman Usaha. Produk ini dirancang
             untuk membantu perusahaan dalam memenuhi kebutuhan finansial jangka pendek, seperti pembayaran gaji
             karyawan, bonus, atau kebutuhan operasional lainnya.
           </p>
@@ -69,7 +66,7 @@ export default function Page() {
         </Hero>
 
         <section className="container">
-          <h2 className="text-slate-700 text-5xl mb-16 font-extrabold text-center">Kenapa Memilih Salary Loan?</h2>
+          <h2 className="text-slate-700 text-3xl mb-16 font-extrabold text-center">Kenapa Memilih Pinjaman Usaha?</h2>
           <ul className="grid lg:grid-cols-3 gap-8">
             <li>
               <Card
@@ -107,12 +104,12 @@ export default function Page() {
           </ul>
         </section>
         <section className="container">
-          <h2 className="text-primary text-5xl mb-4 font-extrabold">Cara Kerja Salary Loan</h2>
+          <h2 className="text-primary text-3xl mb-4 font-extrabold">Cara Kerja Pinjaman Usaha</h2>
           <ol className="list-decimal px-6">
             <li>
               <dl>
                 <dt className="font-bold">Pengajuan</dt>
-                <dd>Hubungi tim kami untuk pengajuan salary loan dan pengisian data pengajuan.</dd>
+                <dd>Hubungi tim kami untuk pengajuan pinjaman usaha dan pengisian data pengajuan.</dd>
               </dl>
             </li>
             <li>
@@ -136,7 +133,7 @@ export default function Page() {
           </ol>
         </section>
         <section className="container">
-          <h2 className="text-primary text-5xl mb-4 font-extrabold">Siapa yang Cocok Salary Loan?</h2>
+          <h2 className="text-primary text-3xl mb-4 font-extrabold">Siapa yang Cocok Pinjaman Usaha?</h2>
           <ol className="list-decimal px-6">
             <li>
               <dl>
@@ -160,7 +157,7 @@ export default function Page() {
         </section>
         <section className="container text-center">
           <p className="max-w-md mx-auto mb-6">
-            Ingin tahu lebih lanjut atau siap mengajukan Salary Loan? Tim kami siap membantu Anda.
+            Ingin tahu lebih lanjut atau siap mengajukan Pinjaman Usaha? Tim kami siap membantu Anda.
           </p>
           <Link href="/contact-us" className="btn btn-primary">
             Hubungi Kami

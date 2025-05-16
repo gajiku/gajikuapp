@@ -1,30 +1,26 @@
-import { Button, PhoneMockup, WindowMockup } from 'react-daisyui';
 import { HiArrowRight, HiOutlineCheck } from 'react-icons/hi';
+import { Button } from 'react-daisyui';
 import { DefaultLayout } from '@/components/layouts/general.layout';
 import GajikuHeroImage from '@/assets/gajiku-hero-image.png';
 import Head from 'next/head';
 import HomepageBackdrop from '@/assets/homepage/backdrop.png';
 import Image from 'next/image';
 import PlaceholderEwa from '@/assets/ewa/placeholder-ewa.svg';
-import RequestApprovalImg from '@/assets/product/request-approval.png';
-import RequestLeaveImg from '@/assets/product/request-leave.png';
-import RequestOvertimeImg from '@/assets/product/request-overtime.png';
 
 export default function Page() {
   return (
     <DefaultLayout>
       <Head>
-        <title>Aplikasi Cuti, Lembur dan Pengajuan Lainnya - Gajiku</title>
+        <title>Gajiku - Earned Wage Access</title>
         <meta
           name="description"
-          content="Dengan gajiku karyawan dapat dengan mudah mengajukan cuti, lembur, hingga work from home melalui aplikasi android/ios gajiku"
+          content="Earned Wage Access (EWA) adalah sebuah fitur keuangan yang memungkinkan karyawan untuk mengakses sebagian dari gaji mereka sebelum jadwal gajian resmi."
         />
-        <meta name="twitter:title" content="Aplikasi Cuti, Lembur dan Pengajuan Lainnya - Gajiku" />
+        <meta name="twitter:title" content="Gajiku - Earned Wage Access" />
         <meta
           name="description"
-          content="Dengan gajiku karyawan dapat dengan mudah mengajukan cuti, lembur, hingga work from home melalui aplikasi android/ios gajiku"
+          content="Earned Wage Access (EWA) adalah sebuah fitur keuangan yang memungkinkan karyawan untuk mengakses sebagian dari gaji mereka sebelum jadwal gajian resmi."
         />
-        <link rel="canonical" href="https://www.gajikuapp.com/produk/manajemen-cuti-lembur" />
       </Head>
 
       <section
@@ -41,11 +37,10 @@ export default function Page() {
         <div className="grid lg:grid-cols-2">
           <div className="px-6 antialiased">
             <h1 className="text-primary text-[3rem]/[1.2] mb-4 font-extrabold">
-              Aplikasi Cuti, Lembur dan Pengajuan Lainnya{' '}
+              Aplikasi Cuti Karyawan Berbasis Web, IOS, Android{' '}
             </h1>
             <p className="text-[1.25rem]/[1.75] font-normal mb-8">
-              Dengan gajiku karyawan dapat dengan mudah mengajukan cuti, lembur, hingga work from home melalui aplikasi
-              android/ios gajiku
+              Pengajuan, atur kuota dan persetujuan cuti jadi lebih mudah
             </p>
             <Button tag="a" color="primary" className="text-white" size="sm" href="/contact-us">
               Hubungi Kami <HiArrowRight />
@@ -79,55 +74,10 @@ export default function Page() {
         {/* <h2 className="text-primary text-[2.5rem]/[1.2] mb-16 font-extrabold text-center">Fitur Absensi Karyawan</h2> */}
         <div className="grid md:grid-cols-2 gap-y-16 gap-x-8">
           <div className="flex flex-col gap-y-4 justify-center">
-            <h3 className="text-3xl font-normal">Pengajuan Cuti</h3>
+            <h3 className="text-3xl font-normal">Mekanisme persetujuan yang fleksibel</h3>
             <p className="text-lg font-[350]">
-              Berbagai jenis cuti bisa dibuat dengan pengaturan yang fleksibel dari pro-rata, cuti yang bersifat sekali
-              ataupun berulang. Kamu juga bisa mengatur kuota hingga memberikan cuti pengganti dengan mudah
-            </p>
-            <div className="w-fit mt-4">
-              <Button tag="a" color="primary" className="text-white" size="sm" href="/contact-us">
-                Hubungi Kami <HiArrowRight />
-              </Button>
-            </div>
-          </div>
-          <div className="content-center">
-            <PhoneMockup className="max-w-64 aspect-[9/16]">
-              <Image
-                src={RequestLeaveImg}
-                className="max-w-64 aspect-[9/16] mb-auto mr-auto pr-6 pb-4"
-                alt="Gajiku MAster Shift"
-                loading="lazy"
-              />
-            </PhoneMockup>
-          </div>
-
-          <div className="content-center text-right pr-6">
-            <PhoneMockup className="max-w-64 aspect-[9/16] ">
-              <Image
-                src={RequestOvertimeImg}
-                className="max-w-64 aspect-[9/16] mb-auto mr-auto pr-6 pb-4"
-                alt="Gajiku MAster Shift"
-                loading="lazy"
-              />
-            </PhoneMockup>
-          </div>
-          <div className="flex flex-col gap-y-4 justify-center">
-            <h3 className="text-3xl font-normal">Pengajuan Lembur</h3>
-            <p className="text-lg font-[350]">
-              Pengajuan lembur baik di hari kerja ataupun di luar hari kerja bisa dengan mudah di buat hanya melalui
-              aplikasi karyawan Gajiku
-            </p>
-            <div className="w-fit mt-4">
-              <Button tag="a" color="primary" className="text-white" size="sm" href="/contact-us">
-                Hubungi Kami <HiArrowRight />
-              </Button>
-            </div>
-          </div>
-
-          <div className="flex flex-col gap-y-4 justify-center">
-            <h3 className="text-3xl font-normal">Pengajuan Work From Home</h3>
-            <p className="text-lg font-[350]">
-              Walaupun penjadwalan kerjamu work from office, benefit work from home masih bisa di buat dengan pengajuan
+              Pengajuan cuti di perusahaan dapat di atur dalam berbagai level, jumlah yang harus menyetujui. Proses
+              mudah dapat dilakukan melalui aplikasi karyawan
             </p>
             <div className="w-fit mt-4">
               <Button tag="a" color="primary" className="text-white" size="sm" href="/contact-us">
@@ -140,15 +90,44 @@ export default function Page() {
           </div>
 
           <div className="content-center">
-            <WindowMockup className="w-full" border frameColor="base-200">
-              <Image src={RequestApprovalImg} className="h-fit w-full p-0" alt="Gajiku MAster Shift" loading="lazy" />
-            </WindowMockup>
+            <Image src={PlaceholderEwa} className="h-fit  px-6" alt="Gajiku employee apps" loading="lazy" />
           </div>
           <div className="flex flex-col gap-y-4 justify-center">
-            <h3 className="text-3xl font-normal">Mekanisme persetujuan yang fleksibel</h3>
+            <h3 className="text-3xl font-normal">Kebijakan Aturan Cuti yang Fleksibel</h3>
             <p className="text-lg font-[350]">
-              Pengajuan cuti, lembur dan lainnya dapat di atur dalam berbagai level persetujuan hingga jumlah orang yang
-              menyetujui.
+              Berbagai jenis cuti bisa dibuat dengan pengaturan yang fleksibel seperti pengaturan pro-rata untuk cuti
+              tahunan, cuti yang bersifat hanya sekali dan sebagainya
+            </p>
+            <div className="w-fit mt-4">
+              <Button tag="a" color="primary" className="text-white" size="sm" href="/contact-us">
+                Hubungi Kami <HiArrowRight />
+              </Button>
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-y-4 justify-center">
+            <h3 className="text-3xl font-normal">Kelola Sisa Cuti Karyawan</h3>
+            <p className="text-lg font-[350]">
+              Atur sisa cuti karyawan apakah akan hilang di tahun selanjutnya ataupun membawa sisa cuti dari tahun
+              sebelumnya, semua bisa atur
+            </p>
+            <div className="w-fit mt-4">
+              <Button tag="a" color="primary" className="text-white" size="sm" href="/contact-us">
+                Hubungi Kami <HiArrowRight />
+              </Button>
+            </div>
+          </div>
+          <div className="content-center">
+            <Image src={PlaceholderEwa} className="h-fit  px-6" alt="Gajiku employee apps" loading="lazy" />
+          </div>
+
+          <div className="content-center">
+            <Image src={PlaceholderEwa} className="h-fit  px-6" alt="Gajiku employee apps" loading="lazy" />
+          </div>
+          <div className="flex flex-col gap-y-4 justify-center">
+            <h3 className="text-3xl font-normal">Integrasi dengan payroll</h3>
+            <p className="text-lg font-[350]">
+              Cuti karyawan dapat tersinkronisasi dengan payroll Gajiku dengan mudah.
             </p>
             <div className="w-fit mt-4">
               <Button tag="a" color="primary" className="text-white" size="sm" href="/contact-us">
@@ -164,26 +143,22 @@ export default function Page() {
           <div>
             <h2 className="text-3xl font-normal mb-4">Fitur Lainnya</h2>
             <p className="font-[350] text-gray-800">
-              Manajemen pengajuan Gajiku memiliki fitur yang komprehensif dan memudahkan untuk kebutuhan bisnis dan
-              semua proses absensi.
+              Manajemen cuti Gajiku memiliki fitur yang komprehensif dan memudahkan untuk kebutuhan bisnis dan semua
+              proses absensi.
             </p>
           </div>
           <ul className="flex flex-col gap-y-2 ">
             <li className="flex gap-x-1 items-center">
               <HiOutlineCheck size={20} className="font-light text-success" />
-              <div>Semua pengajuan & approval melalui aplikasi karyawan</div>
+              <div>Pengajuan cuti melalui aplikasi karyawan</div>
             </li>
             <li className="flex gap-x-1 items-center">
               <HiOutlineCheck size={20} className="font-light text-success" />
-              <div>Cuti setengah hari/jam, cuti pengganti bisa dibuat</div>
+              <div>Cuti setengah hari atau bahkan dalam jam</div>
             </li>
             <li className="flex gap-x-1 items-center">
               <HiOutlineCheck size={20} className="font-light text-success" />
-              <div>Integrasi dengan payroll gajiku</div>
-            </li>
-            <li className="flex gap-x-1 items-center">
-              <HiOutlineCheck size={20} className="font-light text-success" />
-              <div>Perhitungan bisa dengan aturan pemerintah ataupun custom</div>
+              <div>Cuti pengganti</div>
             </li>
           </ul>
         </div>

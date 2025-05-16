@@ -1,8 +1,8 @@
-import { HiArrowRight, HiOutlineCheck } from 'react-icons/hi';
 import { Button } from 'react-daisyui';
 import { DefaultLayout } from '@/components/layouts/general.layout';
 import GajikuHeroImage from '@/assets/gajiku-hero-image.png';
 import Head from 'next/head';
+import { HiArrowRight } from 'react-icons/hi';
 import HomepageBackdrop from '@/assets/homepage/backdrop.png';
 import Image from 'next/image';
 import PlaceholderEwa from '@/assets/ewa/placeholder-ewa.svg';
@@ -11,17 +11,16 @@ export default function Page() {
   return (
     <DefaultLayout>
       <Head>
-        <title>Dashboard Absensi Online - Gajiku</title>
+        <title>Aplikasi Absensi Karyawan Online - Gajiku</title>
         <meta
           name="description"
-          content="Sistem absensi gajiku di lengkapi dashboard untuk melakukan monitoring dan konfigurasi yang fleksibel"
+          content="Absensi karyawan menjadi simpel dan fleksibel. Semua data termasuk masuk, absen, cuti dapat di akses secara real-time"
         />
-        <meta name="twitter:title" content="Dashboard Absensi Online" />
+        <meta name="twitter:title" content="Aplikasi Absensi Karyawan Online - Gajiku" />
         <meta
           name="description"
-          content="Sistem absensi gajiku di lengkapi dashboard untuk melakukan monitoring dan konfigurasi yang fleksibel"
+          content="Absensi karyawan menjadi simpel dan fleksibel. Semua data termasuk masuk, absen, cuti dapat di akses secara real-time"
         />
-        <link rel="canonical" href="https://www.gajikuapp.com/produk/dashboard" />
       </Head>
 
       <section
@@ -37,9 +36,9 @@ export default function Page() {
       >
         <div className="grid lg:grid-cols-2">
           <div className="px-6 antialiased">
-            <h1 className="text-primary text-[3rem]/[1.2] mb-4 font-extrabold">Dashboard Absensi Online </h1>
+            <h1 className="text-primary text-[3rem]/[1.2] mb-4 font-extrabold">Reimbursement</h1>
             <p className="text-[1.25rem]/[1.75] font-normal mb-8">
-              Sistem absensi gajiku di lengkapi dashboard untuk melakukan monitoring dan konfigurasi yang fleksibel
+              Pencatatan biaya reimbursement, approval dan disbursement bisa dilakukan secara online melalui Gajiku
             </p>
             <Button tag="a" color="primary" className="text-white" size="sm" href="/contact-us">
               Hubungi Kami <HiArrowRight />
@@ -73,62 +72,42 @@ export default function Page() {
         {/* <h2 className="text-primary text-[2.5rem]/[1.2] mb-16 font-extrabold text-center">Fitur Absensi Karyawan</h2> */}
         <div className="grid md:grid-cols-2 gap-y-16 gap-x-8">
           <div className="flex flex-col gap-y-4 justify-center">
-            <h3 className="text-3xl font-normal">Monitor Jadwal Kerja</h3>
-            <ul className="flex flex-col gap-y-2 text-lg">
-              <li className="flex gap-x-1 font-[350] items-center">
-                <HiOutlineCheck size={20} className="font-light text-success" />
-                <div>Kalender Kerja</div>
-              </li>
-              <li className="flex gap-x-1 font-[350] items-center">
-                <HiOutlineCheck size={20} className="font-light text-success" />
-                <div>Timesheet</div>
-              </li>
-              <li className="flex gap-x-1 font-[350] items-center">
-                <HiOutlineCheck size={20} className="font-light text-success" />
-                <div>Bulk Approval</div>
-              </li>
-            </ul>
-            <div className="w-fit mt-4">
-              <Button tag="a" color="primary" className="text-white" size="sm" href="/contact-us">
-                Hubungi Kami <HiArrowRight />
-              </Button>
-            </div>
-          </div>
-          <div className="content-center">
-            <Image src={PlaceholderEwa} className="h-fit  px-6" alt="Gajiku employee apps" loading="lazy" />
-          </div>
-
-          <div className="content-center">
-            <Image src={PlaceholderEwa} className="h-fit  px-6" alt="Gajiku employee apps" loading="lazy" />
-          </div>
-          <div className="flex flex-col gap-y-4 justify-center">
-            <h3 className="text-3xl font-normal">Master Data & Laporan</h3>
-            <ul className="flex flex-col gap-y-2 text-lg">
-              <li className="flex gap-x-1 font-[350] items-center">
-                <HiOutlineCheck size={20} className="font-light text-success" />
-                <div>Master Shift</div>
-              </li>
-              <li className="flex gap-x-1 font-[350] items-center">
-                <HiOutlineCheck size={20} className="font-light text-success" />
-                <div>Master Data Cuti</div>
-              </li>
-              <li className="flex gap-x-1 font-[350] items-center">
-                <HiOutlineCheck size={20} className="font-light text-success" />
-                <div>Laporan umum yang bisa di pakai di berbagai sistem payroll</div>
-              </li>
-            </ul>
-            <div className="w-fit mt-4">
-              <Button tag="a" color="primary" className="text-white" size="sm" href="/contact-us">
-                Hubungi Kami <HiArrowRight />
-              </Button>
-            </div>
-          </div>
-
-          <div className="flex flex-col gap-y-4 justify-center">
-            <h3 className="text-3xl font-normal">Atur Workflow Approval</h3>
+            <h3 className="text-3xl font-normal">Pencatatan Reimbursement</h3>
             <p className="text-lg font-[350]">
-              Jenjang persetujuan dapat dibuat dengan fleksibel, hingga siapa dan berapa orang yang harus menyetujui
-              bisa di atur dengan mudah melalui dashboard gajiku
+              Pengajuan dan riwayatnya tercatat secara online. Gajiku juga memprovide laporan yang bisa diatur kategori
+              penggunaan reimbursementnya
+            </p>
+            <div className="w-fit mt-4">
+              <Button tag="a" color="primary" className="text-white" size="sm" href="/contact-us">
+                Hubungi Kami <HiArrowRight />
+              </Button>
+            </div>
+          </div>
+          <div className="content-center">
+            <Image src={PlaceholderEwa} className="h-fit  px-6" alt="Gajiku employee apps" loading="lazy" />
+          </div>
+
+          <div className="content-center">
+            <Image src={PlaceholderEwa} className="h-fit  px-6" alt="Gajiku employee apps" loading="lazy" />
+          </div>
+          <div className="flex flex-col gap-y-4 justify-center">
+            <h3 className="text-3xl font-normal">1 Click Disbursement</h3>
+            <p className="text-lg font-[350]">
+              Tidak perlu lagi melakukan transfer melalui bank ataupun cash, pengiriman uang reimbursement bisa
+              dilakukan hanya dengan 1 click.
+            </p>
+            <div className="w-fit mt-4">
+              <Button tag="a" color="primary" className="text-white" size="sm" href="/contact-us">
+                Hubungi Kami <HiArrowRight />
+              </Button>
+            </div>
+          </div>
+
+          <div className="flex flex-col gap-y-4 justify-center">
+            <h3 className="text-3xl font-normal">Approval Flexible</h3>
+            <p className="text-lg font-[350]">
+              Approval untuk pengajuan reimbursement sangat fleksibel dengan konsep multi level approval. Semua bisa di
+              atur.
             </p>
             <div className="w-fit mt-4">
               <Button tag="a" color="primary" className="text-white" size="sm" href="/contact-us">

@@ -5,6 +5,7 @@ import Link from 'next/link';
 import LogoSquare from '@/assets/logo.png';
 import LogoWide from '@/assets/logo-wide.png';
 import { LuChevronsRight } from 'react-icons/lu';
+import { MENU } from '@/config/menu';
 import { ReactNode } from 'react';
 import classNames from 'classnames';
 
@@ -32,30 +33,13 @@ export const DefaultLayout = (props: Props) => {
                 <li>
                   <a>Produk Kami</a>
                   <ul className="p-2">
-                    <li>
-                      <Link href="/earned-wage-access">Earned Wage Access</Link>
-                    </li>
-                    <li>
-                      <Link href="/produk/absensi-karyawan">Absensi Karyawan (Online)</Link>
-                    </li>
-                    <li>
-                      <Link href="/produk/payroll">Payroll</Link>
-                    </li>
-                    <li>
-                      <Link href="/produk/reimbursement">Reimbursement System</Link>
-                    </li>
-                    <li>
-                      <Link href="/salary-loan">Salary Loan</Link>
-                    </li>
-                    <li>
-                      <Link href="/employee-loan">Employee Loan</Link>
-                    </li>
-                    <li>
-                      <Link href="/product-digital">Digital Product</Link>
-                    </li>
-                    <li>
-                      <Link href="/produk/production-tracker">Production Tracker</Link>
-                    </li>
+                    {MENU.map((m) => {
+                      return (
+                        <li key={m.to}>
+                          <Link href={m.to}>{m.label}</Link>
+                        </li>
+                      );
+                    })}
                   </ul>
                 </li>
                 <li>
@@ -90,30 +74,13 @@ export const DefaultLayout = (props: Props) => {
                 Produk Kami
               </Dropdown.Toggle>
               <Dropdown.Menu className="bg-white w-max text-base text-primary font-semibold">
-                <li>
-                  <Link href="/earned-wage-access">Earned Wage Access</Link>
-                </li>
-                <li>
-                  <Link href="/produk/absensi-karyawan">Absensi Karyawan (Online)</Link>
-                </li>
-                <li>
-                  <Link href="/produk/payroll">Payroll</Link>
-                </li>
-                <li>
-                  <Link href="/produk/reimbursement">Reimbursement System</Link>
-                </li>
-                <li>
-                  <Link href="/salary-loan">Salary Loan</Link>
-                </li>
-                <li>
-                  <Link href="/employee-loan">Employee Loan</Link>
-                </li>
-                <li>
-                  <Link href="/product-digital">Digital Product</Link>
-                </li>
-                <li>
-                  <Link href="/produk/production-tracker">Production Tracker</Link>
-                </li>
+                {MENU.map((m) => {
+                  return (
+                    <li key={m.to}>
+                      <Link href={m.to}>{m.label}</Link>
+                    </li>
+                  );
+                })}
               </Dropdown.Menu>
             </Dropdown>
             <Dropdown hover={true}>
@@ -215,30 +182,13 @@ export const DefaultLayout = (props: Props) => {
         </div>
         <div>
           <Footer.Title>Produk</Footer.Title>
-          <Link href="/earned-wage-access" className="link link-hover">
-            Earned Wage Access
-          </Link>
-          <Link href="/produk/absensi-karyawan" className="link link-hover">
-            Absensi Karyawan (Online)
-          </Link>
-          <Link href="/produk/payroll" className="link link-hover">
-            Payroll
-          </Link>
-          <Link href="/produk/reimbursement" className="link link-hover">
-            Reimbursement System
-          </Link>
-          <Link href="/salary-loan" className="link link-hover">
-            Salary Loan
-          </Link>
-          <Link href="/employee-loan" className="link link-hover">
-            Employee Loan
-          </Link>
-          <Link href="/product-digital" className="link link-hover">
-            Digital Product
-          </Link>
-          <Link href="/produk/production-tracker" className="link link-hover">
-            Production Tracker
-          </Link>
+          {MENU.map((m) => {
+            return (
+              <Link key={m.to} href={m.to} className="link link-hover">
+                {m.label}
+              </Link>
+            );
+          })}
         </div>
         <div>
           <Footer.Title>Lainnya</Footer.Title>
