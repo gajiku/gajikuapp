@@ -21,7 +21,7 @@ export const DefaultLayout = (props: Props) => {
               <Button tag="label" color="ghost" shape="circle" tabIndex={0} className="lg:hidden">
                 <LuMenu size={22} />
               </Button>
-              <Dropdown.Menu tabIndex={0} className="w-52 menu-sm z-[1] bg-white">
+              <Dropdown.Menu tabIndex={0} className="w-72 menu-sm z-[1] bg-white">
                 <li>
                   <a>Produk Kami</a>
                   <ul className="p-2">
@@ -115,15 +115,15 @@ export const DefaultLayout = (props: Props) => {
       </div>
       <div className={classNames('grow py-20', props.className)}>{props.children}</div>
       <footer className="bg-gray-50 py-6 text-sm">
-        <div className="container grid md:grid-cols-2 lg:grid-cols-4 gap-10">
-          <div className="grid auto-rows-min gap-3">
-            <Link href="/">
+        <div className="container grid md:grid-cols-2 lg:grid-cols-4 gap-10 items-start">
+          <div className="grid gap-3">
+            <Link className="w-fit" href="/">
               <Image alt="Gajiku" className="w-10 h-auto" src={LogoSquare} />
             </Link>
             <p>
-              <span>© 2023 Sampradaa Pte Ltd </span>
+              © 2023 Sampradaa Pte Ltd
               <br />
-              <span>Jakarta - Indonesia</span>
+              Jakarta - Indonesia
             </p>
             <p>
               Email: <a href="mailto:support@gajikuapp.com">support@gajikuapp.com</a>
@@ -155,7 +155,7 @@ export const DefaultLayout = (props: Props) => {
               </a>
             </div>
           </div>
-          <div className="grid auto-rows-min gap-3">
+          <div className="grid gap-3">
             <span className="mb-2 font-bold uppercase opacity-60">Tentang Kami</span>
             <nav>
               <ul className="grid gap-1">
@@ -177,7 +177,7 @@ export const DefaultLayout = (props: Props) => {
               </ul>
             </nav>
           </div>
-          <div className="grid auto-rows-min gap-3">
+          <div className="grid gap-3">
             <span className="mb-2 font-bold uppercase opacity-60">Produk</span>
             <nav>
               <ul className="grid gap-1">
@@ -193,7 +193,7 @@ export const DefaultLayout = (props: Props) => {
               </ul>
             </nav>
           </div>
-          <div className="grid auto-rows-min gap-3">
+          <div className="grid gap-3">
             <span className="mb-2 font-bold uppercase opacity-60">Lainnya</span>
             <nav>
               <ul>

@@ -273,11 +273,9 @@ export default function Home() {
           </div>
         </section>
         <section className="container">
-          <div className="max-w-6xl border rounded-lg shadow-xl mx-auto lg:py-16 py-8 px-8">
-            <h2 className="text-primary lg:px-32 md:px-16 px-4 text-center text-3xl mb-16 font-extrabold">
-              Media Berita
-            </h2>
-            <div className="grid md:grid-cols-4 grid-cols-2 gap-8 items-center">
+          <div className="border rounded-lg shadow-xl p-8 lg:py-16">
+            <h2 className="text-primary text-center text-3xl mb-16 font-extrabold">Media Berita</h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
               <a
                 href="https://dailysocial.id/post/startup-ewa-gajiku-raih-pendanaan-awal-16-miliar-rupiah"
                 target="_blank"
