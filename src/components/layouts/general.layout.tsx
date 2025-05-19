@@ -1,10 +1,10 @@
-import { Button, Dropdown, Footer, Navbar } from 'react-daisyui';
-import { FaInstagram, FaLinkedin, FaWhatsappSquare } from 'react-icons/fa';
+import { Button, Dropdown, Navbar } from 'react-daisyui';
+import { LuChevronsRight, LuInstagram, LuLinkedin, LuMenu } from 'react-icons/lu';
+import { FaWhatsappSquare } from 'react-icons/fa';
 import Image from 'next/image';
 import Link from 'next/link';
 import LogoSquare from '@/assets/logo.png';
 import LogoWide from '@/assets/logo-wide.png';
-import { LuChevronsRight } from 'react-icons/lu';
 import { MENU } from '@/config/menu';
 import { ReactNode } from 'react';
 import classNames from 'classnames';
@@ -18,16 +18,8 @@ export const DefaultLayout = (props: Props) => {
         <Navbar className="lg:px-16 shadow h-20">
           <Navbar.Start>
             <Dropdown>
-              <Button tag="label" color="ghost" tabIndex={0} className="lg:hidden">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  className="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h8m-8 6h16" />
-                </svg>
+              <Button tag="label" color="ghost" shape="circle" tabIndex={0} className="lg:hidden">
+                <LuMenu size={22} />
               </Button>
               <Dropdown.Menu tabIndex={0} className="w-52 menu-sm z-[1] bg-white">
                 <li>
@@ -121,88 +113,100 @@ export const DefaultLayout = (props: Props) => {
           </Navbar.End>
         </Navbar>
       </div>
-      <div className={classNames('grow pt-20', props.className)}>{props.children}</div>
-      <Footer className="p-10 bg-gray-100 ">
-        <div>
-          <Link href="/">
-            <Image src={LogoSquare} alt="Gajiku" className="h-fit" width="40" />
-          </Link>
-          <p>
-            <span>© 2023 Sampradaa Pte Ltd </span>
-            <br />
-            <span>Jakarta - Indonesia</span>
-          </p>
-          <p>
-            Email:{' '}
-            <Link href="mailto:support@gajikuapp.com" color="primary">
-              support@gajikuapp.com
+      <div className={classNames('grow py-20', props.className)}>{props.children}</div>
+      <footer className="bg-gray-50 py-6 text-sm">
+        <div className="container grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+          <div className="grid auto-rows-min gap-3">
+            <Link href="/">
+              <Image alt="Gajiku" className="w-10 h-auto" src={LogoSquare} />
             </Link>
-          </p>
-          <div className="flex gap-x-6 mt-3">
-            <a
-              href="https://instagram.com/gajikuapp?igshid=ZDg1NjBiNjg="
-              className="text-3xl"
-              target="_blank"
-              rel="nofollow noopener"
-            >
-              <FaInstagram />
-            </a>
-            <a
-              href="https://www.linkedin.com/company/gajiku"
-              className="text-3xl"
-              target="_blank"
-              rel="nofollow noopener"
-            >
-              <FaLinkedin />
-            </a>
-            <a
-              href="https://api.whatsapp.com/send/?phone=6281119209415&text&type=phone_number&app_absent=0"
-              className="text-3xl"
-              target="_blank"
-              rel="nofollow noopener"
-            >
-              <FaWhatsappSquare />
-            </a>
+            <p>
+              <span>© 2023 Sampradaa Pte Ltd </span>
+              <br />
+              <span>Jakarta - Indonesia</span>
+            </p>
+            <p>
+              Email: <a href="mailto:support@gajikuapp.com">support@gajikuapp.com</a>
+            </p>
+            <div className="flex items-center gap-4">
+              <a
+                href="https://instagram.com/gajikuapp?igshid=ZDg1NjBiNjg="
+                className="text-3xl"
+                target="_blank"
+                rel="nofollow noopener"
+              >
+                <LuInstagram />
+              </a>
+              <a
+                href="https://www.linkedin.com/company/gajiku"
+                className="text-3xl"
+                target="_blank"
+                rel="nofollow noopener"
+              >
+                <LuLinkedin />
+              </a>
+              <a
+                href="https://api.whatsapp.com/send/?phone=6281119209415&text&type=phone_number&app_absent=0"
+                className="text-3xl"
+                target="_blank"
+                rel="nofollow noopener"
+              >
+                <FaWhatsappSquare />
+              </a>
+            </div>
+          </div>
+          <div className="grid auto-rows-min gap-3">
+            <span className="mb-2 font-bold uppercase opacity-60">Tentang Kami</span>
+            <nav>
+              <ul className="grid gap-1">
+                <li>
+                  <Link href="/about" className="link link-hover">
+                    Tentang Gajiku
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/privacy-policy" className="link link-hover">
+                    Kebijakan Privasi
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/contact-us" className="link link-hover">
+                    Kontak
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+          </div>
+          <div className="grid auto-rows-min gap-3">
+            <span className="mb-2 font-bold uppercase opacity-60">Produk</span>
+            <nav>
+              <ul className="grid gap-1">
+                {MENU.map((m) => {
+                  return (
+                    <li key={m.to}>
+                      <Link href={m.to} className="link link-hover">
+                        {m.label}
+                      </Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            </nav>
+          </div>
+          <div className="grid auto-rows-min gap-3">
+            <span className="mb-2 font-bold uppercase opacity-60">Lainnya</span>
+            <nav>
+              <ul>
+                <li>
+                  <Link href="/blog" className="link link-hover">
+                    Blog
+                  </Link>
+                </li>
+              </ul>
+            </nav>
           </div>
         </div>
-        <div></div>
-        <div></div>
-        <div></div>
-        <div>
-          <Footer.Title>Tentang Kami</Footer.Title>
-          <Link href="/about" className="link link-hover">
-            Tentang Gajiku
-          </Link>
-          <Link href="/privacy-policy" className="link link-hover">
-            Kebijakan Privasi
-          </Link>
-          <Link href="/contact-us" className="link link-hover">
-            Kontak
-          </Link>
-        </div>
-        <div>
-          <Footer.Title>Produk</Footer.Title>
-          {MENU.map((m) => {
-            return (
-              <Link key={m.to} href={m.to} className="link link-hover">
-                {m.label}
-              </Link>
-            );
-          })}
-        </div>
-        <div>
-          <Footer.Title>Lainnya</Footer.Title>
-          <Link href="/blog" className="link link-hover">
-            Blog
-          </Link>
-          <Link href="#" className="link link-hover">
-            Use Case
-          </Link>
-          <Link href="#" className="link link-hover">
-            Panduan Penggunaan
-          </Link>
-        </div>
-      </Footer>
+      </footer>
     </div>
   );
 };
