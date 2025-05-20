@@ -34,10 +34,6 @@ const PostPage: NextPage<{ post: EmbedPost }> = (param) => {
         <meta property="og:description" content={param.post.seo_desc} />
         <meta property="og:type" content={'article'} />
         {param.post.main_image !== '' && <meta property="og:image" content={param.post.main_image} />}
-        <meta name="twitter:card" content={'summary_large_image'} />
-        <meta name="twitter:title" content={param.post.seo_title} />
-        <meta name="twitter:description" content={param.post.seo_desc} />
-        {param.post.main_image !== '' && <meta name="twitter:image" content={param.post.main_image} />}
         <style>{blogstrapsDefaultCSS}</style>
       </Head>
       <Script src="https://tally.so/widgets/embed.js"></Script>

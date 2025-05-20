@@ -21,8 +21,8 @@ export default function Hero(props: HeroProps) {
         }}
       >
         <div className="grid lg:grid-cols-2">
-          <div className="flex flex-col gap-8 text-slate-700">
-            {props.title && <h1 className="text-primary text-5xl font-bold">{props.title}</h1>}
+          <div className="flex flex-col gap-4 text-slate-700">
+            {props.title && <h1 className="text-primary text-5xl font-bold mb-4">{props.title}</h1>}
             {props.children}
           </div>
           {props.image && (

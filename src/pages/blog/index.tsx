@@ -32,10 +32,6 @@ const BlogPage: NextPage<{ posts: EmbedPosts }> = (param) => {
         <meta property="og:description" content={'Gajiku resources: Press Released, Product Update, Educations'} />
         <meta property="og:type" content={'website'} />
         <meta property="og:image" content={LogoGajiku.src} />
-        <meta name="twitter:card" content={'summary_large_image'} />
-        <meta name="twitter:title" content={'Gajiku - Blog'} />
-        <meta name="twitter:description" content={'Gajiku resources: Press Released, Product Update, Educations'} />
-        <meta name="twitter:image" content={LogoGajiku.src} />
         <style>{blogstrapsDefaultCSS}</style>
       </Head>
       <DefaultLayout>

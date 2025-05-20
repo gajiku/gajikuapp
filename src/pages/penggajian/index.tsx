@@ -1,135 +1,118 @@
-import { Accordion, Button, Card } from 'react-daisyui';
-import { HiArrowRight, HiOutlineCheck } from 'react-icons/hi';
+import { Accordion, Card } from 'react-daisyui';
 import { RiCodeBoxLine, RiFileExcel2Line, RiFilePdf2Line, RiMoneyDollarBoxLine, RiUserHeartLine } from 'react-icons/ri';
+import BPJS from '@/assets/payroll/BPJS_Screenshot.webp';
 import Background from '@/assets/payroll/image.png';
 import { DefaultLayout } from '@/components/layouts/general.layout';
 import GajikuHeroImage from '@/assets/gajiku-hero-image.png';
 import Head from 'next/head';
+import Hero from '@/components/sections/hero';
+import { HiOutlineCheck } from 'react-icons/hi';
 import HomepageBackdrop from '@/assets/homepage/backdrop.png';
 import Iframe from 'react-iframe';
 import Image from 'next/image';
 import { IoLogoWhatsapp } from 'react-icons/io5';
-import PlaceholderEwa from '@/assets/ewa/placeholder-ewa.svg';
+import Link from 'next/link';
 import Script from 'next/script';
 
 export default function Index() {
   return (
     <DefaultLayout>
       <Head>
-        <title>Gajiku - Payroll</title>
+        <title>Gajiku - Sistem Penggajian Otomatis</title>
         <meta
           name="description"
-          content="Solusi payroll terlengkap untuk perusahaan Anda! Kelola penggajian, potongan pajak, dan tunjangan karyawan dengan mudah dan cepat. Dapatkan laporan akurat, otomatisasi proses, dan dukungan penuh untuk memastikan kepatuhan dan efisiensi."
+          content="Gajiku menyediakan solusi penggajian otomatis yang menghitung gaji, tunjangan, dan potongan secara akurat, lengkap dengan laporan dan integrasi BPJS serta PPh 21."
         />
-        <meta name="twitter:title" content="Gajiku - Payroll" />
+        <meta
+          name="keywords"
+          content="penggajian otomatis, payroll, sistem gaji, HRIS Indonesia, aplikasi penggajian"
+        />
       </Head>
       <Script src="https://tally.so/widgets/embed.js"></Script>
 
-      <section
-        id="hero"
-        className="bg-cover inset-x-0 inset-y-0 h-[600px] pt-16 lg:px-32 md:px-16 px-4"
-        style={{
-          backgroundImage: 'url(' + HomepageBackdrop.src + ')',
-          backgroundPosition: '50%',
-          objectFit: 'cover',
-          backgroundSize: 'cover',
-          zIndex: '-1',
-        }}
-      >
-        <div className="grid lg:grid-cols-2">
-          <div className="px-6 antialiased">
-            <h1 className="text-primary text-[3rem]/[1.2] mb-4 font-extrabold">
-              Solusi Payroll Terbaik untuk Bisnis Anda
-            </h1>
-            <p className="mb-8">
-              Kelola penggajian dengan mudah dan efisien menggunakan aplikasi payroll kami. Dapatkan laporan akurat,
-              hitung pajak otomatis, dan tingkatkan produktivitas tim Anda!
-            </p>
-            <Button color="primary" tag="a" size="sm" className="text-white" href="/contact-us">
-              Mulai Sekarang <HiArrowRight />
-            </Button>
-          </div>
-          <div className="content-center lg:block hidden">
-            <Image src={GajikuHeroImage} alt="Gajikuapp background" loading="lazy" />
-          </div>
+      <Hero background={HomepageBackdrop} image={GajikuHeroImage} title="Solusi Penggajian Terbaik untuk Bisnis Anda">
+        <p>
+          Kelola penggajian dengan mudah dan efisien menggunakan aplikasi penggajian kami. Dapatkan laporan akurat,
+          hitung pajak otomatis, dan tingkatkan produktivitas tim Anda!
+        </p>
+        <footer>
+          <Link className="btn btn-primary mb-8" href="/contact-us">
+            Mulai Sekarang
+          </Link>
+        </footer>
+      </Hero>
+
+      <section className="container">
+        <h2 className="text-slate-700 text-4xl mb-8 font-extrabold text-center">
+          Efisiensi dan Akurasi dalam Mengelola Gaji
+        </h2>
+        <div className="grid md:grid-cols-2 gap-2">
+          <p className="content-center">
+            Apakah Anda mencari cara untuk menyederhanakan pengelolaan gaji karyawan? Dashboard penggajian kami hadir
+            untuk memberikan solusi lengkap, memudahkan perhitungan gaji, manajemen absensi, dan laporan keuangan dengan
+            efisiensi tinggi. Dengan teknologi terbaru, Anda dapat fokus pada pengembangan bisnis tanpa khawatir tentang
+            proses penggajian.
+          </p>
+          <Image alt="" className="hidden md:block" src={Background} />
         </div>
       </section>
 
-      <div className="pt-16 px-4 md:px-16 lg:px-32 mb-16">
-        <section className="mb-16">
-          <h1 className="text-primary text-4xl mb-8 font-extrabold text-center">
-            Efisiensi dan Akurasi dalam Mengelola Gaji
-          </h1>
-          <div className="grid md:grid-cols-2 gap-2">
-            <p className="content-center">
-              Apakah Anda mencari cara untuk menyederhanakan pengelolaan gaji karyawan? Aplikasi payroll kami hadir
-              untuk memberikan solusi lengkap, memudahkan perhitungan gaji, manajemen absensi, dan laporan keuangan
-              dengan efisiensi tinggi. Dengan teknologi terbaru, Anda dapat fokus pada pengembangan bisnis tanpa
-              khawatir tentang proses penggajian.
+      <section className="container">
+        <div className="grid sm:grid-cols-2 gap-6">
+          <Card>
+            <Card.Body className="gap-0 px-4 py-5">
+              <Accordion defaultChecked icon="arrow" className="rounded-none border-b-[1px]">
+                <Accordion.Title className="font-bold p-2">Perhitungan PPh 21</Accordion.Title>
+                <Accordion.Content className="text-sm">
+                  <p>
+                    Hitung PPh 21 karyawan Anda dengan metode pemotongan pajak (gross, nett) secara akurat dan otomatis.
+                  </p>
+                </Accordion.Content>
+              </Accordion>
+              <Accordion icon="arrow" className="rounded-none border-b-[1px]">
+                <Accordion.Title className="font-bold p-2">Perhitungan Terkini</Accordion.Title>
+                <Accordion.Content className="text-sm">
+                  <p>
+                    Hitung PPh untuk kode objek 21-100-02 dan lainnya lebih mudah, akurat, dan sesuai dengan peraturan
+                    terkini.
+                  </p>
+                </Accordion.Content>
+              </Accordion>
+              <Accordion icon="arrow" className="rounded-none">
+                <Accordion.Title className="font-bold p-2">Bonus, insentif, dan pensiun</Accordion.Title>
+                <Accordion.Content className="text-sm">
+                  <p>
+                    Hitung bonus dan insentif yang diterima karyawan, berikut pemotongan pajak dan penyesuaian laporan.
+                  </p>
+                </Accordion.Content>
+              </Accordion>
+            </Card.Body>
+          </Card>
+
+          <article>
+            <h2 className="text-slate-700 text-4xl font-extrabold mb-4">Perhitungan Gaji Otomatis</h2>
+            <p>
+              Nikmati kemudahan perhitungan gaji yang cepat dan akurat dengan sistem otomatis kami. Kurangi kesalahan
+              manual dan pastikan karyawan Anda dibayar tepat waktu.
             </p>
-            <Image alt="" className="hidden md:block" src={Background} />
-          </div>
-        </section>
+          </article>
+        </div>
+      </section>
 
-        <section className="mb-16">
-          <div className="grid grid-cols-2 gap-6">
-            <Card>
-              <Card.Body className="gap-0 px-4 py-5">
-                <Accordion defaultChecked icon="arrow" className="rounded-none border-b-[1px]">
-                  <Accordion.Title className="font-bold pl-2 py-2">Perhitungan PPh 21</Accordion.Title>
-                  <Accordion.Content className="text-sm px-2">
-                    <p>
-                      Hitung PPh 21 karyawan Anda dengan metode pemotongan pajak (gross, nett) secara akurat dan
-                      otomatis.
-                    </p>
-                  </Accordion.Content>
-                </Accordion>
-                <Accordion icon="arrow" className="rounded-none border-b-[1px]">
-                  <Accordion.Title className="font-bold pl-2 py-2">Perhitungan Terkini</Accordion.Title>
-                  <Accordion.Content className="text-sm px-2">
-                    <p>
-                      Hitung PPh untuk kode objek 21-100-02 dan lainnya lebih mudah, akurat, dan sesuai dengan peraturan
-                      terkini.
-                    </p>
-                  </Accordion.Content>
-                </Accordion>
-                <Accordion icon="arrow" className="rounded-none">
-                  <Accordion.Title className="font-bold pl-2 py-2">Bonus, insentif, dan pensiun</Accordion.Title>
-                  <Accordion.Content className="text-sm px-2">
-                    <p>
-                      Hitung bonus dan insentif yang diterima karyawan, berikut pemotongan pajak dan penyesuaian
-                      laporan.
-                    </p>
-                  </Accordion.Content>
-                </Accordion>
-              </Card.Body>
-            </Card>
+      <section className="container">
+        <div className="grid sm:grid-cols-2 gap-6">
+          <article>
+            <h2 className="text-slate-700 text-3xl font-extrabold mb-4">Perhitungan BPJS</h2>
+            <p>
+              Jangan biarkan perhitungan BPJS menjadi beban! Dengan sistem yang terintegrasi, semua jadi lebih
+              sederhana. Hitung iuran BPJS Kesehatan dan Ketenagakerjaan dengan mudah dan sesuai dengan regulasi terkini
+              hanya dalam hitungan detik.
+            </p>
+          </article>
 
-            <article>
-              <h1 className="text-primary text-3xl font-extrabold mb-4">Perhitungan Gaji Otomatis</h1>
-              <p>
-                Nikmati kemudahan perhitungan gaji yang cepat dan akurat dengan sistem otomatis kami. Kurangi kesalahan
-                manual dan pastikan karyawan Anda dibayar tepat waktu.
-              </p>
-            </article>
-          </div>
-        </section>
-
-        <section className="mb-16">
-          <div className="grid grid-cols-2 gap-6">
-            <article>
-              <h1 className="text-primary text-3xl font-extrabold mb-4">Perhitungan BPJS</h1>
-              <p>
-                Jangan biarkan perhitungan BPJS menjadi beban! Dengan sistem yang terintegrasi, semua jadi lebih
-                sederhana. Hitung iuran BPJS Kesehatan dan Ketenagakerjaan dengan mudah dan sesuai dengan regulasi
-                terkini hanya dalam hitungan detik.
-              </p>
-            </article>
-
-            <Image src={PlaceholderEwa} className="h-fit  px-6" alt="Gajiku employee apps" loading="lazy" />
-          </div>
-        </section>
-      </div>
+          <Image src={BPJS} className="h-fit px-6" alt="Gajiku employee apps" loading="lazy" />
+        </div>
+      </section>
 
       <div className="bg-[#f5f5f7]">
         <div className="py-16 px-4 md:px-16 lg:px-32 mb-16">
@@ -180,7 +163,7 @@ export default function Index() {
               <li className="col-span-4 col-start-2 lg:col-span-2 card bg-white shadow-md transition-all scale-100 hover:scale-105">
                 <Card.Body>
                   <RiMoneyDollarBoxLine size={32} />
-                  <h3 className="font-bold mb-2 text-2xl">Payroll Disbursement</h3>
+                  <h3 className="font-bold mb-2 text-2xl">Pencarian Gaji</h3>
                   <p className="leading-5 text-[15px]">
                     Kami menyederhanakan proses transfer gaji yang biasanya sulit dengan administrasi bank. Transfer
                     gaji jadi jauh lebih cepat, mudah, dan aman.
@@ -191,10 +174,10 @@ export default function Index() {
 
             <div className="grid grid-cols-12 gap-6">
               <div className="col-span-5">
-                <h3 className="font-bold text-2xl text-primary mb-4">Cari tahu lebih banyak fitur Payroll Gajiku</h3>
+                <h3 className="font-bold text-2xl text-primary mb-4">Cari tahu lebih banyak fitur Penggajian Gajiku</h3>
                 <p>
                   Gajiku menyediakan fitur yang komprehensif yang memudahkan untuk kebutuhan bisnis dan semua proses
-                  payroll.
+                  penggajian.
                 </p>
               </div>
               <div className="col-span-7">
@@ -203,31 +186,31 @@ export default function Index() {
                     <span className="btn btn-primary btn-circle btn-xs text-white">
                       <HiOutlineCheck size={18} />
                     </span>
-                    <span>Atur komponen payroll untuk perusahaan Anda</span>
+                    <span>Atur komponen penggajian untuk perusahaan Anda</span>
                   </li>
                   <li className="flex gap-2">
                     <span className="btn btn-primary btn-circle btn-xs text-white">
                       <HiOutlineCheck size={18} />
                     </span>
-                    <span>Atur configurasi keterlambatan / lembur untuk karyawan Anda.</span>
+                    <span>Atur configurasi keterlambatan/lembur untuk karyawan Anda.</span>
                   </li>
                   <li className="flex gap-2">
                     <span className="btn btn-primary btn-circle btn-xs text-white">
                       <HiOutlineCheck size={18} />
                     </span>
-                    <span>Perhitungan PPh untuk karyawan / non karyawan.</span>
+                    <span>Perhitungan PPh untuk karyawan/non karyawan.</span>
                   </li>
                   <li className="flex gap-2">
                     <span className="btn btn-primary btn-circle btn-xs text-white">
                       <HiOutlineCheck size={18} />
                     </span>
-                    <span>Multi periode payroll</span>
+                    <span>Penggajian Multi-Periode</span>
                   </li>
                   <li className="flex gap-2">
                     <span className="btn btn-primary btn-circle btn-xs text-white">
                       <HiOutlineCheck size={18} />
                     </span>
-                    <span>Import / export</span>
+                    <span>Import/export data</span>
                   </li>
                 </ul>
               </div>
@@ -236,22 +219,20 @@ export default function Index() {
         </div>
       </div>
 
-      <div className="pb-16 px-4 md:px-16 lg:px-32">
-        <section className="mb-8">
-          <p className="mb-8 text-center">
-            Transformasi cara Anda mengelola gaji karyawan dengan aplikasi payroll yang inovatif. Ciptakan lingkungan
-            kerja yang lebih baik dan produktif dengan solusi kami. Hubungi kami hari ini untuk <b>demo gratis</b>!
-          </p>
-          <div className="text-center mb-4">
-            <a className="btn bg-[#1A3636] hover:bg-[#1A3636] text-white" href="https://wa.me/">
-              <IoLogoWhatsapp size={18} />
-              WhatsApp Kami
-            </a>
-          </div>
-        </section>
+      <section className="container text-center">
+        <p className="mb-8">
+          Transformasi cara Anda mengelola gaji karyawan dengan aplikasi payroll yang inovatif. Ciptakan lingkungan
+          kerja yang lebih baik dan produktif dengan solusi kami. Hubungi kami hari ini untuk <b>demo gratis</b>!
+        </p>
+        <a className="btn btn-success" href="https://wa.me/6281119209415">
+          <IoLogoWhatsapp size={18} />
+          WhatsApp Kami
+        </a>
+      </section>
 
-        <section className="py-16 lg:px-32 md:px-16 px-4 text-center mx-auto max-w-4xl">
-          <h2 className="text-2xl mb-4 text-center font-semibold">Atau langsung jadwalkan demo</h2>
+      <section className="container">
+        <h2 className="text-2xl mb-4 text-center font-semibold">Atau langsung jadwalkan demo</h2>
+        <div className="max-w-2xl mx-auto">
           <Iframe
             url="https://tally.so/embed/meE2je?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
             width="100%"
@@ -260,8 +241,8 @@ export default function Index() {
             scrolling="no"
             frameBorder={0}
           />
-        </section>
-      </div>
+        </div>
+      </section>
     </DefaultLayout>
   );
 }

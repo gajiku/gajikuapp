@@ -12,15 +12,14 @@ export default function Page() {
   return (
     <DefaultLayout>
       <Head>
-        <title>Aplikasi Absensi Karyawan Online - Gajiku</title>
+        <title>Gajiku - Monitor Produksi & Upah Karyawan</title>
         <meta
           name="description"
-          content="Absensi karyawan menjadi simpel dan fleksibel. Semua data termasuk masuk, absen, cuti dapat di akses secara real-time"
+          content="Fitur Monitor Produksi Gajiku membantu perusahaan manufaktur mencatat hasil produksi dan menghitung upah berdasarkan output, mendukung efisiensi dan transparansi."
         />
-        <meta name="twitter:title" content="Aplikasi Absensi Karyawan Online - Gajiku" />
         <meta
-          name="description"
-          content="Absensi karyawan menjadi simpel dan fleksibel. Semua data termasuk masuk, absen, cuti dapat di akses secara real-time"
+          name="keywords"
+          content="monitor produksi, production tracker, upah berdasarkan hasil, sistem produksi, manajemen produksi"
         />
       </Head>
 

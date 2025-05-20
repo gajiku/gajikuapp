@@ -10,16 +10,11 @@ export default function Home() {
           name="description"
           content="Pembayaran gaji dimuka untuk karyawan terbaikmu! Bebas biaya untukmu, beri kebebasan untuk mereka."
         />
-        <meta name="twitter:title" content="Gajiku - Gajian, on demand" />
-        <meta
-          name="description"
-          content="Pembayaran gaji dimuka untuk karyawan terbaikmu! Bebas biaya untukmu, beri kebebasan untuk mereka."
-        />
       </Head>
 
-      <section className="lg:px-32 md:px-16 px-4 flex py-8 flex-col gap-y-3 text-sm">
-        <p className="font-bold">PRIVACY POLICY</p>
-        <p className="font-bold">WELCOME TO GAJIKU!</p>
+      <section className="container grid gap-3 py-8">
+        <h1 className="text-5xl font-extrabold text-center">PRIVACY POLICY</h1>
+        <h2 className="text-2xl font-bold">WELCOME TO GAJIKU!</h2>
         <p>
           The terms and conditions set out below govern the use of the services offered by Sampradaa Pte Ltd in relation
           to the use of the www.gajiku.asia website and the Gajiku application.
@@ -41,7 +36,7 @@ export default function Home() {
           agreement to comply with changes to these Terms and Conditions.
         </p>
 
-        <p className="font-bold">1. GENERAL PROVISIONS</p>
+        <h3 className="font-bold">1. GENERAL PROVISIONS</h3>
         <p>
           Gajiku is a technology-based service application platform that provides advanced payment facilities for Users.
           Gajiku is owned by Sampradaa Pte Ltd. The Gajiku platform is an Android and iOS version of the application
@@ -61,7 +56,7 @@ export default function Home() {
           system.
         </p>
 
-        <p className="font-bold">2. USER TERMS</p>
+        <h3 className="font-bold">2. USER TERMS</h3>
         <p>
           Users who wish to access the platform and To use the Gajiku service, you must first register which is
           accompanied by the provision of information in the form of a cell phone number owned by the User. Companies
@@ -120,7 +115,7 @@ export default function Home() {
           of using the Gajiku Platform.
         </p>
 
-        <p className="font-bold">3. ACCOUNT SECURITY</p>
+        <h3 className="font-bold">3. ACCOUNT SECURITY</h3>
         <p>
           Gajiku is committed to making all reasonable efforts to keep this Gajiku Platform functioning properly,
           safely, comfortably and running smoothly according to its designation, however Gajiku cannot guarantee
@@ -149,7 +144,7 @@ export default function Home() {
           Platform may be hacked or retrieved by irresponsible Third Parties.
         </p>
 
-        <p className="font-bold">4. PRIVACY POLICY</p>
+        <h3 className="font-bold">4. PRIVACY POLICY</h3>
         <p>
           The privacy policy as stipulated in these Terms and Conditions will explain how Gajiku manages, processes,
           obtains, collects, uses, discloses and processes, opens access to, and protects personal information and data
@@ -185,7 +180,7 @@ export default function Home() {
           with the provision and use of such incorrect information.
         </p>
 
-        <p className="font-bold">5. USE OF PERSONAL DATA</p>
+        <h3 className="font-bold">5. USE OF PERSONAL DATA</h3>
         <p>
           The User hereby gives express consent to Gajiku to carry out any use of the User&apos;s personal data for
           business and operational activities as well as other necessary purposes in accordance with the purpose for
@@ -235,7 +230,7 @@ export default function Home() {
           on this privacy policy in accordance with the provisions of the applicable laws and regulations.
         </p>
 
-        <p className="font-bold">6. SERVICE FEATURES</p>
+        <h3 className="font-bold">6. SERVICE FEATURES</h3>
         <p>
           Gajiku is a technology-based platform that offers facilities for User employees to earn salaries that have
           been generated before the time of payment of salaries that have been set by the User&apos;s company provided
@@ -266,7 +261,7 @@ export default function Home() {
           User&apos;s employee.
         </p>
 
-        <p className="font-bold">7. TRANSACTION FEES</p>
+        <h3 className="font-bold">7. TRANSACTION FEES</h3>
         <p>
           Gajiku will not charge any fees and/or interest except transaction fees to User employees for any advance
           salary withdrawals made by User employees.
@@ -287,14 +282,14 @@ export default function Home() {
           applicable transaction fees.
         </p>
 
-        <p className="font-bold">8. LIMITATION OF LIABILITY</p>
+        <h3 className="font-bold">8. LIMITATION OF LIABILITY</h3>
         <p>
           In providing services, Gajiku will exercise caution, however, Gajiku is not responsible for any actions taken
           by Users in connection with the use of Gajiku services which are carried out in bad faith, intentional errors,
           User negligence.
         </p>
 
-        <p className="font-bold">9. CLAIM</p>
+        <h3 className="font-bold">9. CLAIM</h3>
         <p>
           Users can make complaints and notifications through the Gajiku Platform by filling out the form in the
           application or can be sent via electronic mail (e-mail) at Support@gajikuapp.com, since it is known that there
@@ -321,13 +316,13 @@ export default function Home() {
           User&apos;s negligence.
         </p>
 
-        <p className="font-bold">10. TAXES</p>
+        <h3 className="font-bold">10. TAXES</h3>
         <p>
           All taxes that may arise in connection with the use of the Gajiku Platform services must be borne by each
           party in connection with the applicable laws and regulations.
         </p>
 
-        <p className="font-bold">11. INTELLECTUAL PROPERTY RIGHTS</p>
+        <h3 className="font-bold">11. INTELLECTUAL PROPERTY RIGHTS</h3>
         <p>
           Gajiku is the sole owner of the name, icon, and logo, as well as all intellectual property rights related to
           the site, system, and interface, all of which are copyrights and trademarks protected by statutory provisions.
@@ -354,7 +349,7 @@ export default function Home() {
           Property Rights related to the Gajiku Platform.
         </p>
 
-        <p className="font-bold">12. NOTICE</p>
+        <h3 className="font-bold">12. NOTICE</h3>
         <p>
           All notices or requests for information to and/or about the Gajiku Platform will be processed & can be sent
           via electronic mail (e-mail) at Support@gajikuapp.com.
@@ -369,7 +364,7 @@ export default function Home() {
           incurring any fees.
         </p>
 
-        <p className="font-bold">13. DISPUTE SETTLEMENT</p>
+        <h3 className="font-bold">13. DISPUTE SETTLEMENT</h3>
         <p>
           All disputes and differences of opinion that may arise in the implementation of these Terms and Conditions
           will be resolved by deliberation, and if a problem arises that cannot be resolved amicably, within 30 (thirty)
@@ -381,13 +376,13 @@ export default function Home() {
           and Gajiku agree to resolve the dispute through Indonesia District Court.
         </p>
 
-        <p className="font-bold">14. APPLICABLE LAW</p>
+        <h3 className="font-bold">14. APPLICABLE LAW</h3>
         <p>
           These Terms and Conditions shall be governed and construed and implemented based on the laws in force in
           Indonesia.
         </p>
 
-        <p className="font-bold">15. FORCERNING CIRCUMSTANCES</p>
+        <h3 className="font-bold">15. FORCERNING CIRCUMSTANCES</h3>
         <p>
           Gajiku will not be responsible for any delay or failure to perform its obligations under these Terms and
           Conditions, if the delay or failure is caused by events or circumstances beyond its reasonable control,
@@ -397,7 +392,7 @@ export default function Home() {
           well as disruption of the transaction settlement system on Gajiku Platform.
         </p>
 
-        <p className="font-bold">16. MISCELLANEOUS</p>
+        <h3 className="font-bold">16. MISCELLANEOUS</h3>
         <p>
           Gajiku without prior notification has the right to take the necessary actions, if fraud/manipulation, money
           laundering or violations are found by the User and any violations committed by the User will be processed

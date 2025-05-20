@@ -48,122 +48,119 @@ export default function Page() {
           content="Butuh dana untuk gaji atau operasional? Ajukan Pinjaman Usaha ke Gajiku. Proses cepat dan bunga transparan."
         />
         <meta name="keywords" content="pinjaman usaha, pinjaman operasional bisnis, pinjaman untuk bayar gaji" />
-        <meta name="twitter:title" content="Gajiku - Pinjaman Untuk Kebutuhan Perusahaan" />
       </Head>
 
-      <div className="flex flex-col gap-16 mb-16">
-        <Hero background={HomepageBackdrop} image={GajikuHeroImage} title="Solusi Pinjaman untuk Kebutuhan Bisnis Anda">
-          <p>
-            Atasi kebutuhan operasional perusahaan dengan cepat dan mudah melalui Pinjaman Usaha. Produk ini dirancang
-            untuk membantu perusahaan dalam memenuhi kebutuhan finansial jangka pendek, seperti pembayaran gaji
-            karyawan, bonus, atau kebutuhan operasional lainnya.
-          </p>
-          <footer>
-            <Link href="/contact-us" className="btn btn-primary">
-              Hubungi Kami
-            </Link>
-          </footer>
-        </Hero>
-
-        <section className="container">
-          <h2 className="text-slate-700 text-3xl mb-16 font-extrabold text-center">Kenapa Memilih Pinjaman Usaha?</h2>
-          <ul className="grid lg:grid-cols-3 gap-8">
-            <li>
-              <Card
-                className="h-full"
-                icon={LuAlarmClockCheck}
-                iconClassName="bg-secondary text-white"
-                title="Proses Cepat dan Mudah"
-              >
-                <p>
-                  Pengajuan dan pencairan dana dilakukan dengan proses yang efisien, mendukung kelancaran operasional
-                  perusahaan Anda.
-                </p>
-              </Card>
-            </li>
-            <li>
-              <Card
-                className="h-full"
-                icon={LuAlignEndHorizontal}
-                iconClassName="bg-accent text-white"
-                title="Fleksibel untuk Berbagai Kebutuhan"
-              >
-                <p>Dana pinjaman dapat digunakan untuk berbagai keperluan, tidak terbatas pada pembayaran gaji saja.</p>
-              </Card>
-            </li>
-            <li>
-              <Card
-                className="h-full"
-                icon={LuPercent}
-                iconClassName="bg-success text-white"
-                title="Bunga Kompetitif dan Transparan"
-              >
-                <p>Nikmati suku bunga yang bersaing tanpa biaya tersembunyi.</p>
-              </Card>
-            </li>
-          </ul>
-        </section>
-        <section className="container">
-          <h2 className="text-primary text-3xl mb-4 font-extrabold">Cara Kerja Pinjaman Usaha</h2>
-          <ol className="list-decimal px-6">
-            <li>
-              <dl>
-                <dt className="font-bold">Pengajuan</dt>
-                <dd>Hubungi tim kami untuk pengajuan pinjaman usaha dan pengisian data pengajuan.</dd>
-              </dl>
-            </li>
-            <li>
-              <dl>
-                <dt className="font-bold">Verifikasi</dt>
-                <dd>Tim kami akan melakukan verifikasi dokumen dan informasi yang diberikan.</dd>
-              </dl>
-            </li>
-            <li>
-              <dl>
-                <dt className="font-bold">Persetujuan</dt>
-                <dd>Setelah disetujui, dana akan segera dicairkan ke rekening perusahaan.</dd>
-              </dl>
-            </li>
-            <li>
-              <dl>
-                <dt className="font-bold">Penggunaan Dana</dt>
-                <dd>Gunakan dana sesuai kebutuhan operasional perusahaan Anda.</dd>
-              </dl>
-            </li>
-          </ol>
-        </section>
-        <section className="container">
-          <h2 className="text-primary text-3xl mb-4 font-extrabold">Siapa yang Cocok Pinjaman Usaha?</h2>
-          <ol className="list-decimal px-6">
-            <li>
-              <dl>
-                <dt className="font-bold">Perusahaan dengan Kebutuhan Cash Flow Mendadak</dt>
-                <dd>Untuk memenuhi kebutuhan mendesak seperti pembayaran gaji atau bonus.</dd>
-              </dl>
-            </li>
-            <li>
-              <dl>
-                <dt className="font-bold">Startup dan UKM</dt>
-                <dd>Mendukung pertumbuhan bisnis dengan menyediakan dana tambahan saat diperlukan.</dd>
-              </dl>
-            </li>
-            <li>
-              <dl>
-                <dt className="font-bold">Perusahaan dengan Proyek Khusus</dt>
-                <dd>Membiayai proyek atau inisiatif khusus tanpa mengganggu cash flow utama.</dd>
-              </dl>
-            </li>
-          </ol>
-        </section>
-        <section className="container text-center">
-          <p className="max-w-md mx-auto mb-6">
-            Ingin tahu lebih lanjut atau siap mengajukan Pinjaman Usaha? Tim kami siap membantu Anda.
-          </p>
+      <Hero background={HomepageBackdrop} image={GajikuHeroImage} title="Solusi Pinjaman untuk Kebutuhan Bisnis Anda">
+        <p>
+          Atasi kebutuhan operasional perusahaan dengan cepat dan mudah melalui Pinjaman Usaha. Produk ini dirancang
+          untuk membantu perusahaan dalam memenuhi kebutuhan finansial jangka pendek, seperti pembayaran gaji karyawan,
+          bonus, atau kebutuhan operasional lainnya.
+        </p>
+        <footer>
           <Link href="/contact-us" className="btn btn-primary">
             Hubungi Kami
           </Link>
-        </section>
-      </div>
+        </footer>
+      </Hero>
+
+      <section className="container">
+        <h2 className="text-slate-700 text-3xl mb-16 font-extrabold text-center">Kenapa Memilih Pinjaman Usaha?</h2>
+        <ul className="grid lg:grid-cols-3 gap-8">
+          <li>
+            <Card
+              className="h-full"
+              icon={LuAlarmClockCheck}
+              iconClassName="bg-secondary text-white"
+              title="Proses Cepat dan Mudah"
+            >
+              <p>
+                Pengajuan dan pencairan dana dilakukan dengan proses yang efisien, mendukung kelancaran operasional
+                perusahaan Anda.
+              </p>
+            </Card>
+          </li>
+          <li>
+            <Card
+              className="h-full"
+              icon={LuAlignEndHorizontal}
+              iconClassName="bg-accent text-white"
+              title="Fleksibel untuk Berbagai Kebutuhan"
+            >
+              <p>Dana pinjaman dapat digunakan untuk berbagai keperluan, tidak terbatas pada pembayaran gaji saja.</p>
+            </Card>
+          </li>
+          <li>
+            <Card
+              className="h-full"
+              icon={LuPercent}
+              iconClassName="bg-success text-white"
+              title="Bunga Kompetitif dan Transparan"
+            >
+              <p>Nikmati suku bunga yang bersaing tanpa biaya tersembunyi.</p>
+            </Card>
+          </li>
+        </ul>
+      </section>
+      <section className="container">
+        <h2 className="text-primary text-3xl mb-4 font-extrabold">Cara Kerja Pinjaman Usaha</h2>
+        <ol className="list-decimal px-6">
+          <li>
+            <dl>
+              <dt className="font-bold">Pengajuan</dt>
+              <dd>Hubungi tim kami untuk pengajuan pinjaman usaha dan pengisian data pengajuan.</dd>
+            </dl>
+          </li>
+          <li>
+            <dl>
+              <dt className="font-bold">Verifikasi</dt>
+              <dd>Tim kami akan melakukan verifikasi dokumen dan informasi yang diberikan.</dd>
+            </dl>
+          </li>
+          <li>
+            <dl>
+              <dt className="font-bold">Persetujuan</dt>
+              <dd>Setelah disetujui, dana akan segera dicairkan ke rekening perusahaan.</dd>
+            </dl>
+          </li>
+          <li>
+            <dl>
+              <dt className="font-bold">Penggunaan Dana</dt>
+              <dd>Gunakan dana sesuai kebutuhan operasional perusahaan Anda.</dd>
+            </dl>
+          </li>
+        </ol>
+      </section>
+      <section className="container">
+        <h2 className="text-primary text-3xl mb-4 font-extrabold">Siapa yang Cocok Pinjaman Usaha?</h2>
+        <ol className="list-decimal px-6">
+          <li>
+            <dl>
+              <dt className="font-bold">Perusahaan dengan Kebutuhan Cash Flow Mendadak</dt>
+              <dd>Untuk memenuhi kebutuhan mendesak seperti pembayaran gaji atau bonus.</dd>
+            </dl>
+          </li>
+          <li>
+            <dl>
+              <dt className="font-bold">Startup dan UKM</dt>
+              <dd>Mendukung pertumbuhan bisnis dengan menyediakan dana tambahan saat diperlukan.</dd>
+            </dl>
+          </li>
+          <li>
+            <dl>
+              <dt className="font-bold">Perusahaan dengan Proyek Khusus</dt>
+              <dd>Membiayai proyek atau inisiatif khusus tanpa mengganggu cash flow utama.</dd>
+            </dl>
+          </li>
+        </ol>
+      </section>
+      <section className="container text-center">
+        <p className="max-w-md mx-auto mb-6">
+          Ingin tahu lebih lanjut atau siap mengajukan Pinjaman Usaha? Tim kami siap membantu Anda.
+        </p>
+        <Link href="/contact-us" className="btn btn-primary">
+          Hubungi Kami
+        </Link>
+      </section>
     </DefaultLayout>
   );
 }

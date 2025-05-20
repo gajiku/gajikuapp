@@ -1,125 +1,96 @@
-import { Button } from 'react-daisyui';
 import { DefaultLayout } from '@/components/layouts/general.layout';
 import GajikuHeroImage from '@/assets/gajiku-hero-image.png';
 import Head from 'next/head';
-import { HiArrowRight } from 'react-icons/hi';
+import Hero from '@/components/sections/hero';
 import HomepageBackdrop from '@/assets/homepage/backdrop.png';
 import Image from 'next/image';
-import PlaceholderEwa from '@/assets/ewa/placeholder-ewa.svg';
+import Link from 'next/link';
+import Picture1 from '@/assets/reimbursement/Reimbursement.webp';
+import Picture2 from '@/assets/reimbursement/One_Click.webp';
+import Picture3 from '@/assets/reimbursement/Approval_Flexible.webp';
 
 export default function Page() {
   return (
     <DefaultLayout>
       <Head>
-        <title>Aplikasi Absensi Karyawan Online - Gajiku</title>
+        <title>Gajiku - Sistem Reimburse</title>
         <meta
           name="description"
-          content="Absensi karyawan menjadi simpel dan fleksibel. Semua data termasuk masuk, absen, cuti dapat di akses secara real-time"
-        />
-        <meta name="twitter:title" content="Aplikasi Absensi Karyawan Online - Gajiku" />
-        <meta
-          name="description"
-          content="Absensi karyawan menjadi simpel dan fleksibel. Semua data termasuk masuk, absen, cuti dapat di akses secara real-time"
+          content="Semua proses reimbursement, mulai dari pencatatan, persetujuan, hingga pencairan bisa dilakukan secara online lewat Gajiku."
         />
       </Head>
 
-      <section
-        id="hero"
-        className={`bg-cover  inset-x-0 inset-y-0 pb-16 pt-16 lg:px-32 md:px-16 px-4`}
-        style={{
-          backgroundImage: 'url(' + HomepageBackdrop.src + ')',
-          backgroundPosition: '50%',
-          objectFit: 'cover',
-          backgroundSize: 'cover',
-          zIndex: '-1',
-        }}
-      >
-        <div className="grid lg:grid-cols-2">
-          <div className="px-6 antialiased">
-            <h1 className="text-primary text-[3rem]/[1.2] mb-4 font-extrabold">Reimbursement</h1>
-            <p className="text-[1.25rem]/[1.75] font-normal mb-8">
-              Pencatatan biaya reimbursement, approval dan disbursement bisa dilakukan secara online melalui Gajiku
-            </p>
-            <Button tag="a" color="primary" className="text-white" size="sm" href="/contact-us">
-              Hubungi Kami <HiArrowRight />
-            </Button>
-          </div>
-          <div className="content-center lg:block hidden">
-            <Image src={GajikuHeroImage} alt="Gajikuapp background" loading="lazy" />
-          </div>
-        </div>
-      </section>
-      <section
-        id="separator"
-        className="flex flex-col justify-center max-w-[100vw] overflow-hidden px-[50px] relative pb-[6px] pt-[120px]"
-        style={{
-          backgroundColor: 'rgb(63, 195, 197)',
-          background: 'linear-gradient(0deg, rgb(63, 195, 197) 0%, white 100%)',
-        }}
-      >
-        <div className="items-end bottom-0 flex left-0 overflow-hidden pointer-events-none absolute right-0">
-          <svg viewBox="0 0 1695 876" xmlns="http://www.w3.org/2000/svg">
-            <g fill="#fff" fillRule="evenodd">
-              <path opacity=".61" d="M1695 0l-555.512 876H1695z"></path>
-              <path opacity=".61" d="M0 872.81V703l1695 76L0 876z"></path>
-              <path d="M0 872.729L1695 779v97H0z"></path>
-            </g>
-          </svg>
-        </div>
-      </section>
+      <div className="flex flex-col gap-12">
+        <Hero background={HomepageBackdrop} image={GajikuHeroImage} title="Sistem Reimburse">
+          <p>
+            Semua proses reimbursement, mulai dari pencatatan, persetujuan, hingga pencairan bisa dilakukan secara
+            online lewat Gajiku.
+          </p>
+          <footer>
+            <Link className="btn btn-primary mb-8" href="/contact-us">
+              Hubungi Kami
+            </Link>
+          </footer>
+        </Hero>
 
-      <section className="py-16 lg:px-32 md:px-16 px-4">
-        {/* <h2 className="text-primary text-[2.5rem]/[1.2] mb-16 font-extrabold text-center">Fitur Absensi Karyawan</h2> */}
-        <div className="grid md:grid-cols-2 gap-y-16 gap-x-8">
-          <div className="flex flex-col gap-y-4 justify-center">
-            <h3 className="text-3xl font-normal">Pencatatan Reimbursement</h3>
-            <p className="text-lg font-[350]">
-              Pengajuan dan riwayatnya tercatat secara online. Gajiku juga memprovide laporan yang bisa diatur kategori
-              penggunaan reimbursementnya
-            </p>
-            <div className="w-fit mt-4">
-              <Button tag="a" color="primary" className="text-white" size="sm" href="/contact-us">
-                Hubungi Kami <HiArrowRight />
-              </Button>
+        <section className="container">
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid gap-3">
+              <h2 className="text-slate-700 text-4xl font-extrabold">Pencatatan Reimbursement</h2>
+              <p>
+                Pengajuan dan riwayat reimbursement tercatat otomatis secara online. Gajiku juga menyediakan laporan
+                yang bisa diatur berdasarkan kategori penggunaan.
+              </p>
+              <footer>
+                <Link className="btn btn-primary" href="/contact-us">
+                  Hubungi Kami
+                </Link>
+              </footer>
+            </div>
+            <div className="content-center">
+              <Image alt="Pencatatan Reimbursement" src={Picture1} loading="lazy" />
             </div>
           </div>
-          <div className="content-center">
-            <Image src={PlaceholderEwa} className="h-fit  px-6" alt="Gajiku employee apps" loading="lazy" />
-          </div>
-
-          <div className="content-center">
-            <Image src={PlaceholderEwa} className="h-fit  px-6" alt="Gajiku employee apps" loading="lazy" />
-          </div>
-          <div className="flex flex-col gap-y-4 justify-center">
-            <h3 className="text-3xl font-normal">1 Click Disbursement</h3>
-            <p className="text-lg font-[350]">
-              Tidak perlu lagi melakukan transfer melalui bank ataupun cash, pengiriman uang reimbursement bisa
-              dilakukan hanya dengan 1 click.
-            </p>
-            <div className="w-fit mt-4">
-              <Button tag="a" color="primary" className="text-white" size="sm" href="/contact-us">
-                Hubungi Kami <HiArrowRight />
-              </Button>
+        </section>
+        <section className="container">
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="content-center">
+              <Image alt="Satu Klik untuk Pencairan" src={Picture2} loading="lazy" />
+            </div>
+            <div className="grid gap-3">
+              <h3 className="text-slate-700 text-4xl font-extrabold">Satu Klik untuk Pencairan</h3>
+              <p>
+                Tanpa repot transfer manual lewat bank atau uang tunai, transfer dana reimbursement bisa dilakukan hanya
+                dengan satu klik.
+              </p>
+              <footer>
+                <Link className="btn btn-primary" href="/contact-us">
+                  Hubungi Kami
+                </Link>
+              </footer>
             </div>
           </div>
-
-          <div className="flex flex-col gap-y-4 justify-center">
-            <h3 className="text-3xl font-normal">Approval Flexible</h3>
-            <p className="text-lg font-[350]">
-              Approval untuk pengajuan reimbursement sangat fleksibel dengan konsep multi level approval. Semua bisa di
-              atur.
-            </p>
-            <div className="w-fit mt-4">
-              <Button tag="a" color="primary" className="text-white" size="sm" href="/contact-us">
-                Hubungi Kami <HiArrowRight />
-              </Button>
+        </section>
+        <section className="container">
+          <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid gap-3">
+              <h3 className="text-slate-700 text-4xl font-extrabold">Approval Fleksibel</h3>
+              <p>
+                Approval untuk pengajuan reimbursement sangat fleksibel dengan konsep multi level approval. Semua bisa
+                di atur.
+              </p>
+              <footer>
+                <Link className="btn btn-primary" href="/contact-us">
+                  Hubungi Kami
+                </Link>
+              </footer>
+            </div>
+            <div className="content-center">
+              <Image src={Picture3} className="h-fit px-6" alt="Approval Fleksibel" loading="lazy" />
             </div>
           </div>
-          <div className="content-center">
-            <Image src={PlaceholderEwa} className="h-fit  px-6" alt="Gajiku employee apps" loading="lazy" />
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
     </DefaultLayout>
   );
 }

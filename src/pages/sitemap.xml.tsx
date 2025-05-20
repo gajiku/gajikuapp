@@ -7,14 +7,13 @@ function generateSiteMap() {
     <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
       <url><loc>https://gajikuapp.com</loc></url>
       <url><loc>https://gajikuapp.com/earned-wage-access</loc></url>
-      <url><loc>https://gajikuapp.com/produk/payroll</loc></url>
-      <url><loc>https://gajikuapp.com/about</loc></url>
-      <url><loc>https://gajikuapp.com/produk/absensi-karyawan</loc></url>
-      <url><loc>https://gajikuapp.com/produk/absensi-karyawan/manajemen-absensi</loc></url>
-      <url><loc>https://gajikuapp.com/produk/absensi-karyawan/shift</loc></url>
-      <url><loc>https://gajikuapp.com/produk/absensi-karyawan/pengajuan-cuti-lembur</loc></url>
-      <url><loc>https://gajikuapp.com/produk/absensi-karyawan/dashboard</loc></url>
-      <url><loc>https://gajikuapp.com/produk/production-tracker</loc></url>
+      <url><loc>https://gajikuapp.com/absensi-karyawan</loc></url>
+      <url><loc>https://gajikuapp.com/penggajian</loc></url>
+      <url><loc>https://gajikuapp.com/sistem-reimburse</loc></url>
+      <url><loc>https://gajikuapp.com/pinjaman-usaha</loc></url>
+      <url><loc>https://gajikuapp.com/pinjaman-karyawan</loc></url>
+      <url><loc>https://gajikuapp.com/produk-digital</loc></url>
+      <url><loc>https://gajikuapp.com/monitor-produksi</loc></url>
    </urlset>
  `;
 }
