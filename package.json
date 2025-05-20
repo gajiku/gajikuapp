@@ -19,8 +19,7 @@
     "react-daisyui": "^5.0.0",
     "react-dom": "^18",
     "react-icons": "^5.2.1",
-    "react-iframe": "^1.8.5",
-    "react-toastify": "^9.0.7"
+    "react-iframe": "^1.8.5"
   },
   "devDependencies": {
     "@types/node": "^20",

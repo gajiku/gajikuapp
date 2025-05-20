@@ -30,7 +30,7 @@ export default function Page() {
 
       <section className="container">
         <div className="grid md:grid-cols-2 gap-16">
-          <div className="flex flex-col gap-y-4 justify-center">
+          <div className="grid gap-4 content-start">
             <h2 className="text-slate-700 text-4xl font-extrabold">Monitor Jadwal Kerja</h2>
             <ul className="grid gap-2">
               <li className="flex gap-2 items-center">
@@ -59,7 +59,7 @@ export default function Page() {
           <div className="content-center">
             <Image src={PlaceholderEwa} className="h-fit px-6" alt="Gajiku employee apps" loading="lazy" />
           </div>
-          <div className="flex flex-col gap-y-4 justify-center">
+          <div className="grid gap-4 content-start">
             <h2 className="text-slate-700 text-4xl font-extrabold">Master Data & Laporan</h2>
             <ul className="grid gap-2">
               <li className="flex gap-2 items-center">
@@ -82,7 +82,7 @@ export default function Page() {
             </footer>
           </div>
 
-          <div className="flex flex-col gap-y-4 justify-center">
+          <div className="grid gap-4 content-start">
             <h2 className="text-slate-700 text-4xl font-extrabold">Atur Workflow Approval</h2>
             <p>
               Jenjang persetujuan dapat dibuat dengan fleksibel, hingga siapa dan berapa orang yang harus menyetujui
