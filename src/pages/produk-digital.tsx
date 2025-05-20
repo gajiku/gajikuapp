@@ -53,7 +53,7 @@ export default function Page() {
           <li>
             <dl>
               <dt className="font-bold">Harga Terjangkau</dt>
-              <dd>Produk mulai dari Rp5.000 aja</dd>
+              <dd>Produk mulai dari Rp5.000 saja</dd>
             </dl>
           </li>
           <li>

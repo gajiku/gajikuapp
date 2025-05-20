@@ -17,7 +17,7 @@ export default function Home() {
 
       <section className="container text-center py-8">
         <h1 className="text-primary text-4xl mb-12 font-extrabold">Kontak Kami</h1>
-        <p className="text-xl mb-8">
+        <p className="mb-8">
           Bantu karyawan Anda untuk mendapatkan kesehatan finansial dan meningkatkan performa dan retensi karyawan.
         </p>
         <div className="max-w-xl mx-auto">

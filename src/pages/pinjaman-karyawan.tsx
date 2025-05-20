@@ -54,25 +54,25 @@ export default function Page() {
           <li>
             <dl>
               <dt className="font-bold">Proses Mudah dan Cepat</dt>
-              <dd>Ajukan langsung dari aplikasi, gak perlu ke bank</dd>
+              <dd>Ajukan langsung dari aplikasi, tanpa perlu ke bank.</dd>
             </dl>
           </li>
           <li>
             <dl>
               <dt className="font-bold">Bunga Ringan & Transparan</dt>
-              <dd>Semua biaya terlihat di awal, gak ada yang disembunyikan</dd>
+              <dd>Semua biaya terlihat di awal, tidak ada biaya tersembunyi.</dd>
             </dl>
           </li>
           <li>
             <dl>
               <dt className="font-bold">Tanpa Agunan</dt>
-              <dd>Gak perlu jaminan untuk pinjaman</dd>
+              <dd>Tidak perlu jaminan untuk mendapatkan pinjaman.</dd>
             </dl>
           </li>
           <li>
             <dl>
               <dt className="font-bold">Cicilan Otomatis dari Gaji</dt>
-              <dd>Bayar cicilan langsung dipotong dari gaji tiap bulan</dd>
+              <dd>Bayar cicilan langsung dipotong dari gaji tiap bulan.</dd>
             </dl>
           </li>
         </ol>
@@ -84,23 +84,23 @@ export default function Page() {
           <li>Pilih menu Pinjaman</li>
           <li>Isi jumlah pinjaman & jangka waktu</li>
           <li>Submit pengajuan, tunggu persetujuan</li>
-          <li>Dana cair ke rekeningmu!</li>
+          <li>Dana cair ke rekening Anda!</li>
         </ol>
       </section>
       <section className="container">
         <h2 className="text-primary text-3xl mb-4 font-extrabold">Siapa yang Bisa Ajukan?</h2>
         <p>
-          Karyawan dari perusahaan yang sudah terhubung dengan Gajiku. Kalau perusahaanmu belum kerja sama, kamu bisa
-          rekomendasikan ke HR-mu.
+          Karyawan dari perusahaan yang sudah terhubung dengan Gajiku. Jika perusahaan Anda belum kerja sama dengan
+          Gajiku, Anda bisa rekomendasikan ke HR Anda.
         </p>
       </section>
       <section className="container text-center">
         <h3 className="text-primary text-xl font-bold mb-2">Gajiku, Teman Finansial Karyawan</h3>
-        <p className="max-w-2xl mx-auto mb-6">
-          Kami percaya karyawan butuh akses ke pinjaman yang adil, mudah, dan aman. Pinjaman Karyawan dari Gajiku dibuat
-          untuk bantu kamu saat butuh dana tambahan tanpa ribet.
+        <p className="mb-6">
+          Gajiku percaya karyawan butuh akses ke pinjaman yang adil, mudah, dan aman. Pinjaman Karyawan dari Gajiku
+          dibuat untuk membantu Anda saat butuh dana tambahan dengan mudah.
         </p>
-        <p className="max-w-2xl mx-auto mb-6">Ingin tahu lebih lanjut, Tim kami siap membantu Anda.</p>
+        <p className="mb-6">Ingin tahu lebih lanjut, Tim kami siap membantu Anda.</p>
         <Link href="/contact-us" className="btn btn-primary">
           Hubungi Kami
         </Link>

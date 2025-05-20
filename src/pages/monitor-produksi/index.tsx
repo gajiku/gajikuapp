@@ -41,8 +41,8 @@ export default function Page() {
           <div className="grid gap-4 content-start">
             <h2 className="text-slate-700 text-4xl font-extrabold">Manajemen Proyek</h2>
             <p>
-              Production Tracker dapat diatur sebagai proyek di mana setiap proyek memiliki target dan melibatkan siapa
-              saja yang terlibat, sehingga bisa menjadi KPI.
+              Monitor Produksi bisa diatur per proyek, lengkap dengan target dan siapa saja yang terlibat sehingga bisa
+              dijadikan bagian dari KPI tim.
             </p>
             <footer>
               <Link className="btn btn-primary mb-8" href="/contact-us">
@@ -64,7 +64,7 @@ export default function Page() {
           <div className="grid gap-4 content-start">
             <h2 className="text-slate-700 text-4xl font-extrabold">Hitung Upah Berdasarkan Hasil Produksi</h2>
             <p>
-              Hasil produksi bisa di atur apakah berdasarkan pieces atau bahkan dimensi yang akan menjadi dasar
+              Hasil produksi bisa diatur apakah berdasarkan pieces atau bahkan dimensi yang akan menjadi dasar
               perhitungan upah karyawan.
             </p>
             <footer>
@@ -76,9 +76,8 @@ export default function Page() {
 
           <div className="grid gap-4 content-start">
             <h2 className="text-slate-700 text-4xl font-extrabold">Multi Role</h2>
-
             <p>
-              Karyawan dapat di atur sebagai worker, checker, operator ataupun manager dimana masing-masing memiliki
+              Karyawan dapat diatur sebagai worker, checker, operator ataupun manager dimana masing-masing memiliki
               tugasnya.
             </p>
             <footer>

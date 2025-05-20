@@ -102,7 +102,7 @@ export default function Index() {
       <section className="container">
         <div className="grid sm:grid-cols-2 gap-6">
           <article>
-            <h2 className="text-slate-700 text-3xl font-extrabold mb-4">Perhitungan BPJS</h2>
+            <h2 className="text-slate-700 text-4xl font-extrabold mb-4">Perhitungan BPJS</h2>
             <p>
               Jangan biarkan perhitungan BPJS menjadi beban! Dengan sistem yang terintegrasi, semua jadi lebih
               sederhana. Hitung iuran BPJS Kesehatan dan Ketenagakerjaan dengan mudah dan sesuai dengan regulasi terkini
@@ -117,7 +117,7 @@ export default function Index() {
       <div className="bg-[#f5f5f7]">
         <div className="py-16 px-4 md:px-16 lg:px-32 mb-16">
           <section className="mb-8">
-            <h2 className="text-center text-primary text-3xl mb-8 font-extrabold">
+            <h2 className="text-center text-primary text-4xl mb-8 font-extrabold">
               Keuntungan Menggunakan Penggajian Gajiku
             </h2>
 
@@ -174,7 +174,7 @@ export default function Index() {
 
             <div className="grid grid-cols-12 gap-6">
               <div className="col-span-5">
-                <h3 className="font-bold text-2xl text-primary mb-4">Cari tahu lebih banyak fitur Penggajian Gajiku</h3>
+                <h3 className="font-bold text-3xl text-primary mb-4">Cari tahu lebih banyak fitur Penggajian Gajiku</h3>
                 <p>
                   Gajiku menyediakan fitur yang komprehensif yang memudahkan untuk kebutuhan bisnis dan semua proses
                   penggajian.
