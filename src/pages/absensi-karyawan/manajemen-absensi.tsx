@@ -130,7 +130,7 @@ export default function Page() {
               </li>
               <li className="flex gap-2 items-center">
                 <HiOutlineCheck size={20} className="text-success" />
-                Laporan bulanan absensi untuk payroll.
+                Laporan bulanan absensi untuk penggajian.
               </li>
             </ul>
             <footer>
@@ -158,7 +158,7 @@ export default function Page() {
             <ul className="grid gap-2">
               <li className="flex gap-2 items-center">
                 <HiOutlineCheck size={20} className="text-success" />
-                Integrasi dengan payroll gajiku
+                Integrasi dengan penggajian gajiku
               </li>
               <li className="flex gap-2 items-center">
                 <HiOutlineCheck size={20} className="text-success" />

@@ -72,7 +72,7 @@ export default function Page() {
               </li>
               <li className="flex gap-2 items-center">
                 <HiOutlineCheck size={20} className="text-success" />
-                <div>Laporan umum yang bisa di pakai di berbagai sistem payroll</div>
+                <div>Laporan umum yang bisa di pakai di berbagai sistem penggajian</div>
               </li>
             </ul>
             <footer>

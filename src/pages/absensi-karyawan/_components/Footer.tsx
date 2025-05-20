@@ -23,7 +23,7 @@ export default function Footer() {
             </li>
             <li className="flex gap-2">
               <HiOutlineCheck size={20} className="text-success relative top-0.5" />
-              Integrasi dengan payroll Gajiku
+              Integrasi dengan penggajian Gajiku
             </li>
             <li className="flex gap-2">
               <HiOutlineCheck size={20} className="text-success relative top-0.5" />

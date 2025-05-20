@@ -118,7 +118,7 @@ export default function Index() {
         <div className="py-16 px-4 md:px-16 lg:px-32 mb-16">
           <section className="mb-8">
             <h2 className="text-center text-primary text-3xl mb-8 font-extrabold">
-              Keuntungan Menggunakan Gajiku Payroll
+              Keuntungan Menggunakan Penggajian Gajiku
             </h2>
 
             <ul className="grid grid-cols-6 gap-6 mb-16">
@@ -221,7 +221,7 @@ export default function Index() {
 
       <section className="container text-center">
         <p className="mb-8">
-          Transformasi cara Anda mengelola gaji karyawan dengan aplikasi payroll yang inovatif. Ciptakan lingkungan
+          Transformasi cara Anda mengelola gaji karyawan dengan aplikasi penggajian yang inovatif. Ciptakan lingkungan
           kerja yang lebih baik dan produktif dengan solusi kami. Hubungi kami hari ini untuk <b>demo gratis</b>!
         </p>
         <a className="btn btn-success" href="https://wa.me/6281119209415">
