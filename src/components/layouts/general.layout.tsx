@@ -37,15 +37,7 @@ export const DefaultLayout = (props: Props) => {
                     </ul>
                   </li>
                   <li>
-                    <a>Tentang Gajiku</a>
-                    <ul className="p-2">
-                      <li>
-                        <Link href="/about">Tim Gajiku</Link>
-                      </li>
-                      <li>
-                        <Link href="#">Testimoni</Link>
-                      </li>
-                    </ul>
+                    <Link href="/about">Tentang Gajiku</Link>
                   </li>
                   <li>
                     <Link href="/blog">Blog</Link>
@@ -77,36 +69,24 @@ export const DefaultLayout = (props: Props) => {
                   })}
                 </Dropdown.Menu>
               </Dropdown>
-              <Dropdown hover={true}>
-                <Dropdown.Toggle
-                  className="btn btn-ghost hover:bg-gray-100 rounded-btn text-base text-primary font-semibold"
-                  button={false}
-                >
-                  Tentang Gajiku
-                </Dropdown.Toggle>
-                <Dropdown.Menu className="bg-white w-max text-base text-primary font-semibold">
-                  <li>
-                    <Link href="/about">Tim Gajiku</Link>
-                  </li>
-                  <li>
-                    <Link href="#">Testimoni</Link>
-                  </li>
-                </Dropdown.Menu>
-              </Dropdown>
-              <Button
-                tag="a"
+              <Link
+                className="btn btn-ghost hover:bg-gray-100 rounded-btn text-base text-primary font-semibold"
+                href="/about"
+              >
+                Tentang Gajiku
+              </Link>
+              <Link
                 className="btn btn-ghost hover:bg-gray-100 rounded-btn text-base text-primary font-semibold"
                 href="/blog"
               >
                 Blog
-              </Button>
-              <Button
-                tag="a"
+              </Link>
+              <Link
                 className="btn btn-ghost hover:bg-gray-100 rounded-btn text-base text-primary font-semibold"
                 href="/contact-us"
               >
                 Kontak Kami
-              </Button>
+              </Link>
             </Navbar.Center>
             <Navbar.End>
               <Button tag="a" color="primary" className="text-white" href="/contact-us">

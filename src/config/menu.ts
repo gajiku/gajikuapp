@@ -1,9 +1,5 @@
 export const MENU = [
   {
-    to: '/earned-wage-access',
-    label: 'Earned Wage Access',
-  },
-  {
     to: '/absensi-karyawan',
     label: 'Absensi Karyawan (Online)',
   },
@@ -16,19 +12,27 @@ export const MENU = [
     label: 'Sistem Reimburse',
   },
   {
-    to: '/pinjaman-usaha',
-    label: 'Pinjaman Usaha',
-  },
-  {
-    to: '/pinjaman-karyawan',
-    label: 'Pinjaman Karyawan',
+    to: '/earned-wage-access',
+    label: 'Earned Wage Access',
   },
   {
     to: '/produk-digital',
     label: 'Produk Digital',
   },
   {
+    to: '/pinjaman-karyawan',
+    label: 'Pinjaman Karyawan',
+  },
+  {
+    to: '/kpi',
+    label: 'KPI',
+  },
+  {
     to: '/monitor-produksi',
     label: 'Monitor Produksi',
+  },
+  {
+    to: '/pinjaman-usaha',
+    label: 'Pinjaman Usaha',
   },
 ];
