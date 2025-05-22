@@ -8,10 +8,11 @@ import {
 } from 'react-icons/lu';
 import AppleEn from '@/assets/apple-en.png';
 import ClientAgung from '@/assets/homepage/client-agung.png';
+import ClientBAV from '@/assets/homepage/client-bav.png';
 import ClientDVL from '@/assets/homepage/client-dvl.svg';
 import ClientEsb from '@/assets/homepage/client-esb.png';
-import ClientGowork from '@/assets/homepage/client-gowork.png';
 import ClientHangry from '@/assets/homepage/client-hangry.png';
+import ClientKadence from '@/assets/homepage/client-kadence.png';
 import ClientLotte from '@/assets/homepage/client-lotte.png';
 import ClientMPM from '@/assets/homepage/client-mpm.png';
 import ClientMajoo from '@/assets/homepage/client-majoo.png';
@@ -167,7 +168,8 @@ export default function Home() {
             { image: ClientHangry, title: 'Hangry' },
             { image: ClientMajoo, title: 'Majoo' },
             { image: ClientEsb, title: 'ESB' },
-            { image: ClientGowork, title: 'GoWork' },
+            { image: ClientBAV, title: 'Bina Artha Ventura' },
+            { image: ClientKadence, title: 'Kadence' },
           ].map((dt, n: number): ReactNode => {
             return <Image key={`client.${n}`} alt={dt.title} src={dt.image} loading="lazy" />;
           })}
