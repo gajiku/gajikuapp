@@ -19,8 +19,8 @@ import ClientSamator from '@/assets/homepage/client-samator.jpg';
 import ClientSampoerna from '@/assets/homepage/client-sampoerna.png';
 import ClientShipper from '@/assets/homepage/client-shipper.png';
 import { DefaultLayout } from '@/components/layouts/general.layout';
-import GajikuDashboard from '@/assets/homepage/gajiku-dashboard.png';
-import GajikuEmployeeApps from '@/assets/homepage/gajiku-employee-apps.png';
+import GajikuDashboard from '@/assets/homepage/dashboard.png';
+import GajikuEmployeeApps from '@/assets/homepage/superapp.png';
 import GajikuHeroImage from '@/assets/gajiku-hero-image.png';
 import GooglePlayEn from '@/assets/google-play-en.png';
 import Head from 'next/head';
@@ -127,7 +127,7 @@ export default function Home() {
             </ul>
           </section>
           <div className="content-start">
-            <Image alt="Aplikasi Karyawan Gajiku" src={GajikuEmployeeApps} loading="lazy" />
+            <Image alt="Aplikasi Karyawan Gajiku" className="w-3/5 mx-auto" src={GajikuEmployeeApps} loading="lazy" />
           </div>
         </div>
       </div>
@@ -135,7 +135,7 @@ export default function Home() {
         <h2 className="text-slate-700 text-4xl mb-12 font-extrabold md:text-center">
           Gajiku Dashboard Untuk Perusahaan
         </h2>
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 mb-16">
           <div>
             <h3 className="text-2xl text-primary mb-2 font-bold">Database Karyawan</h3>
             <p>Atur semua informasi terkait karyawan baru, resign, perubahan karir, data penggajian dan lainnya.</p>
@@ -149,7 +149,7 @@ export default function Home() {
             <p>Monitor klaim biaya dan juga pinjaman karyawan secara real time!</p>
           </div>
         </div>
-        <Image alt="Gajiku Dashboard" src={GajikuDashboard} loading="lazy" />
+        <Image alt="Gajiku Dashboard" className="w-3/5 mx-auto" src={GajikuDashboard} loading="lazy" />
       </section>
       <section className="container">
         <h2 className="text-slate-700 text-4xl mb-12 font-extrabold md:text-center">

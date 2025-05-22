@@ -5,5 +5,5 @@ type ContainerProps = {
 };
 
 export default function Container(props: ContainerProps) {
-  return <div className="grid gap-12">{props.children}</div>;
+  return <div className="grid gap-16">{props.children}</div>;
 }
