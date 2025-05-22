@@ -7,15 +7,15 @@ import {
   LuWalletMinimal,
 } from 'react-icons/lu';
 import AppleEn from '@/assets/apple-en.png';
-import ClientEdenfarm from '@/assets/homepage/client-edenfarm.svg';
-import ClientEkrut from '@/assets/homepage/client-ekrut.png';
+import ClientAgung from '@/assets/homepage/client-agung.png';
+import ClientDVL from '@/assets/homepage/client-dvl.svg';
 import ClientEsb from '@/assets/homepage/client-esb.png';
-import ClientEvermos from '@/assets/homepage/client-evermos.png';
 import ClientGowork from '@/assets/homepage/client-gowork.png';
 import ClientHangry from '@/assets/homepage/client-hangry.png';
 import ClientLotte from '@/assets/homepage/client-lotte.png';
+import ClientMPM from '@/assets/homepage/client-mpm.png';
 import ClientMajoo from '@/assets/homepage/client-majoo.png';
-import ClientMatahari from '@/assets/homepage/client-matahari.png';
+import ClientSamator from '@/assets/homepage/client-samator.jpg';
 import ClientSampoerna from '@/assets/homepage/client-sampoerna.png';
 import ClientShipper from '@/assets/homepage/client-shipper.png';
 import { DefaultLayout } from '@/components/layouts/general.layout';
@@ -155,19 +155,19 @@ export default function Home() {
         <h2 className="text-slate-700 text-4xl mb-12 font-extrabold md:text-center">
           Gajiku Dipercaya Oleh Lebih dari 100 Perusahaan Indonesia di Berbagai Sektor
         </h2>
-        <div className="grid md:grid-cols-6 sm:grid-cols-3 grid-cols-2 gap-8 justify-center items-center">
+        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-14 items-center">
           {[
-            { image: ClientMatahari, title: 'Matahari' },
+            { image: ClientSamator, title: 'Samator' },
+            { image: ClientDVL, title: 'Darya Varia Laboratoria' },
             { image: ClientSampoerna, title: 'Sampoerna' },
+            { image: ClientAgung, title: 'Agung Concern' },
             { image: ClientLotte, title: 'Lotte' },
+            { image: ClientMPM, title: 'MPM' },
             { image: ClientShipper, title: 'Shipper' },
             { image: ClientHangry, title: 'Hangry' },
-            { image: ClientEsb, title: 'ESB' },
-            { image: ClientEdenfarm, title: 'Eden Farm' },
-            { image: ClientEvermos, title: 'Evermos' },
-            { image: ClientEkrut, title: 'Ekrut' },
-            { image: ClientGowork, title: 'GoWork' },
             { image: ClientMajoo, title: 'Majoo' },
+            { image: ClientEsb, title: 'ESB' },
+            { image: ClientGowork, title: 'GoWork' },
           ].map((dt, n: number): ReactNode => {
             return <Image key={`client.${n}`} alt={dt.title} src={dt.image} loading="lazy" />;
           })}
