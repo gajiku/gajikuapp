@@ -114,9 +114,13 @@ export default function Home() {
                 },
               ].map((dt, n: number): ReactNode => {
                 return (
-                  <li key={n} className="flex items-center gap-4">
-                    <div className={`bg-${dt.color} text-white h-10 w-10 flex items-center justify-center rounded-xl`}>
-                      <dt.icon size={24} />
+                  <li key={n} className="flex gap-3">
+                    <div className="py-1">
+                      <div
+                        className={`bg-${dt.color} text-white h-10 w-10 flex items-center justify-center rounded-xl shrink-0`}
+                      >
+                        <dt.icon size={24} />
+                      </div>
                     </div>
                     <dl>
                       <dt className={`text-${dt.color} font-semibold text-lg`}>{dt.title}</dt>
@@ -138,15 +142,15 @@ export default function Home() {
         </h2>
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <div>
-            <h3 className="text-2xl text-primary mb-2 font-bold">Database Karyawan</h3>
+            <h3 className="text-2xl text-primary mb-1 font-bold">Database Karyawan</h3>
             <p>Atur semua informasi terkait karyawan baru, resign, perubahan karir, data penggajian dan lainnya.</p>
           </div>
           <div>
-            <h3 className="text-2xl text-secondary mb-2 font-bold">Penggajian</h3>
+            <h3 className="text-2xl text-secondary mb-1 font-bold">Penggajian</h3>
             <p>Perhitungan gaji, tunjangan, PPh 21 dan BPJS secara otomatis.</p>
           </div>
           <div>
-            <h3 className="text-2xl text-accent mb-2 font-bold">Manajemen Biaya dan Pinjaman Karyawan</h3>
+            <h3 className="text-2xl text-accent mb-1 font-bold">Manajemen Biaya dan Pinjaman Karyawan</h3>
             <p>Monitor klaim biaya dan juga pinjaman karyawan secara real time!</p>
           </div>
         </div>
