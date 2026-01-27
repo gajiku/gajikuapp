@@ -8,6 +8,10 @@ export const MENU = [
     label: 'Penggajian',
   },
   {
+    to: '/tax-consultant',
+    label: 'Tax Consultant',
+  },
+  {
     to: '/sistem-reimburse',
     label: 'Sistem Reimburse',
   },

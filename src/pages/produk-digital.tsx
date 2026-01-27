@@ -34,7 +34,7 @@ export default function Page() {
       </Hero>
 
       <section className="container grid gap-4">
-        <h2 className="text-primary text-3xl font-extrabold">Produk Dijital yang Ditawarkan Gajiku</h2>
+        <h2 className="text-primary text-3xl font-extrabold">Produk Digital yang Ditawarkan Gajiku</h2>
         <p>Produk Digital adalah fitur yang memungkinkan karyawan membeli kebutuhan digital seperti:</p>
         <ul className="flex items-center gap-4">
           <li className="btn btn-primary btn-outline">Token PLN</li>

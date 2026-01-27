@@ -34,7 +34,7 @@ export default function Page() {
 
       <section className="container">
         <div className="grid md:grid-cols-2 gap-8">
-          <div className="grid gap-3">
+          <div className="flex flex-col gap-3">
             <h2 className="text-slate-700 text-4xl font-extrabold">Pencatatan Reimbursement</h2>
             <p>
               Pengajuan dan riwayat reimbursement tercatat otomatis secara online. Gajiku juga menyediakan laporan yang
@@ -56,7 +56,7 @@ export default function Page() {
           <div className="content-center">
             <Image alt="Satu Klik untuk Pencairan" src={Picture2} loading="lazy" />
           </div>
-          <div className="grid gap-3">
+          <div className="flex flex-col gap-3">
             <h3 className="text-slate-700 text-4xl font-extrabold">Satu Klik untuk Pencairan</h3>
             <p>
               Tanpa repot transfer manual lewat bank atau uang tunai, transfer dana reimbursement bisa dilakukan hanya
@@ -72,7 +72,7 @@ export default function Page() {
       </section>
       <section className="container">
         <div className="grid md:grid-cols-2 gap-8">
-          <div className="grid gap-3">
+          <div className="flex flex-col gap-3">
             <h3 className="text-slate-700 text-4xl font-extrabold">Approval Fleksibel</h3>
             <p>
               Approval untuk pengajuan reimbursement sangat fleksibel dengan konsep multi level approval. Semua bisa di
