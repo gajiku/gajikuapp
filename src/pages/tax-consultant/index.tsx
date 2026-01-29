@@ -11,11 +11,14 @@ export default function Index() {
   return (
     <DefaultLayout>
       <Head>
-        <title>Gajiku - Tax Consultant</title>
-        <meta name="description" content="Gajiku menyediakan solusi tax consultant untuk perusahaan anda." />
+        <title>Jasa Konsultan Pajak PPh 21 & SPT Badan Murah Jakarta | Gajiku</title>
+        <meta
+          name="description"
+          content="Solusi pajak SME: Hitung, bayar, & lapor PPh 21, PPN, PPh 23, hingga SPT Badan. Layanan retainer per jam, harga terjangkau, berbasis di Jakarta."
+        />
         <meta
           name="keywords"
-          content="penggajian otomatis, payroll, sistem gaji, HRIS Indonesia, aplikasi penggajian"
+          content="Jasa Konsultan Pajak Jakarta, Konsultan Pajak Murah UMKM, Jasa Lapor SPT Badan Terjangkau, Jasa Hitung PPh 21 Karyawan"
         />
       </Head>
       <Script src="https://tally.so/widgets/embed.js"></Script>
