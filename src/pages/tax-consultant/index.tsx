@@ -63,7 +63,7 @@ export default function Index() {
             return (
               <li
                 key={`tax.reason.${n}`}
-                className="col-span-3 lg:col-span-2 card bg-white shadow-md transition-all scale-100 hover:scale-105"
+                className="col-span-6 lg:col-span-2 card bg-white shadow-md transition-all scale-100 hover:scale-105"
               >
                 <Card.Body>
                   <h3 className="font-bold mb-2 text-2xl text-slate-700">{dt.title}</h3>
@@ -78,7 +78,7 @@ export default function Index() {
       <section className="container grid gap-4">
         <h2 className="text-primary text-3xl font-extrabold">Layanan Komprehensif untuk Ketenangan Bisnis Anda</h2>
         <p>Solusi perpajakan lengkap yang disesuaikan dengan kebutuhan perusahaan Anda.</p>
-        <div className="grid md:grid-cols-2 gap-12">
+        <ul className="grid grid-cols-6 gap-6 mb-16">
           {[
             {
               title: 'Manajemen PPh 21/26',
@@ -95,22 +95,84 @@ export default function Index() {
               description:
                 'Kami melakukan deteksi dini terhadap potensi risiko pajak di perusahaan Anda sebelum menjadi temuan DJP. Mencegah lebih baik daripada membayar denda.',
             },
+          ].map((dt, n: number) => {
+            return (
+              <li
+                key={`tax.feature.${n}`}
+                className="col-span-6 lg:col-span-2 card bg-white shadow-md transition-all scale-100 hover:scale-105"
+              >
+                <Card.Body>
+                  <h3 className="font-bold mb-2 text-2xl text-slate-700">{dt.title}</h3>
+                  <p>{dt.description}</p>
+                </Card.Body>
+              </li>
+            );
+          })}
+        </ul>
+      </section>
+
+      <section className="container grid gap-4">
+        <h2 className="text-primary text-3xl font-extrabold">Cakupan Layanan Kami</h2>
+        <p>
+          Kami menangani seluruh administrasi perpajakan Anda secara end-to-end, mulai dari perhitungan rutin bulanan,
+          pelaporan berkala, hingga asistensi pajak tahunan agar Anda bisa fokus sepenuhnya pada pertumbuhan bisnis.
+        </p>
+        <ul className="grid grid-cols-6 gap-6 mb-16">
+          {[
             {
-              title: 'Pendampingan Hukum & SP2DK',
-              description:
-                'Menerima surat dari kantor pajak? Jangan panik. Ahli pajak kami akan mendampingi Anda memberikan tanggapan profesional dan mewakili perusahaan jika diperlukan.',
+              title: 'Perhitungan & Pembayaran Pajak',
+              description: (
+                <>
+                  <p className="grow-0">Kami mengelola arus keluar pajak Anda dengan presisi tinggi.</p>
+                  <ol className="list-decimal pl-4">
+                    <li>PPh Pasal 21 terintegrasi payroll</li>
+                    <li>PPN Masa yang akurat</li>
+                    <li>PPh 4(2), 15, 22, 23/26</li>
+                    <li>Pendampingan setor sendiri</li>
+                  </ol>
+                </>
+              ),
+            },
+            {
+              title: 'Pelaporan Pajak Digital',
+              description: (
+                <>
+                  <p className="grow-0">Laporan rapi adalah kunci keamanan dari audit pajak.</p>
+                  <ol className="list-decimal pl-4">
+                    <li>Integrasi HRIS & Payroll</li>
+                    <li>SPT Tahunan Orang Pribadi</li>
+                    <li>SPT Tahunan Badan</li>
+                  </ol>
+                </>
+              ),
+            },
+            {
+              title: 'Konsultasi Pajak & Akuntansi',
+              description: (
+                <>
+                  <p className="grow-0">Akses ke tim ahli tanpa biaya overhead tinggi.</p>
+                  <ol className="list-decimal pl-4">
+                    <li>Expert Advisory berpengalaman</li>
+                    <li>Skema Retainer atau Per Jam</li>
+                    <li>Pendampingan kepatuhan dan mitigasi risiko pajak</li>
+                  </ol>
+                </>
+              ),
             },
           ].map((dt, n: number) => {
             return (
-              <div key={`tax.feature.${n}`} className="card card-bordered">
-                <div className="card-body text-center">
-                  <h3 className="text-2xl text-slate-700">{dt.title}</h3>
-                  <p className="text-slate-500 mb-8">{dt.description}</p>
-                </div>
-              </div>
+              <li
+                key={`tax.feature.${n}`}
+                className="col-span-6 lg:col-span-2 card bg-white shadow-md transition-all scale-100 hover:scale-105"
+              >
+                <Card.Body>
+                  <h3 className="font-bold mb-2 text-2xl text-slate-700">{dt.title}</h3>
+                  {dt.description}
+                </Card.Body>
+              </li>
             );
           })}
-        </div>
+        </ul>
       </section>
 
       <section className="container">
@@ -152,7 +214,7 @@ export default function Index() {
           singkat gratis.
         </p>
         <Link href="/contact-us" className="btn btn-primary">
-          Hubungi Kami
+          Jadwalkan Konsultasi Gratis
         </Link>
       </section>
     </DefaultLayout>
