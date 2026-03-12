@@ -32,7 +32,6 @@ export const getServerSideProps: GetServerSideProps = async (context) => {
   const sitemap = generateSiteMap();
 
   context.res.setHeader('Content-Type', 'text/xml');
-  // we send the XML to the browser
   context.res.write(sitemap);
   context.res.end();
 
