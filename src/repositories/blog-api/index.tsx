@@ -24,8 +24,10 @@ export interface Blog {
   picture: string;
   url: string;
   title: string;
+  subtitle: string;
   description: string;
   content: string;
+  form: string;
   createdAt: string;
   updatedAt: string;
 }

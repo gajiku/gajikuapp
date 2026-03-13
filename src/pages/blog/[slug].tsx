@@ -1,10 +1,10 @@
 import { Blog, First } from '@/repositories/blog-api';
 import { GetServerSideProps, NextPage } from 'next';
 import { format, parseISO } from 'date-fns';
-import { Breadcrumbs } from 'react-daisyui';
 import { DefaultLayout } from '@/components/layouts/general.layout';
 import Head from 'next/head';
 import Iframe from 'react-iframe';
+import Link from 'next/link';
 import Script from 'next/script';
 import { request } from '@/lib/http';
 
@@ -24,76 +24,34 @@ const PostPage: NextPage<{ post: Blog }> = ({ post }) => {
 
       <DefaultLayout>
         <div className="p-8 max-w-3xl mx-auto">
-          <Breadcrumbs>
-            <Breadcrumbs.Item href="/">Home</Breadcrumbs.Item>
-            <Breadcrumbs.Item href="/blog">Blog</Breadcrumbs.Item>
-            <Breadcrumbs.Item>{post.title}</Breadcrumbs.Item>
-          </Breadcrumbs>
+          <div className="breadcrumbs text-sm mb-4">
+            <ul>
+              <li>
+                <Link href="/">Home</Link>
+              </li>
+              <li>
+                <Link href="/blog">Blog</Link>
+              </li>
+              <li>{post.title}</li>
+            </ul>
+          </div>
 
           <article>
             <div className="flex flex-col gap-3 mb-3">
               <h2 className="text-4xl font-extrabold">{post.title}</h2>
-              <small>{format(parseISO(post.createdAt), 'MMM do, yyyy')}</small>
+              <div className="text-gray-500 text-sm">
+                {post.subtitle && <p className="leading-5 mb-2">{post.subtitle}</p>}
+                <footer>{format(parseISO(post.createdAt), 'MMM do, yyyy')}</footer>
+              </div>
               <hr />
             </div>
             <div className="article" dangerouslySetInnerHTML={{ __html: post.content }} />
           </article>
 
-          {/* Form */}
-          {post.slug === 'download-template-perhitungan-gajiku-excel' ? (
-            <section className="py-16 lg:px-32 md:px-16 px-4 text-center mx-auto max-w-4xl" id="download-form">
-              <h2 className="text-2xl mb-4 text-center font-semibold">
-                Download Template Excel Perhitungan Gaji Karyawan
-              </h2>
-              <Iframe
-                url="https://tally.so/embed/w7oNpP?hideTitle=1&transparentBackground=1&dynamicHeight=1"
-                width="100%"
-                height="100%"
-                className="h-full"
-                scrolling="no"
-                frameBorder={0}
-              />
+          {post.form && (
+            <section>
+              <Iframe url={post.form} width="100%" height="100%" className="h-full" scrolling="no" frameBorder={0} />
             </section>
-          ) : post.slug === 'template-slip-gaji-excel-free-download' ? (
-            <section className="py-16 lg:px-32 md:px-16 px-4 text-center mx-auto max-w-4xl" id="download-form">
-              <h2 className="text-2xl mb-4 text-center font-semibold">Download Template Slip Gaji Excel</h2>
-              <Iframe
-                url="https://tally.so/embed/w2LePe?hideTitle=1&transparentBackground=1&dynamicHeight=1"
-                width="100%"
-                height="100%"
-                className="h-full"
-                scrolling="no"
-                frameBorder={0}
-              />
-            </section>
-          ) : post.slug === 'download-rumus-perhitungan-kalkulator-pph-21-exc' ? (
-            <section className="py-16 lg:px-32 md:px-16 px-4 text-center mx-auto max-w-4xl" id="download-form">
-              <h2 className="text-2xl mb-4 text-center font-semibold">
-                Download Rumus Perhitungan Kalkulator PPH 21 Excel
-              </h2>
-              <Iframe
-                url="https://tally.so/embed/meL6Rl?hideTitle=1&transparentBackground=1&dynamicHeight=1"
-                width="100%"
-                height="100%"
-                className="h-full"
-                scrolling="no"
-                frameBorder={0}
-              />
-            </section>
-          ) : post.slug === 'download-absensi-karyawan-format-excel-gratis' ? (
-            <section className="py-16 lg:px-32 md:px-16 px-4 text-center mx-auto max-w-4xl" id="download-form">
-              <h2 className="text-2xl mb-4 text-center font-semibold">Download Absensi Karyawan Format Excel</h2>
-              <Iframe
-                url="https://tally.so/embed/w7o4X9?hideTitle=1&transparentBackground=1&dynamicHeight=1"
-                width="100%"
-                height="100%"
-                className="h-full"
-                scrolling="no"
-                frameBorder={0}
-              />
-            </section>
-          ) : (
-            <></>
           )}
         </div>
       </DefaultLayout>
