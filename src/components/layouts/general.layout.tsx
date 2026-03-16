@@ -70,25 +70,25 @@ export const DefaultLayout = (props: Props) => {
                 </Dropdown.Menu>
               </Dropdown>
               <Link
-                className="btn btn-ghost hover:bg-gray-100 rounded-btn text-base text-primary font-semibold"
+                className="btn btn-ghost hover:bg-gray-50 rounded-btn text-base text-primary font-semibold"
                 href="/about"
               >
                 Tentang Gajiku
               </Link>
               <Link
-                className="btn btn-ghost hover:bg-gray-100 rounded-btn text-base text-primary font-semibold"
+                className="btn btn-ghost hover:bg-gray-50 rounded-btn text-base text-primary font-semibold"
                 href="/blog"
               >
                 Blog
               </Link>
               <Link
-                className="btn btn-ghost hover:bg-gray-100 rounded-btn text-base text-primary font-semibold"
+                className="btn btn-ghost hover:bg-gray-50 rounded-btn text-base text-primary font-semibold"
                 href="/contact-us"
               >
                 Kontak Kami
               </Link>
               <Link
-                className="btn btn-ghost hover:bg-gray-100 rounded-btn text-base text-primary font-semibold"
+                className="btn btn-ghost hover:bg-gray-50 rounded-btn text-base text-primary font-semibold"
                 href="/faq"
               >
                 FAQ
