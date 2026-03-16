@@ -87,6 +87,12 @@ export const DefaultLayout = (props: Props) => {
               >
                 Kontak Kami
               </Link>
+              <Link
+                className="btn btn-ghost hover:bg-gray-100 rounded-btn text-base text-primary font-semibold"
+                href="/faq"
+              >
+                FAQ
+              </Link>
             </Navbar.Center>
             <Navbar.End>
               <Button tag="a" color="primary" className="text-white" href="/contact-us">
@@ -146,6 +152,11 @@ export const DefaultLayout = (props: Props) => {
                 <li>
                   <Link href="/contact-us" className="link link-hover">
                     Kontak
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/faq" className="link link-hover">
+                    FAQ
                   </Link>
                 </li>
               </ul>

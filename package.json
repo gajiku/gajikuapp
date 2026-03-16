@@ -13,6 +13,7 @@
     "@next/third-parties": "^14.2.5",
     "classnames": "^2.5.1",
     "daisyui": "^4.12.10",
+    "date-fns": "^4.1.0",
     "html-react-parser": "^3.0.12",
     "next": "14.2.4",
     "react": "^18",

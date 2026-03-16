@@ -3,6 +3,7 @@ export type ApiSuccessResponse<T> = {
   process_time: string;
   data: T;
 };
+
 export type ApiErrorResponse = {
   http_status: number;
   grpc_status: number;
