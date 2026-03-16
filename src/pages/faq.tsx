@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { useEffect, useRef, useState } from 'react';
 import { HiChevronDown, HiChevronUp } from 'react-icons/hi';
 
-export default function Home() {
+export default function FaqPage() {
   const top = useRef<HTMLDivElement>(null);
   const [expand, setExpand] = useState<boolean>(false);
   const [selected, setSelected] = useState<number>(0);
@@ -59,7 +59,7 @@ export default function Home() {
 
       <section ref={top}>
         <div className="flex flex-col md:flex-row">
-          <div className="self-start md:border-r md:border-gray-300 p-4 md:pb-20 sticky top-20 md:top-7 md:w-[25%]">
+          <div className="md:border-r md:border-gray-300 p-4 md:pb-20 md:self-start md:sticky md:top-7 md:w-[25%]">
             <div className="md:hidden">
               <div
                 className={classNames(
