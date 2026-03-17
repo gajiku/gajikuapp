@@ -1,9 +1,8 @@
+import { useEffect, useRef, useState } from 'react';
+import { HiChevronDown, HiChevronUp } from 'react-icons/hi';
 import { DefaultLayout } from '@/components/layouts/general.layout';
 import classNames from 'classnames';
 import Head from 'next/head';
-import Image from 'next/image';
-import { useEffect, useRef, useState } from 'react';
-import { HiChevronDown, HiChevronUp } from 'react-icons/hi';
 
 export default function FaqPage() {
   const top = useRef<HTMLDivElement>(null);
@@ -139,20 +138,16 @@ const answers = [
           <span>Download aplikasi Gajiku (Android/IOS).</span>
           <div className="flex gap-4 md:ml-4 mt-4">
             <a href="https://apps.apple.com/id/app/gajiku/id6444016967" target="_blank">
-              <Image
-                className="object-contain w-fit"
+              <img
+                className="md:h-12 object-contain w-fit"
                 src="https://storage.googleapis.com/gajiku-assets/faq/faq-app-store.png"
-                width={400}
-                height={120}
                 alt="get-from-app-store"
               />
             </a>
             <a href="https://play.google.com/store/apps/details?id=com.gajiku.app" target="_blank">
-              <Image
-                className="object-contain w-fit"
+              <img
+                className="md:h-12 object-contain w-fit"
                 src="https://storage.googleapis.com/gajiku-assets/faq/faq-google-play.png"
-                width={400}
-                height={120}
                 alt="get-from-google-play"
               />
             </a>
@@ -160,43 +155,35 @@ const answers = [
         </li>
         <li>
           Buka aplikasi. Di halaman login, klik Dapatkan Akses.
-          <Image
-            className="border border-gray-100 md:ml-4 mt-4 object-contain w-fit"
+          <img
+            className="border border-gray-100 md:w-96 md:ml-4 mt-4 object-contain w-fit"
             src="https://storage.googleapis.com/gajiku-assets/faq/faq-get-access.png"
-            width={640}
-            height={1000}
             alt="login-instruction-1"
           />
         </li>
         <li>
           Masukkan nomor HP Anda dan klik lanjut. Pastikan nomor HP yang dimasukkan sesuai dengan nomor HP yang
           terdaftar di sistem perusahaan.
-          <Image
-            className="border border-gray-100 md:ml-4 mt-4 object-contain w-fit"
+          <img
+            className="border border-gray-100 md:w-96 md:ml-4 mt-4 object-contain w-fit"
             src="https://storage.googleapis.com/gajiku-assets/faq/faq-insert-phone.png"
-            width={640}
-            height={1000}
             alt="login-instruction-2"
           />
         </li>
         <li>
           Sistem akan mengirimkan kode OTP melalui SMS ke nomor HP yang dimasukkan. Pastikan sinyal anda aman agar SMS
           kode OTP masuk. Masukkan kode OTP yang anda terima via SMS lalu klik lanjut.
-          <Image
-            className="border border-gray-100 md:ml-4 mt-4 object-contain w-fit"
+          <img
+            className="border border-gray-100 md:w-96 md:ml-4 mt-4 object-contain w-fit"
             src="https://storage.googleapis.com/gajiku-assets/faq/faq-get-otp.png"
-            width={640}
-            height={1000}
             alt="login-instruction-3"
           />
         </li>
         <li>
           Buat kata sandi baru.
-          <Image
-            className="border border-gray-100 md:ml-4 mt-4 object-contain w-fit"
+          <img
+            className="border border-gray-100 md:w-96 md:ml-4 mt-4 object-contain w-fit"
             src="https://storage.googleapis.com/gajiku-assets/faq/faq-create-password.png"
-            width={640}
-            height={1000}
             alt="login-instruction-4"
           />
         </li>
@@ -210,43 +197,35 @@ const answers = [
       <ol className="grid gap-8 list-decimal list-outside ml-4 md:ml-8">
         <li>
           Buka aplikasi. Di halaman login, klik Lupa Password.
-          <Image
-            className="border border-gray-100 md:ml-4 mt-4 object-contain w-fit"
+          <img
+            className="border border-gray-100 md:w-96 md:ml-4 mt-4 object-contain w-fit"
             src="https://storage.googleapis.com/gajiku-assets/faq/faq-forgot-password.png"
-            width={640}
-            height={1000}
             alt="forgot-password-instruction-1"
           />
         </li>
         <li>
           Masukkan nomor HP Anda dan klik lanjut. Pastikan nomor HP yang dimasukkan sesuai dengan nomor HP yang
           terdaftar di sistem perusahaan.
-          <Image
-            className="border border-gray-100 md:ml-4 mt-4 object-contain w-fit"
+          <img
+            className="border border-gray-100 md:w-96 md:ml-4 mt-4 object-contain w-fit"
             src="https://storage.googleapis.com/gajiku-assets/faq/faq-insert-phone.png"
-            width={640}
-            height={1000}
             alt="forgot-password-instruction-2"
           />
         </li>
         <li>
           Sistem akan mengirimkan kode OTP melalui SMS ke nomor HP yang dimasukkan. Pastikan sinyal anda aman agar SMS
           kode OTP masuk. Masukkan kode OTP yang anda terima via SMS lalu klik lanjut.
-          <Image
-            className="border border-gray-100 md:ml-4 mt-4 object-contain w-fit"
+          <img
+            className="border border-gray-100 md:w-96 md:ml-4 mt-4 object-contain w-fit"
             src="https://storage.googleapis.com/gajiku-assets/faq/faq-get-otp.png"
-            width={640}
-            height={1000}
             alt="forgot-password-instruction-3"
           />
         </li>
         <li>
           Buat kata sandi baru.
-          <Image
-            className="border border-gray-100 md:ml-4 mt-4 object-contain w-fit"
+          <img
+            className="border border-gray-100 md:w-96 md:ml-4 mt-4 object-contain w-fit"
             src="https://storage.googleapis.com/gajiku-assets/faq/faq-create-password.png"
-            width={640}
-            height={1000}
             alt="forgot-password-instruction-4"
           />
         </li>
@@ -260,43 +239,35 @@ const answers = [
       <ul className="grid gap-8 list-disc list-outside ml-8">
         <li>
           Saldo EWA Anda kosong.
-          <Image
-            className="border border-gray-100 md:ml-4 mt-4 object-contain w-fit"
+          <img
+            className="border border-gray-100 md:w-96 md:ml-4 mt-4 object-contain w-fit"
             src="https://storage.googleapis.com/gajiku-assets/faq/faq-ewa1.png"
-            width={640}
-            height={10000}
             alt="ewa-info-1"
           />
         </li>
         <li>
-          Muncul keterangan "Fitur tarik gaji muka tidak aktif untuk akun Anda" (hubungi perusahaan untuk mengaktifkan
-          kembali).
-          <Image
-            className="border border-gray-100 md:ml-4 mt-4 object-contain w-fit"
+          Muncul keterangan &quot;Fitur tarik gaji muka tidak aktif untuk akun Anda&quot; (hubungi perusahaan untuk
+          mengaktifkan kembali).
+          <img
+            className="border border-gray-100 md:w-96 md:ml-4 mt-4 object-contain w-fit"
             src="https://storage.googleapis.com/gajiku-assets/faq/faq-ewa2.png"
-            width={640}
-            height={1000}
             alt="ewa-info-2"
           />
         </li>
         <li>
-          Muncul keterangan "Dalam periode blackout" (periode penarikan sedang ditutup oleh perusahaan).
-          <Image
-            className="border border-gray-100 md:ml-4 mt-4 object-contain w-fit"
+          Muncul keterangan &quot;Dalam periode blackout&quot; (periode penarikan sedang ditutup oleh perusahaan).
+          <img
+            className="border border-gray-100 md:w-96 md:ml-4 mt-4 object-contain w-fit"
             src="https://storage.googleapis.com/gajiku-assets/faq/faq-ewa3.png"
-            width={640}
-            height={1000}
             alt="ewa-info-3"
           />
         </li>
         <li>
-          Muncul keterangan "Harap masukkan akun bank Anda". Harap hubungi perusahaan agar data rekening Anda dimasukkan
-          ke sistem perusahaan.
-          <Image
-            className="border border-gray-100 md:ml-4 mt-4 object-contain w-fit"
+          Muncul keterangan &quot;Harap masukkan akun bank Anda&quot;. Harap hubungi perusahaan agar data rekening Anda
+          dimasukkan ke sistem perusahaan.
+          <img
+            className="border border-gray-100 md:w-96 md:ml-4 mt-4 object-contain w-fit"
             src="https://storage.googleapis.com/gajiku-assets/faq/faq-ewa4.png"
-            width={640}
-            height={1000}
             alt="ewa-info-4"
           />
         </li>
@@ -308,41 +279,33 @@ const answers = [
       <ol className="grid gap-8 list-decimal list-outside ml-4 md:ml-8">
         <li>
           Di halaman beranda, masukkan nilai EWA yang ingin diambil lalu klik Tarik Saldo.
-          <Image
-            className="border border-gray-100 md:ml-4 mt-4 object-contain w-fit"
+          <img
+            className="border border-gray-100 md:w-96 md:ml-4 mt-4 object-contain w-fit"
             src="https://storage.googleapis.com/gajiku-assets/faq/faq-ewa-withdrawal1.png"
-            width={640}
-            height={1000}
             alt="ewa-withdrawal-instruction-1"
           />
         </li>
         <li>
           Klik konfirmasi.
-          <Image
-            className="border border-gray-100 md:ml-4 mt-4 object-contain w-fit"
+          <img
+            className="border border-gray-100 md:w-96 md:ml-4 mt-4 object-contain w-fit"
             src="https://storage.googleapis.com/gajiku-assets/faq/faq-ewa-withdrawal2.png"
-            width={640}
-            height={1000}
             alt="ewa-withdrawal-instruction-2"
           />
         </li>
         <li>
           Setelahnya akan muncul halaman sukses pengajuan.
-          <Image
-            className="border border-gray-100 md:ml-4 mt-4 object-contain w-fit"
+          <img
+            className="border border-gray-100 md:w-96 md:ml-4 mt-4 object-contain w-fit"
             src="https://storage.googleapis.com/gajiku-assets/faq/faq-ewa-withdrawal3.png"
-            width={640}
-            height={1000}
             alt="ewa-withdrawal-instruction-3"
           />
         </li>
         <li>
           Anda bisa memantau status pengajuan di menu Riwayat.
-          <Image
-            className="border border-gray-100 md:ml-4 mt-4 object-contain w-fit"
+          <img
+            className="border border-gray-100 md:w-96 md:ml-4 mt-4 object-contain w-fit"
             src="https://storage.googleapis.com/gajiku-assets/faq/faq-ewa-withdrawal4.png"
-            width={640}
-            height={1000}
             alt="ewa-withdrawal-instruction-4"
           />
         </li>
@@ -363,31 +326,25 @@ const answers = [
       <ul className="grid gap-8 list-disc list-outside ml-4 md:ml-8">
         <li>
           Level (0/1): Pengajuan belum disetujui oleh perusahaan.
-          <Image
-            className="border border-gray-100 md:ml-4 mt-4 object-contain w-fit"
+          <img
+            className="border border-gray-100 md:w-96 md:ml-4 mt-4 object-contain w-fit"
             src="https://storage.googleapis.com/gajiku-assets/faq/faq-approval-status1.png"
-            width={640}
-            height={1000}
             alt="status-info-1"
           />
         </li>
         <li>
           Level (1/1): Pengajuan sudah disetujui.
-          <Image
-            className="border border-gray-100 md:ml-4 mt-4 object-contain w-fit"
+          <img
+            className="border border-gray-100 md:w-96 md:ml-4 mt-4 object-contain w-fit"
             src="https://storage.googleapis.com/gajiku-assets/faq/faq-approval-status2.png"
-            width={640}
-            height={1000}
             alt="status-info-2"
           />
         </li>
         <li>
           Tanda X: Pengajuan ditolak oleh perusahaan (Anda bisa membuat pengajuan ulang).
-          <Image
-            className="border border-gray-100 md:ml-4 mt-4 object-contain w-fit"
+          <img
+            className="border border-gray-100 md:w-96 md:ml-4 mt-4 object-contain w-fit"
             src="https://storage.googleapis.com/gajiku-assets/faq/faq-approval-status3.png"
-            width={640}
-            height={1000}
             alt="status-info-3"
           />
         </li>
