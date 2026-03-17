@@ -1,6 +1,6 @@
 import { ApiSuccessResponse } from '@/pkg/api/response';
 
-const host = 'https://api.gajiku.dev/blog';
+const host = 'https://api.gajiku.app/blog';
 
 export interface BasicBlog {
   slug: string;
