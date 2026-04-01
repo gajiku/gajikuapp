@@ -1,3 +1,4 @@
+import { ContactUsForm } from '@/components/forms/contact-us';
 import { DefaultLayout } from '@/components/layouts/general.layout';
 import GajikuHeroImage from '@/assets/gajiku-hero-image.png';
 import Head from 'next/head';
@@ -85,17 +86,19 @@ export default function Page() {
           Gajiku, Anda bisa rekomendasikan ke HR Anda.
         </p>
       </section>
-      <section className="container text-center">
-        <h3 className="text-primary text-xl font-bold mb-2">Yuk, Gunakan Gaji yang Sudah Anda Hasilkan</h3>
-        <p className="max-w-2xl mx-auto mb-6">
-          Tidak perlu tunggu gajian untuk beli kebutuhan penting. Pakai Produk Digital dari Gajiku, langsung dari
-          aplikasi.
-        </p>
-        <p className="max-w-2xl mx-auto mb-6">Ingin tahu lebih lanjut, Tim kami siap membantu Anda.</p>
-        <Link href="/contact-us" className="btn btn-primary">
-          Hubungi Kami
-        </Link>
-      </section>
+
+      <ContactUsForm
+        className="mt-8"
+        header={
+          <>
+            <h3 className="text-primary text-xl font-bold mb-2">Yuk, Gunakan Gaji yang Sudah Anda Hasilkan</h3>
+            <p className="max-w-2xl mx-auto mb-6">
+              Tidak perlu tunggu gajian untuk beli kebutuhan penting. Pakai Produk Digital dari Gajiku, langsung dari
+              aplikasi.
+            </p>
+          </>
+        }
+      />
     </DefaultLayout>
   );
 }

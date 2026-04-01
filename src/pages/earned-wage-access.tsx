@@ -1,3 +1,4 @@
+import { ContactUsForm } from '@/components/forms/contact-us';
 import { DefaultLayout } from '@/components/layouts/general.layout';
 import Head from 'next/head';
 import { HiOutlineCheck } from 'react-icons/hi';
@@ -106,25 +107,20 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="container">
-        <p className="text-center mb-6">
-          Jika ada pertanyaan seputar EWA Gajiku, silakan hubungi Customer Service Gajiku di{' '}
-          <Link href="mailto:support@gajikuapp.com" color="primary">
-            support@gajikuapp.com
-          </Link>
-        </p>
-        <h2 className="text-slate-700 text-3xl mb-6 text-center font-extrabold">Atau langsung jadwalkan demo</h2>
-        <div className="max-w-xl mx-auto">
-          <Iframe
-            url="https://tally.so/embed/meE2je?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-            width="100%"
-            height="100%"
-            className="h-full"
-            scrolling="no"
-            frameBorder={0}
-          />
-        </div>
-      </section>
+
+      <ContactUsForm
+        header={
+          <>
+            <p className="text-center mb-6">
+              Jika ada pertanyaan seputar EWA Gajiku, silakan hubungi kami melalui Whatsapp atau Customer Service Gajiku
+              di{' '}
+              <Link href="mailto:support@gajikuapp.com" color="primary">
+                support@gajikuapp.com
+              </Link>
+            </p>
+          </>
+        }
+      />
     </DefaultLayout>
   );
 }

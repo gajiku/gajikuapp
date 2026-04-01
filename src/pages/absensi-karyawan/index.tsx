@@ -1,4 +1,12 @@
-import { HiOutlineCalendar, HiOutlineChartBar, HiOutlineClock, HiOutlineUserGroup } from 'react-icons/hi';
+import {
+  HiOutlineCalendar,
+  HiOutlineChartBar,
+  HiOutlineClock,
+  HiOutlineFingerPrint,
+  HiOutlineUserGroup,
+  HiOutlineWifi,
+} from 'react-icons/hi';
+import { ContactUsForm } from '@/components/forms/contact-us';
 import { DefaultLayout } from '@/components/layouts/general.layout';
 import GajikuHeroImage from '@/assets/gajiku-hero-image.png';
 import Head from 'next/head';
@@ -51,8 +59,23 @@ export default function Page() {
               icon: HiOutlineUserGroup,
               color: 'secondary',
               title: 'Manajemen Absensi',
-              description: 'Absensi karyawan yang fleksibel dengan GPS menggunakan Android & iOS',
+              description: 'Sistem manajemen absensi kehadiran karyawan dan laporan kehadiran yang lengkap ',
               href: '/absensi-karyawan/manajemen-absensi',
+            },
+            {
+              icon: HiOutlineWifi,
+              color: 'warning',
+              title: 'Absensi Online',
+              description: 'Absensi karyawan yang fleksibel dengan GPS menggunakan Android & iOS',
+              href: 'absensi-karyawan/absensi-online',
+            },
+            {
+              icon: HiOutlineFingerPrint,
+              color: 'error',
+              title: 'Integrasi Mesin Fingerprint',
+              description:
+                'Hubungkan mesin absensi di kantor Anda dengan sistem cloud kami dan sinkronisasi secara otomatis ke dashboard',
+              href: 'absensi-karyawan/fingerprint',
             },
             {
               icon: HiOutlineClock,
@@ -87,6 +110,19 @@ export default function Page() {
           })}
         </div>
       </section>
+
+      <ContactUsForm
+        className="mt-8"
+        header={
+          <>
+            <p>Siap digitalisasi absensi karyawan Anda?</p>
+            <p>
+              Hubungi kami sekarang untuk menjadwalkan <b>demo gratis</b> dan lihat bagaimana Gajiku membuat pencatatan
+              kehadiran jadi lebih akurat dan praktis!
+            </p>
+          </>
+        }
+      />
     </DefaultLayout>
   );
 }

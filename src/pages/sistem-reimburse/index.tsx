@@ -1,3 +1,4 @@
+import { ContactUsForm } from '@/components/forms/contact-us';
 import { DefaultLayout } from '@/components/layouts/general.layout';
 import GajikuHeroImage from '@/assets/gajiku-hero-image.png';
 import Head from 'next/head';
@@ -89,6 +90,18 @@ export default function Page() {
           </div>
         </div>
       </section>
+
+      <ContactUsForm
+        className="mt-8"
+        header={
+          <>
+            <p>Sederhanakan proses klaim biaya karyawan dengan manajemen reimbursement tanpa kertas & ribet.</p>
+            <p>
+              Hubungi kami hari ini untuk <b>demo gratis</b>!
+            </p>
+          </>
+        }
+      />
     </DefaultLayout>
   );
 }
