@@ -1,3 +1,5 @@
+import AttendanceLocationImg from '@/assets/product/attendance-location.png';
+import AttendancePresenceImg from '@/assets/product/attendance-presence.png';
 import { ContactUsForm } from '@/components/forms/contact-us';
 import { DefaultLayout } from '@/components/layouts/general.layout';
 import GajikuHeroImage from '@/assets/gajiku-hero-image.png';
@@ -7,21 +9,20 @@ import { HiOutlineCheck } from 'react-icons/hi';
 import HomepageBackdrop from '@/assets/homepage/backdrop.png';
 import Image from 'next/image';
 import Link from 'next/link';
-import PlaceholderEwa from '@/assets/ewa/placeholder-ewa.svg';
 
 export default function Page() {
   return (
     <DefaultLayout>
       <Head>
-        <title>Dashboard Absensi Online - Gajiku</title>
-        <meta
-          name="description"
-          content="Sistem absensi gajiku di lengkapi dashboard untuk melakukan monitoring dan konfigurasi yang fleksibel"
-        />
+        <title>Absensi Online - Gajiku</title>
+        <meta name="description" content="Absensi karyawan secara online dengan GPS menggunakan Android & iOS." />
       </Head>
 
-      <Hero background={HomepageBackdrop} image={GajikuHeroImage} reverse title="Dashboard Absensi Online">
-        <p>Sistem absensi gajiku di lengkapi dashboard untuk melakukan monitoring dan konfigurasi yang fleksibel.</p>
+      <Hero background={HomepageBackdrop} image={GajikuHeroImage} reverse title="Absensi Online">
+        <p>
+          Sistem absensi dan kehadiran karyawan dengan GPS dapat diakses dari berbagai platform termasuk browser,
+          Android dan iOS
+        </p>
         <footer>
           <Link className="btn btn-primary mb-8" href="/contact-us">
             Hubungi Kami
@@ -32,19 +33,23 @@ export default function Page() {
       <section className="container">
         <div className="grid md:grid-cols-2 gap-16">
           <div className="grid gap-4 content-start">
-            <h2 className="text-slate-700 text-4xl font-extrabold">Monitor Jadwal Kerja</h2>
+            <h3 className="text-slate-700 text-4xl font-extrabold">Absensi Online dari Smartphone</h3>
             <ul className="grid gap-2">
               <li className="flex gap-2 items-center">
                 <HiOutlineCheck size={20} className="text-success" />
-                Kalender Kerja
+                <div>Clock-in & clock-out dari browser, Android & iOS</div>
               </li>
               <li className="flex gap-2 items-center">
                 <HiOutlineCheck size={20} className="text-success" />
-                Timesheet
+                <div>Presensi mode kantor, work from home dan hybrid</div>
               </li>
               <li className="flex gap-2 items-center">
                 <HiOutlineCheck size={20} className="text-success" />
-                Bulk Approval
+                <div>Anti Fake GPS tracker</div>
+              </li>
+              <li className="flex gap-2 items-center">
+                <HiOutlineCheck size={20} className="text-success" />
+                <div>Laporan langsung secara real-time</div>
               </li>
             </ul>
             <footer>
@@ -54,26 +59,45 @@ export default function Page() {
             </footer>
           </div>
           <div className="content-center">
-            <Image src={PlaceholderEwa} className="h-fit px-6" alt="Gajiku employee apps" loading="lazy" />
+            <div aria-label="Phone mockup" className="mockup-phone max-w-xs max-h-fit">
+              <div className="camera"></div>
+              <div className="display">
+                <div className="artboard artboard-demo phone-1 !h-fit">
+                  <Image src={AttendancePresenceImg} className="pr-6 mb-auto " alt="Gajiku Attendance" loading="lazy" />
+                </div>
+              </div>
+            </div>
           </div>
 
-          <div className="content-center">
-            <Image src={PlaceholderEwa} className="h-fit px-6" alt="Gajiku employee apps" loading="lazy" />
+          <div className="content-center text-right pr-6">
+            <div aria-label="Phone mockup" className="mockup-phone max-w-xs max-h-fit">
+              <div className="camera"></div>
+              <div className="display">
+                <div className="artboard artboard-demo phone-1 !h-fit">
+                  <Image
+                    src={AttendanceLocationImg}
+                    className="pr-6 mb-auto "
+                    alt="Gajiku Attendance Location"
+                    loading="lazy"
+                  />
+                </div>
+              </div>
+            </div>
           </div>
           <div className="grid gap-4 content-start">
-            <h2 className="text-slate-700 text-4xl font-extrabold">Master Data & Laporan</h2>
+            <h3 className="text-slate-700 text-4xl font-extrabold">Absensi Untuk Karyawan Lapangan</h3>
             <ul className="grid gap-2">
               <li className="flex gap-2 items-center">
                 <HiOutlineCheck size={20} className="text-success" />
-                <div>Master Shift</div>
+                Mode clock-in & clock-out di mana saja
               </li>
               <li className="flex gap-2 items-center">
                 <HiOutlineCheck size={20} className="text-success" />
-                <div>Master Data Cuti</div>
+                Lacak koordinat karyawan berdasarkan GPS
               </li>
               <li className="flex gap-2 items-center">
                 <HiOutlineCheck size={20} className="text-success" />
-                <div>Laporan umum yang bisa di pakai di berbagai sistem penggajian</div>
+                Lacak seberapa lama ijin istirahat
               </li>
             </ul>
             <footer>
@@ -81,22 +105,6 @@ export default function Page() {
                 Hubungi Kami
               </Link>
             </footer>
-          </div>
-
-          <div className="grid gap-4 content-start">
-            <h2 className="text-slate-700 text-4xl font-extrabold">Atur Workflow Approval</h2>
-            <p>
-              Jenjang persetujuan dapat dibuat dengan fleksibel, hingga siapa dan berapa orang yang harus menyetujui
-              bisa di atur dengan mudah melalui dashboard gajiku
-            </p>
-            <footer>
-              <Link className="btn btn-primary" href="/contact-us">
-                Hubungi Kami
-              </Link>
-            </footer>
-          </div>
-          <div className="content-center">
-            <Image src={PlaceholderEwa} className="h-fit px-6" alt="Gajiku employee apps" loading="lazy" />
           </div>
         </div>
       </section>

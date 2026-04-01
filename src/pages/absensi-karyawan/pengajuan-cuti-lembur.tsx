@@ -1,4 +1,5 @@
 import { PhoneMockup, WindowMockup } from 'react-daisyui';
+import { ContactUsForm } from '@/components/forms/contact-us';
 import { DefaultLayout } from '@/components/layouts/general.layout';
 import Footer from './_components/Footer';
 import GajikuHeroImage from '@/assets/gajiku-hero-image.png';
@@ -120,6 +121,15 @@ export default function Page() {
       </section>
 
       <Footer />
+
+      <ContactUsForm
+        className="mt-16"
+        header={
+          <p>
+            Hubungi kami sekarang untuk menjadwalkan <b>demo gratis</b>!
+          </p>
+        }
+      />
     </DefaultLayout>
   );
 }

@@ -1,4 +1,5 @@
 import { Accordion } from 'react-daisyui';
+import { ContactUsForm } from '@/components/forms/contact-us';
 import { DefaultLayout } from '@/components/layouts/general.layout';
 import GajikuHeroImage from '@/assets/gajiku-hero-image.png';
 import Head from 'next/head';
@@ -111,16 +112,18 @@ export default function Page() {
         </ol>
       </section>
 
-      <section className="container text-center">
-        <h3 className="text-primary text-xl font-bold mb-2">Ingin Mengetahui Cara Kerjanya?</h3>
-        <p className="mb-6">
-          Tim kami siap membantu Anda memahami bagaimana sistem KPI dari Gajiku dapat diimplementasikan sesuai kebutuhan
-          perusahaan Anda.
-        </p>
-        <Link href="/contact-us" className="btn btn-primary">
-          Jadwalkan Demo Gratis
-        </Link>
-      </section>
+      <ContactUsForm
+        className="mt-8"
+        header={
+          <>
+            <h3 className="text-primary text-xl font-bold mb-2">Ingin Mengetahui Cara Kerjanya?</h3>
+            <p className="mb-6">
+              Tim kami siap membantu Anda memahami bagaimana sistem KPI dari Gajiku dapat diimplementasikan sesuai
+              kebutuhan perusahaan Anda.
+            </p>
+          </>
+        }
+      />
     </DefaultLayout>
   );
 }

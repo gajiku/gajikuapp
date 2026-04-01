@@ -1,4 +1,5 @@
 import { LuAlarmClockCheck, LuAlignEndHorizontal, LuPercent } from 'react-icons/lu';
+import { ContactUsForm } from '@/components/forms/contact-us';
 import { DefaultLayout } from '@/components/layouts/general.layout';
 import GajikuHeroImage from '@/assets/gajiku-hero-image.png';
 import Head from 'next/head';
@@ -153,14 +154,17 @@ export default function Page() {
           </li>
         </ol>
       </section>
-      <section className="container text-center">
-        <p className="max-w-md mx-auto mb-6">
-          Ingin tahu lebih lanjut atau siap mengajukan Pinjaman Usaha? Tim kami siap membantu Anda.
-        </p>
-        <Link href="/contact-us" className="btn btn-primary">
-          Hubungi Kami
-        </Link>
-      </section>
+
+      <ContactUsForm
+        className="mt-8"
+        header={
+          <>
+            <p className="max-w-md mx-auto mb-6">
+              Ingin tahu lebih lanjut atau siap mengajukan Pinjaman Usaha? Tim kami siap membantu Anda.
+            </p>
+          </>
+        }
+      />
     </DefaultLayout>
   );
 }

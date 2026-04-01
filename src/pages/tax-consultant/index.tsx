@@ -1,4 +1,5 @@
 import { Card } from 'react-daisyui';
+import { ContactUsForm } from '@/components/forms/contact-us';
 import { DefaultLayout } from '@/components/layouts/general.layout';
 import GajikuHeroImage from '@/assets/gajiku-hero-image.png';
 import Head from 'next/head';
@@ -207,16 +208,18 @@ export default function Index() {
         </ol>
       </section>
 
-      <section className="container text-center">
-        <h3 className="text-primary text-xl font-bold mb-2">Siap Lepas Dari Kerumitan Pajak?</h3>
-        <p className="max-w-2xl mx-auto mb-6">
-          Jangan biarkan urusan pajak menghambat skalabilitas perusahaan Anda. Hubungi tim ahli kami untuk konsultasi
-          singkat gratis.
-        </p>
-        <Link href="/contact-us" className="btn btn-primary">
-          Jadwalkan Konsultasi Gratis
-        </Link>
-      </section>
+      <ContactUsForm
+        className="mt-8"
+        header={
+          <>
+            <h3 className="text-primary text-xl font-bold mb-2">Siap Lepas Dari Kerumitan Pajak?</h3>
+            <p className="max-w-2xl mx-auto mb-6">
+              Jangan biarkan urusan pajak menghambat skalabilitas perusahaan Anda. Hubungi tim ahli kami untuk
+              konsultasi singkat gratis.
+            </p>
+          </>
+        }
+      />
     </DefaultLayout>
   );
 }

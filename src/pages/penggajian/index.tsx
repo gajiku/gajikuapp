@@ -2,6 +2,7 @@ import { Accordion, Card } from 'react-daisyui';
 import { RiCodeBoxLine, RiFileExcel2Line, RiFilePdf2Line, RiMoneyDollarBoxLine, RiUserHeartLine } from 'react-icons/ri';
 import BPJS from '@/assets/payroll/BPJS_Screenshot.webp';
 import Background from '@/assets/payroll/image.png';
+import { ContactUsForm } from '@/components/forms/contact-us';
 import { DefaultLayout } from '@/components/layouts/general.layout';
 import GajikuHeroImage from '@/assets/gajiku-hero-image.png';
 import Head from 'next/head';
@@ -219,30 +220,14 @@ export default function Index() {
         </div>
       </div>
 
-      <section className="container text-center">
-        <p className="mb-8">
-          Transformasi cara Anda mengelola gaji karyawan dengan aplikasi penggajian yang inovatif. Ciptakan lingkungan
-          kerja yang lebih baik dan produktif dengan solusi kami. Hubungi kami hari ini untuk <b>demo gratis</b>!
-        </p>
-        <a className="btn btn-success" href="https://wa.me/6281119209415">
-          <IoLogoWhatsapp size={18} />
-          WhatsApp Kami
-        </a>
-      </section>
-
-      <section className="container">
-        <h2 className="text-2xl mb-4 text-center font-semibold">Atau langsung jadwalkan demo</h2>
-        <div className="max-w-2xl mx-auto">
-          <Iframe
-            url="https://tally.so/embed/meE2je?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-            width="100%"
-            height="100%"
-            className="h-full"
-            scrolling="no"
-            frameBorder={0}
-          />
-        </div>
-      </section>
+      <ContactUsForm
+        header={
+          <p>
+            Transformasi cara Anda mengelola gaji karyawan dengan aplikasi penggajian yang inovatif. Ciptakan lingkungan
+            kerja yang lebih baik dan produktif dengan solusi kami. Hubungi kami hari ini untuk <b>demo gratis</b>!
+          </p>
+        }
+      />
     </DefaultLayout>
   );
 }

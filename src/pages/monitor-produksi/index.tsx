@@ -1,5 +1,6 @@
 import { Accordion, Card, WindowMockup } from 'react-daisyui';
 import DashboardImg from '@/assets/product/production-tracker-dashboard.png';
+import { ContactUsForm } from '@/components/forms/contact-us';
 import { DefaultLayout } from '@/components/layouts/general.layout';
 import GajikuHeroImage from '@/assets/gajiku-hero-image.png';
 import Head from 'next/head';
@@ -126,6 +127,18 @@ export default function Page() {
           </div>
         </div>
       </section>
+
+      <ContactUsForm
+        className="mt-8"
+        header={
+          <>
+            <p>Pantau produktivitas & hitung upah secara otomatis dan optimalkan lini produksi Anda.</p>
+            <p>
+              Hubungi kami hari ini untuk <b>demo gratis</b>!
+            </p>
+          </>
+        }
+      />
     </DefaultLayout>
   );
 }
