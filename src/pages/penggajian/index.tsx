@@ -9,9 +9,7 @@ import Head from 'next/head';
 import Hero from '@/components/sections/hero';
 import { HiOutlineCheck } from 'react-icons/hi';
 import HomepageBackdrop from '@/assets/homepage/backdrop.png';
-import Iframe from 'react-iframe';
 import Image from 'next/image';
-import { IoLogoWhatsapp } from 'react-icons/io5';
 import Link from 'next/link';
 import Script from 'next/script';
 

@@ -8,6 +8,10 @@ export const MENU = [
     label: 'Penggajian',
   },
   {
+    to: '/payroll-outsource-service',
+    label: 'Payroll Outsource Service',
+  },
+  {
     to: '/tax-consultant',
     label: 'Tax Consultant',
   },

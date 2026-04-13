@@ -8,6 +8,7 @@ function generateSiteMap() {
       <url><loc>https://gajikuapp.com</loc></url>
       <url><loc>https://gajikuapp.com/absensi-karyawan</loc></url>
       <url><loc>https://gajikuapp.com/penggajian</loc></url>
+      <url><loc>https://gajikuapp.com/payroll-outsource-service</loc></url>
       <url><loc>https://gajikuapp.com/sistem-reimburse</loc></url>
       <url><loc>https://gajikuapp.com/earned-wage-access</loc></url>
       <url><loc>https://gajikuapp.com/produk-digital</loc></url>
@@ -18,6 +19,7 @@ function generateSiteMap() {
       <url><loc>https://gajikuapp.com/about</loc></url>
       <url><loc>https://gajikuapp.com/blog</loc></url>
       <url><loc>https://gajikuapp.com/contact-us</loc></url>
+      <url><loc>https://gajikuapp.com/faq</loc></url>
    </urlset>
  `;
 }
