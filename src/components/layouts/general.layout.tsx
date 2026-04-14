@@ -112,7 +112,7 @@ export const DefaultLayout = (props: Props) => {
               <Image alt="Gajiku" className="w-10 h-auto" src={LogoSquare} />
             </Link>
             <p>
-              © 2023 Sampradaa Pte Ltd
+              © {new Date().getFullYear()} Sampradaa Pte Ltd
               <br />
               Jakarta - Indonesia
             </p>

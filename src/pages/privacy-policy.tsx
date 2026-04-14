@@ -415,9 +415,9 @@ export default function Home() {
         <p>
           The use of the Gajiku Platform by the User after the change is announced is considered as the User&apos;s
           acceptance of the revised Terms and Conditions. In the event that the User does not agree to these Terms and
-          Conditions, please do not access, browse or use the Gajiku Platform. These Terms and Conditions were last Last
-          modified: 02 Nov 2022
+          Conditions, please do not access, browse or use the Gajiku Platform.
         </p>
+        <p className="text-sm">These Terms and Conditions were last Last modified: 02 Nov 2022</p>
       </section>
     </DefaultLayout>
   );
