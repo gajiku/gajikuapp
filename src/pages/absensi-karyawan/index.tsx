@@ -94,7 +94,7 @@ export default function Page() {
             },
           ].map((dt, n: number): ReactNode => {
             return (
-              <div key={`attendance.feature.${n}`} className="card card-bordered">
+              <div key={`attendance.feature.${n}`} className="card card-bordered rounded-3xl">
                 <div className="card-body text-center">
                   <dt.icon size={48} className={classNames('mx-auto mb-4', `text-${dt.color}`)} />
                   <h3 className="text-2xl text-slate-700">{dt.title}</h3>

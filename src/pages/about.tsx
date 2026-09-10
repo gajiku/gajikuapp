@@ -1,7 +1,6 @@
 import AboutCantika from '@/assets/about/about-cantika.jpg';
 import AboutEffene from '@/assets/about/about-effene.jpg';
 import AboutHayu from '@/assets/about/about-hayu.jpg';
-import AboutHerry from '@/assets/about/about-herry.jpg';
 import AboutImg1 from '@/assets/about/about-img1.svg';
 import AboutImg2 from '@/assets/about/about-img2.svg';
 import AboutImg3 from '@/assets/about/about-img3.svg';
@@ -58,7 +57,7 @@ export default function Page() {
               },
               {
                 image: AboutImg4,
-                year: 2023,
+                year: 2026,
                 description:
                   'Gajiku terus berkembang untuk memenuhi kebutuhan dan memberikan solusi terbaik khususnya di bidang HR Technology',
               },
@@ -86,10 +85,10 @@ export default function Page() {
       </section>
 
       <section className="container">
-        <div className="card card-bordered">
+        <div className="card card-bordered rounded-3xl">
           <div className="card-body">
             <h2 className="text-primary text-center text-4xl mb-16 font-extrabold">Tim Gajiku</h2>
-            <div className="grid md:grid-cols-2 gap-8">
+            <div className="grid gap-8">
               <div className="flex flex-col items-center text-center">
                 <Avatar shape="circle" size={120} src={AboutSherman.src} />
                 <h3 className="text-primary text-lg font-bold">Sherman Tanuwidjaja</h3>
@@ -112,35 +111,13 @@ export default function Page() {
                   </p>
                 </div>
               </div>
-              <div className="flex flex-col items-center text-center">
-                <Avatar shape="circle" size={120} src={AboutHerry.src} className="mx-auto" />
-                <h3 className="text-primary text-lg font-bold">Herry Gunawan </h3>
-                <div className="mb-6">
-                  <p>Co-Founder/CTO</p>
-                  <div className="flex justify-center">
-                    <a href="https://www.linkedin.com/in/herryg91" rel="nofollow noopener" target="_blank">
-                      <TbBrandLinkedin size={24} className="text-[#0a66c2]" />
-                    </a>
-                  </div>
-                </div>
-                <div className="grid gap-3">
-                  <p>
-                    Tech lead at Tokopedia, Build search, personalization and recommendation team from scratch. Bult and
-                    structured entire architecture and development.
-                  </p>
-                  <p>
-                    Climbed Ruang Guru ladder from Engineering manager all the way to head of Engineering. Leading team
-                    of 40 engineers.
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
         </div>
       </section>
 
       <section className="container">
-        <div className="card card-bordered">
+        <div className="card card-bordered rounded-3xl">
           <div className="card-body">
             <h2 className="text-primary text-center text-4xl mb-16 font-extrabold">Founding Member</h2>
             <div className="grid md:grid-cols-3 gap-8">

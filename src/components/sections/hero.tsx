@@ -22,7 +22,7 @@ export default function Hero(props: HeroProps) {
       >
         <div className="grid lg:grid-cols-2">
           <div className="grid gap-4 content-start text-slate-700">
-            {props.title && <h1 className="text-primary text-5xl font-bold mb-4">{props.title}</h1>}
+            {props.title && <h1 className="text-primary text-5xl font-extrabold mb-4">{props.title}</h1>}
             {props.children}
           </div>
           {props.image && (

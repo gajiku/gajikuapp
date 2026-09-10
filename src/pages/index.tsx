@@ -67,7 +67,7 @@ export default function Home() {
               <Image src={GooglePlayEn} alt="Gajiku Google Play" className="h-12 w-auto" loading="lazy" />
             </a>
           </div>
-          <small className="text-sm tracking-tight text-slate-500">*Aplikasi Gajiku khusus karyawan</small>
+          <small className="tracking-tight text-slate-500">*Aplikasi Gajiku khusus karyawan</small>
         </footer>
       </Hero>
       <div className="container">
@@ -213,33 +213,35 @@ export default function Home() {
         </ul>
       </section>
       <section className="container">
-        <div className="border rounded-2xl shadow-lg p-8">
-          <h2 className="text-primary text-center text-4xl mb-16 font-extrabold">Media Berita</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-12 items-center">
-            <a
-              href="https://dailysocial.id/post/startup-ewa-gajiku-raih-pendanaan-awal-16-miliar-rupiah"
-              target="_blank"
-              rel="noreferer noopener"
-            >
-              <Image alt="Gajiku in Dailysocial" src={MediaDailysocial} loading="lazy" />
-            </a>
-            <a href="https://id.techinasia.com/pendanaan-gajiku" target="_blank" rel="noreferer noopener">
-              <Image alt="Gajiku in Techinasia" src={MediaTechinasia} loading="lazy" />
-            </a>
-            <a
-              href="https://www.thejakartapost.com/business/2022/01/26/hr-start-up-gajiku-raises-1-1-million-in-seed-round.html"
-              target="_blank"
-              rel="noreferer noopener"
-            >
-              <Image alt="Gajiku in Jakarta Post" src={MediaJakartaPost} loading="lazy" />
-            </a>
-            <a
-              href="https://www.forbes.com/30-under-30/2024/asia/finance-venture-capital?profile=sherman-tanuwidjaja"
-              target="_blank"
-              rel="noreferer noopener"
-            >
-              <Image alt="Gajiku 30 under 30" src={MediaForbes} loading="lazy" />
-            </a>
+        <div className="card card-bordered rounded-3xl">
+          <div className="card-body">
+            <h2 className="text-primary text-center text-4xl mb-16 font-extrabold">Media Berita</h2>
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-12 items-center">
+              <a
+                href="https://dailysocial.id/post/startup-ewa-gajiku-raih-pendanaan-awal-16-miliar-rupiah"
+                target="_blank"
+                rel="noreferer noopener"
+              >
+                <Image alt="Gajiku in Dailysocial" src={MediaDailysocial} loading="lazy" />
+              </a>
+              <a href="https://id.techinasia.com/pendanaan-gajiku" target="_blank" rel="noreferer noopener">
+                <Image alt="Gajiku in Techinasia" src={MediaTechinasia} loading="lazy" />
+              </a>
+              <a
+                href="https://www.thejakartapost.com/business/2022/01/26/hr-start-up-gajiku-raises-1-1-million-in-seed-round.html"
+                target="_blank"
+                rel="noreferer noopener"
+              >
+                <Image alt="Gajiku in Jakarta Post" src={MediaJakartaPost} loading="lazy" />
+              </a>
+              <a
+                href="https://www.forbes.com/30-under-30/2024/asia/finance-venture-capital?profile=sherman-tanuwidjaja"
+                target="_blank"
+                rel="noreferer noopener"
+              >
+                <Image alt="Gajiku 30 under 30" src={MediaForbes} loading="lazy" />
+              </a>
+            </div>
           </div>
         </div>
       </section>

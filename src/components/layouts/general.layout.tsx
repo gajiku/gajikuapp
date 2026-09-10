@@ -10,6 +10,14 @@ import { MENU } from '@/config/menu';
 import { ReactNode } from 'react';
 import classNames from 'classnames';
 
+const menu = [
+  { label: 'Produk Kami', menu: MENU },
+  { label: 'Tentang Gajiku', href: '/about' },
+  { label: 'Blog', href: '/blog' },
+  { label: 'Kontak Kami', href: '/contact-us' },
+  { label: 'FAQ', href: '/faq' },
+];
+
 type Props = { children?: ReactNode; className?: string };
 
 export const DefaultLayout = (props: Props) => {
@@ -24,27 +32,30 @@ export const DefaultLayout = (props: Props) => {
                   <LuMenu size={22} />
                 </Button>
                 <Dropdown.Menu tabIndex={0} className="w-72 menu-sm z-[1] bg-white">
-                  <li>
-                    <a>Produk Kami</a>
-                    <ul className="p-2">
-                      {MENU.map((m) => {
-                        return (
-                          <li key={m.to}>
-                            <Link href={m.to}>{m.label}</Link>
-                          </li>
-                        );
-                      })}
-                    </ul>
-                  </li>
-                  <li>
-                    <Link href="/about">Tentang Gajiku</Link>
-                  </li>
-                  <li>
-                    <Link href="/blog">Blog</Link>
-                  </li>
-                  <li>
-                    <Link href="/contact-us">Kontak Kami</Link>
-                  </li>
+                  {menu.map((item, n) => {
+                    const key = `nav.mobile.${n}`;
+
+                    return (
+                      <li key={key}>
+                        {item.menu && (
+                          <>
+                            <a>{item.label}</a>
+                            <ul className="p-2">
+                              {item.menu.map((m) => {
+                                return (
+                                  <li key={m.to}>
+                                    <Link href={m.to}>{m.label}</Link>
+                                  </li>
+                                );
+                              })}
+                            </ul>
+                          </>
+                        )}
+
+                        {item.href && <Link href={item.href}>{item.label}</Link>}
+                      </li>
+                    );
+                  })}
                 </Dropdown.Menu>
               </Dropdown>
               <Link href="/">
@@ -52,47 +63,41 @@ export const DefaultLayout = (props: Props) => {
               </Link>
             </Navbar.Start>
             <Navbar.Center className="hidden lg:flex">
-              <Dropdown hover>
-                <Dropdown.Toggle
-                  className="btn btn-ghost hover:bg-gray-100 text-base text-primary font-semibold"
-                  button={false}
-                >
-                  Produk Kami
-                </Dropdown.Toggle>
-                <Dropdown.Menu className="bg-white w-max text-base text-primary font-semibold">
-                  {MENU.map((m) => {
-                    return (
-                      <li key={m.to}>
-                        <Link href={m.to}>{m.label}</Link>
-                      </li>
-                    );
-                  })}
-                </Dropdown.Menu>
-              </Dropdown>
-              <Link
-                className="btn btn-ghost hover:bg-gray-50 rounded-btn text-base text-primary font-semibold"
-                href="/about"
-              >
-                Tentang Gajiku
-              </Link>
-              <Link
-                className="btn btn-ghost hover:bg-gray-50 rounded-btn text-base text-primary font-semibold"
-                href="/blog"
-              >
-                Blog
-              </Link>
-              <Link
-                className="btn btn-ghost hover:bg-gray-50 rounded-btn text-base text-primary font-semibold"
-                href="/contact-us"
-              >
-                Kontak Kami
-              </Link>
-              <Link
-                className="btn btn-ghost hover:bg-gray-50 rounded-btn text-base text-primary font-semibold"
-                href="/faq"
-              >
-                FAQ
-              </Link>
+              {menu.map((item, n) => {
+                const key = `nav.header.${n}`;
+
+                if (item.menu) {
+                  return (
+                    <Dropdown key={key} hover>
+                      <Dropdown.Toggle
+                        className="btn btn-ghost hover:bg-white text-base text-primary font-semibold"
+                        button={false}
+                      >
+                        {item.label}
+                      </Dropdown.Toggle>
+                      <Dropdown.Menu className="w-max text-primary font-medium rounded-[28px]">
+                        {item.menu.map((m) => {
+                          return (
+                            <li key={m.to}>
+                              <Link href={m.to}>{m.label}</Link>
+                            </li>
+                          );
+                        })}
+                      </Dropdown.Menu>
+                    </Dropdown>
+                  );
+                }
+
+                return (
+                  <Link
+                    key={key}
+                    className="btn btn-ghost hover:bg-white text-base text-primary font-semibold"
+                    href={item.href}
+                  >
+                    {item.label}
+                  </Link>
+                );
+              })}
             </Navbar.Center>
             <Navbar.End>
               <Button tag="a" color="primary" className="text-white" href="/contact-us">
@@ -119,7 +124,7 @@ export const DefaultLayout = (props: Props) => {
             <p>
               Email: <a href="mailto:support@gajikuapp.com">support@gajikuapp.com</a>
             </p>
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-1.5">
               <a href="https://instagram.com/gajikuapp?igshid=ZDg1NjBiNjg=" rel="nofollow noopener" target="_blank">
                 <TbBrandInstagram size={28} className="text-[#962fbf]" />
               </a>

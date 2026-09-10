@@ -64,7 +64,7 @@ export default function Index() {
             return (
               <li
                 key={`tax.reason.${n}`}
-                className="col-span-6 lg:col-span-2 card bg-white shadow-md transition-all scale-100 hover:scale-105"
+                className="col-span-6 lg:col-span-2 card bg-white shadow transition-all scale-100 hover:scale-105 rounded-3xl"
               >
                 <Card.Body>
                   <h3 className="font-bold mb-2 text-2xl text-slate-700">{dt.title}</h3>
