@@ -59,7 +59,7 @@ export default function Home() {
           <Link className="btn btn-primary mb-8" href="/contact-us">
             Mulai Sekarang
           </Link>
-          <div className="flex items-center gap-4">
+          <div className="flex items-center gap-2">
             <a href="https://apps.apple.com/id/app/gajiku/id6444016967" target="_blank">
               <Image src={AppleEn} alt="Gajiku App Store" className="h-12 w-auto" loading="lazy" />
             </a>

@@ -1,4 +1,4 @@
-import { Button, Dropdown, Navbar } from 'react-daisyui';
+import { Dropdown, Navbar } from 'react-daisyui';
 import { LuChevronsRight, LuMenu } from 'react-icons/lu';
 import { TbBrandInstagram, TbBrandLinkedin, TbBrandWhatsapp } from 'react-icons/tb';
 import Container from '../sections/container';
@@ -13,9 +13,9 @@ import classNames from 'classnames';
 const menu = [
   { label: 'Produk Kami', menu: MENU },
   { label: 'Tentang Gajiku', href: '/about' },
-  { label: 'Blog', href: '/blog' },
   { label: 'Kontak Kami', href: '/contact-us' },
-  { label: 'FAQ', href: '/faq' },
+  { label: 'Partnership', href: '/partnership' },
+  { label: 'Blog', href: '/blog' },
 ];
 
 type Props = { children?: ReactNode; className?: string };
@@ -28,9 +28,9 @@ export const DefaultLayout = (props: Props) => {
           <Navbar className="px-0 h-20">
             <Navbar.Start>
               <Dropdown>
-                <Button tag="label" color="ghost" shape="circle" tabIndex={0} className="lg:hidden">
-                  <LuMenu size={22} />
-                </Button>
+                <label tabIndex={0} className="lg:hidden btn btn-sm btn-circle btn-ghost hover:bg-gray-200">
+                  <LuMenu size={18} />
+                </label>
                 <Dropdown.Menu tabIndex={0} className="w-72 menu-sm z-[1] bg-white">
                   {menu.map((item, n) => {
                     const key = `nav.mobile.${n}`;
@@ -58,8 +58,8 @@ export const DefaultLayout = (props: Props) => {
                   })}
                 </Dropdown.Menu>
               </Dropdown>
-              <Link href="/">
-                <Image src={LogoWide} alt="Gajiku" className="h-fit" width="167" />
+              <Link className="relative -top-1" href="/">
+                <Image src={LogoWide} alt="Gajiku" className="w-32 h-auto" />
               </Link>
             </Navbar.Start>
             <Navbar.Center className="hidden lg:flex">
@@ -100,9 +100,9 @@ export const DefaultLayout = (props: Props) => {
               })}
             </Navbar.Center>
             <Navbar.End>
-              <Button tag="a" color="primary" className="text-white" href="/contact-us">
+              <Link href="/contact-us" className="btn btn-primary">
                 Coba Sekarang <LuChevronsRight />
-              </Button>
+              </Link>
             </Navbar.End>
           </Navbar>
         </div>
@@ -157,6 +157,11 @@ export const DefaultLayout = (props: Props) => {
                 <li>
                   <Link href="/contact-us" className="link link-hover">
                     Kontak
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/partnership" className="link link-hover">
+                    Partnership
                   </Link>
                 </li>
                 <li>

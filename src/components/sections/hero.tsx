@@ -8,6 +8,7 @@ type HeroProps = {
   children?: ReactNode;
   reverse?: boolean;
   title?: string;
+  className?: string;
 };
 
 export default function Hero(props: HeroProps) {
@@ -26,7 +27,9 @@ export default function Hero(props: HeroProps) {
             {props.children}
           </div>
           {props.image && (
-            <div className={classNames('content-center lg:block hidden', props.reverse && 'order-first')}>
+            <div
+              className={classNames('content-center lg:block hidden', props.className, props.reverse && 'order-first')}
+            >
               <Image src={props.image} alt="Hero Image" loading="lazy" />
             </div>
           )}
