@@ -2,7 +2,7 @@ import {
   LuAlarmClock,
   LuComputer,
   LuSmartphoneCharging,
-  LuWallet,
+  // LuWallet,
   LuWalletCards,
   LuWalletMinimal,
 } from 'react-icons/lu';
@@ -42,12 +42,9 @@ export default function Home() {
         <title>Gajiku - Solusi HR & Keuangan Digital untuk Karyawan dan Perusahaan</title>
         <meta
           name="description"
-          content="Gajiku membantu perusahaan meningkatkan kesejahteraan karyawan melalui fitur seperti absensi online, penggajian otomatis, pinjaman karyawan Earned Wage Access (EWA)."
+          content="Gajiku membantu perusahaan meningkatkan kesejahteraan karyawan melalui fitur seperti absensi online, penggajian otomatis, Earned Wage Access (EWA)."
         />
-        <meta
-          name="keywords"
-          content="Gajiku, HRIS SaaS, Akses Gaji di Depan, absensi online, penggajian digital, pinjaman karyawan"
-        />
+        <meta name="keywords" content="Gajiku, HRIS SaaS, Akses Gaji di Depan, absensi online, penggajian digital" />
       </Head>
 
       <Hero background={HomepageBackdrop} image={GajikuHeroImage} title="Benefit Terbaik Untuk Karyawan Anda">
@@ -94,12 +91,12 @@ export default function Home() {
                   description: 'Monitoring klaim biaya dari karyawan Anda',
                   color: 'accent',
                 },
-                {
-                  icon: LuWallet,
-                  title: 'Pinjaman Karyawan',
-                  description: 'Digitalisaikan proses peminjaman karyawan Anda',
-                  color: 'info',
-                },
+                // {
+                //   icon: LuWallet,
+                //   title: 'Pinjaman Karyawan',
+                //   description: 'Digitalisaikan proses peminjaman karyawan Anda',
+                //   color: 'info',
+                // },
                 {
                   icon: LuSmartphoneCharging,
                   title: 'Produk Digital',
