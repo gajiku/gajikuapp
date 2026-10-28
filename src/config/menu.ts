@@ -27,10 +27,10 @@ export const MENU = [
     to: '/produk-digital',
     label: 'Produk Digital',
   },
-  {
-    to: '/pinjaman-karyawan',
-    label: 'Pinjaman Karyawan',
-  },
+  // {
+  //   to: '/pinjaman-karyawan',
+  //   label: 'Pinjaman Karyawan',
+  // },
   {
     to: '/kpi',
     label: 'KPI',
@@ -39,8 +39,8 @@ export const MENU = [
     to: '/monitor-produksi',
     label: 'Monitor Produksi',
   },
-  {
-    to: '/pinjaman-usaha',
-    label: 'Pinjaman Usaha',
-  },
+  // {
+  //   to: '/pinjaman-usaha',
+  //   label: 'Pinjaman Usaha',
+  // },
 ];
