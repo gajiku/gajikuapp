@@ -91,12 +91,6 @@ export default function Home() {
                   description: 'Monitoring klaim biaya dari karyawan Anda',
                   color: 'accent',
                 },
-                // {
-                //   icon: LuWallet,
-                //   title: 'Pinjaman Karyawan',
-                //   description: 'Digitalisaikan proses peminjaman karyawan Anda',
-                //   color: 'info',
-                // },
                 {
                   icon: LuSmartphoneCharging,
                   title: 'Produk Digital',
@@ -147,8 +141,8 @@ export default function Home() {
             <p>Perhitungan gaji, tunjangan, PPh 21 dan BPJS secara otomatis.</p>
           </div>
           <div>
-            <h3 className="text-2xl text-accent mb-1 font-bold">Manajemen Biaya dan Pinjaman Karyawan</h3>
-            <p>Monitor klaim biaya dan juga pinjaman karyawan secara real time!</p>
+            <h3 className="text-2xl text-accent mb-1 font-bold">Manajemen Biaya</h3>
+            <p>Monitor klaim biaya secara real time!</p>
           </div>
         </div>
         <Image alt="Gajiku Dashboard" className="w-3/5 mx-auto" src={GajikuDashboard} loading="lazy" />

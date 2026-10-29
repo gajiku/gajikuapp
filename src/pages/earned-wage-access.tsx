@@ -2,7 +2,6 @@ import { ContactUsForm } from '@/components/forms/contact-us';
 import { DefaultLayout } from '@/components/layouts/general.layout';
 import Head from 'next/head';
 import { HiOutlineCheck } from 'react-icons/hi';
-import Iframe from 'react-iframe';
 import Image from 'next/image';
 import { Link } from 'react-daisyui';
 import PlaceholderEwa from '@/assets/ewa/placeholder-ewa.svg';

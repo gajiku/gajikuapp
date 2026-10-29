@@ -61,10 +61,6 @@ export default function Page() {
                     <span className="font-bold">Tax Consultant & Compliance:</span> Penanganan PPh 21, PPN, dan SPT
                     Badan secara akurat oleh praktisi profesional.
                   </li>
-                  {/* <li>
-                    <span className="font-bold">Pinjaman Karyawan & Usaha:</span> Solusi pembiayaan terstruktur yang
-                    terintegrasi langsung dengan sistem penggajian.
-                  </li> */}
                 </ol>
               </dd>
             </dl>
